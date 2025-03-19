@@ -7,11 +7,14 @@
     "DRACOE.Logging.64": "[1.0.9]",
     "DRACOE.PopUps.64": "[1.0.8]",
     "UiPath.Excel.Activities": "[2.22.3]",
+    "UiPath.IntelligentOCR.Activities": "[6.22.1]",
     "UiPath.Mail.Activities": "[1.23.11]",
+    "UiPath.PDF.Activities": "[3.20.2]",
     "UiPath.System.Activities": "[24.10.4]",
     "UiPath.Testing.Activities": "[23.10.1]",
-    "UiPath.UIAutomation.Activities": "[23.10.13]",
-    "UiPath.WebAPI.Activities": "[1.21.1]"
+    "UiPath.UIAutomation.Activities": "[23.10.15]",
+    "UiPath.WebAPI.Activities": "[1.21.1]",
+    "UiPath.Word.Activities": "[1.20.3]"
   },
   "webServices": [],
   "entitiesStores": [],
