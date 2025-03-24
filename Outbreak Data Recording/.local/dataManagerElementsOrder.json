@@ -94,6 +94,7 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strNameDate&Sequence_3",
         "dictFormValues&Flowchart_1",
         "g_arrCaseID&Sequence_83",
         "g_Config&Sequence_83",
@@ -120,6 +121,20 @@
         "g_TransactionItem&Sequence_83",
         "strDocText&Sequence_1",
         "strCPH&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&Sequence_83",
+        "g_Config&Sequence_83",
+        "g_swProcessingTimer&Sequence_83",
+        "g_intExitPoint&Sequence_83",
+        "g_TransactionItem&Sequence_83"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],

@@ -85,10 +85,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadPDFText DisplayName="Read PDF Text" FileName="C:\Users\rm000121\OneDrive - Defra\UiPath\APHA-Outbreak-Data-Recording\Test data\EXD644\test table.pdf" sap:VirtualizedContainerService.HintSize="531.6,83.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[strDocText]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="531.6,272" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:ReadPDFText DisplayName="Read PDF Text" FileName="C:\Users\rm000121\OneDrive - Defra\UiPath\APHA-Outbreak-Data-Recording\Test data\EXD195\41-127-0022 AIV73947 SE visit EXD195 NO STOCK rev IB.pdf" sap:VirtualizedContainerService.HintSize="531.6,83.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[strDocText]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="531.6,394.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,316" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -102,17 +102,17 @@
               <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Type of stock).*?(?=\(b\) If animals)").Value.Trim]</InArgument>
             </Assign.Value>
           </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strBirds]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Type of stock).*?(?=Number inspected)").Value.Trim]</InArgument>
+            </Assign.Value>
+          </Assign>
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <Assign sap:VirtualizedContainerService.HintSize="531.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_3">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[strBirds]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Type of stock).*?(?=Number inspected)").Value.Trim]</InArgument>
-      </Assign.Value>
-    </Assign>
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="531.6,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_1" />
   </Sequence>
 </Activity>

@@ -155,18 +155,72 @@
             <av:PointCollection x:Key="ConnectorLocation">300,591.6999999999999 300,621.6999999999999 300.6,621.6999999999999 300.6,631.6999999999999</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Scrape EXD195" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Scrape EXD195" sap:VirtualizedContainerService.HintSize="541.6,384.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="strNameDate" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Scrape EXD195 values and store to dictionary" sap:VirtualizedContainerService.HintSize="479.6,273.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("CPH")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=CPH No\.).*?(?=This form may be completed)").Value.Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("JRF")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=JRF No\.).*?(?=AIV of IP)").Value.Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strNameDate]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Part Three.*?Name).*?(?=Mobile)").Value]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("VetName")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Replace(strNameDate,"[^A-z\s]|Date","").Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("VisitDateTime")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Replace(strNameDate,"[^0-9]","")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("Comments")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Surveillance Team comments\:).*?(?=Form reviewed by OSV)").Value.Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
         </Sequence>
         <FlowStep.Next>
-          <FlowDecision x:Name="__ReferenceID0" DisplayName="TryParse DateTime" sap:VirtualizedContainerService.HintSize="103.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-            <FlowDecision.Condition>
-              <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="DateTime.TryParse(dictFormValues(&quot;VisitDateTime&quot;), nothing)" />
-            </FlowDecision.Condition>
+          <FlowDecision x:Name="__ReferenceID0" Condition="[DateTime.TryParse(dictFormValues(&quot;VisitDateTime&quot;), nothing)]" DisplayName="TryParse DateTime" sap:VirtualizedContainerService.HintSize="103.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -313,6 +367,53 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Scrape EXD44 values and store to dictionary" sap:VirtualizedContainerService.HintSize="479.6,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("CPH")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=CPH No).*?(?=JRF)").Value.Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("JRF")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=JRF).*?(?=APH Office)").Value.Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("VetName")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Part Three.*?Name).*?(?=Mobile No").Value.Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("VisitDate")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Date of visit).*?(?=Time visit began").Value.Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[dictFormValues("VisitTime")]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Time visit began).*?(?=3\. Location of Stock").Value.Trim]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:Comment sap:VirtualizedContainerService.HintSize="479.6,56.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Post visit actions and stock table" />
         </Sequence>
         <FlowStep.Next>
           <x:Reference>__ReferenceID0</x:Reference>
@@ -370,6 +471,7 @@
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
+          <ui:Comment sap:VirtualizedContainerService.HintSize="479.6,56.4" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Stock table" />
         </Sequence>
         <FlowStep.Next>
           <x:Reference>__ReferenceID0</x:Reference>
@@ -449,7 +551,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,166.9 300,186.89999999999998</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[g_TransactionItem]" sap:VirtualizedContainerService.HintSize="322,69.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[strDocText]">
+      <ui:ReadPDFText DisplayName="Read PDF Text" FileName="[g_TransactionItem]" sap:VirtualizedContainerService.HintSize="322,69.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[strDocText]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
