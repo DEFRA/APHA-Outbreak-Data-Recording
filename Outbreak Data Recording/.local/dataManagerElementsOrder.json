@@ -94,6 +94,7 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtStockTable&Flowchart_1",
         "strNameDate&Sequence_3",
         "dictFormValues&Flowchart_1",
         "g_arrCaseID&Sequence_83",
@@ -137,6 +138,53 @@
         "g_TransactionItem&Sequence_83"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Read stock table 195, 196, 197.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intCount&Sequence_1",
+        "strType&Sequence_1",
+        "strBird&Sequence_1",
+        "strNumber&Sequence_1",
+        "arrCols&Sequence_2",
+        "arrRows&Sequence_1",
+        "strStockTable&Sequence_1",
+        "g_arrCaseID&Sequence_83",
+        "g_Config&Sequence_83",
+        "g_swProcessingTimer&Sequence_83",
+        "g_intExitPoint&Sequence_83",
+        "g_TransactionItem&Sequence_83"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtStockTable",
+        "in_strDocText"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Read stock table 44, 644.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intLineCount&Sequence_1",
+        "intPartCount&Sequence_2",
+        "arrBirdParts&Sequence_2",
+        "strLineTrimmed&Sequence_2",
+        "dictBirdNames&Sequence_1",
+        "arrBirdLines&Sequence_1",
+        "strBirds&Sequence_1",
+        "g_arrCaseID&Sequence_83",
+        "g_Config&Sequence_83",
+        "g_swProcessingTimer&Sequence_83",
+        "g_intExitPoint&Sequence_83",
+        "g_TransactionItem&Sequence_83"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strDocText"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
