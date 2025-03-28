@@ -11,17 +11,21 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>834,1299.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,1299.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetTransactionStatus_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
+      <x:String>DRACOE_Logging_64</x:String>
+      <x:String>DRACOE_PopUps_64</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System</x:String>
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Validation</x:String>
       <x:String>System.Activities.XamlIntegration</x:String>
@@ -31,51 +35,51 @@
       <x:String>System.Data</x:String>
       <x:String>System.Diagnostics</x:String>
       <x:String>System.Drawing</x:String>
+      <x:String>System.Globalization</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Windows.Forms</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>UiPath.Mail.Activities.Business</x:String>
-      <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>UiPath.Mail.Activities</x:String>
-      <x:String>UiPath.Mail.Outlook.Activities</x:String>
-      <x:String>System.Activities.Runtime.Collections</x:String>
-      <x:String>DRACOE_PopUps_64</x:String>
-      <x:String>UiPath.Studio.Forms.Runtime</x:String>
-      <x:String>UiPath.Forms.Activities</x:String>
-      <x:String>UiPath.Platform.GlobalVariables</x:String>
-      <x:String>UiPath.Forms.Activities.Base</x:String>
-      <x:String>UiPath.Platform.Triggers</x:String>
-      <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>UiPath.Platform.Triggers.Scope</x:String>
-      <x:String>System.Runtime.CompilerServices</x:String>
-      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
-      <x:String>System.Windows.Forms</x:String>
-      <x:String>DRACOE_Logging_64</x:String>
-      <x:String>System.Globalization</x:String>
-      <x:String>System.Security</x:String>
-      <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Database</x:String>
       <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Platform.GlobalVariables</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="168">
+      <AssemblyReference>DRACOE.Logging.64</AssemblyReference>
+      <AssemblyReference>DRACOE.PopUps.64</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
@@ -85,73 +89,64 @@
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Linq</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Net.Mail</AssemblyReference>
-      <AssemblyReference>DRACOE.PopUps.64.ViewModels</AssemblyReference>
-      <AssemblyReference>DRACOE.PopUps.64</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Forms.Runtime</AssemblyReference>
-      <AssemblyReference>UiPath.Forms.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
-      <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
-      <AssemblyReference>System.Windows.Forms.Primitives</AssemblyReference>
-      <AssemblyReference>System.Windows.Forms</AssemblyReference>
-      <AssemblyReference>DRACOE.Logging.64</AssemblyReference>
-      <AssemblyReference>System.Private.Xml</AssemblyReference>
-      <AssemblyReference>UiPath.Database</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
-      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
-      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.CodeDom</AssemblyReference>
-      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
-      <AssemblyReference>System.IO.Packaging</AssemblyReference>
-      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
-      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
-      <AssemblyReference>Microsoft.PowerShell.Commands.Diagnostics</AssemblyReference>
-      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
       <AssemblyReference>System.Diagnostics.DiagnosticSource</AssemblyReference>
       <AssemblyReference>System.Diagnostics.EventLog</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.FileVersionInfo</AssemblyReference>
       <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
       <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
       <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
       <AssemblyReference>System.Diagnostics.TraceSource</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.Unsafe</AssemblyReference>
+      <AssemblyReference>System.Runtime.CompilerServices.VisualC</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Primitives</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Set and log the transaction's status along with extra log fields. &#xA;There can be three possible statuses: Success, Business Exception and System Exception.&#xA;&#xA;Business Rule Exception characterizes an irregular situation according to the process's rules and prevents the transaction to be processed. The transaction is not retried in this case, since the result will be the same until the problem that causes the exception is solved.&#xA;For example, it can be considered a BusinessRuleException if a process expects to read an email's attachment, but the sender didn't attach any file. In this case, immediate retries of the transaction will not yield a different result.&#xA;&#xA;On the other hand, system exceptions are characterized by exceptions whose types are different than BusinessRuleException. When this kind of exception happens, the transaction item can be retried after closing and reopening the applications involved in the process. The rationale behind this is that the exception was caused by a problem in the applications, which might be solved by restarting them.&#xA;&#xA;If Orchestrator queues are the source of transactions, the Set Transaction Status activity is used to update the status. In addition, the retry mechanism is also implemented by Orchestrator.&#xA;&#xA;If Orchestrator queues are not used, the status can be set, for example, by writing to a specific column in a spreadsheet. In such cases, the retry mechanism is covered by the framework and the number of retries is defined in the configuration file.&#xA;&#xA;At the end, io_TransactionNumber is incremented, which makes the framework get the next transaction to be processed." DisplayName="Set Transaction Status" sap:VirtualizedContainerService.HintSize="722,1234" sap2010:WorkflowViewState.IdRef="Flowchart_2">
@@ -192,7 +187,11 @@
               <av:PointCollection x:Key="ConnectorLocation">110,665.6 110,695.6 210,695.6 210,715.6</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful and the email is moved to the Success subfolder." DisplayName="Success" sap:VirtualizedContainerService.HintSize="200,194" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful and the email is moved to the Success subfolder." DisplayName="Success" sap:VirtualizedContainerService.HintSize="547.6,2015.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="intCounter" />
+              <Variable x:TypeArguments="x:String" Name="strCompletedPath" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -201,7 +200,6 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="485.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Transaction Successful&quot;]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="485.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Remember to configure the SUCCESS set transaction status activity!&quot;]" />
             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="485.6,384.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,306" sap2010:WorkflowViewState.IdRef="Sequence_25">
@@ -221,7 +219,44 @@
                 </Sequence>
               </ui:CommentOut.Body>
             </ui:CommentOut>
-            <ui:MoveOutlookMessage Account="{x:Null}" DisplayName="Move Email to &quot;Completed&quot;" sap:VirtualizedContainerService.HintSize="485.6,90.4" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_1" MailFolder="[g_Config(&quot;Completed&quot;).ToString]" MailMessage="[g_TransactionItem]" />
+            <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strCompletedPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - completed" sap:VirtualizedContainerService.HintSize="485.6,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
+              <ui:InterruptibleDoWhile.Body>
+                <Assign DisplayName="Construct destination filepath - review" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_20">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[strCompletedPath]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[g_Config("Completed").ToString+"\"+Path.GetFileNameWithoutExtension(g_TransactionItem)+if(intCounter&lt;&gt;0,"_"+intCounter.ToString,"")+Path.GetExtension(g_TransactionItem)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </ui:InterruptibleDoWhile.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleDoWhile>
+            <TryCatch DisplayName="Try Catch - move file to completed" sap:VirtualizedContainerService.HintSize="485.6,189.2" sap2010:WorkflowViewState.IdRef="TryCatch_18">
+              <TryCatch.Try>
+                <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strCompletedPath]" DisplayName="Move File to &quot;Completed&quot;" sap:VirtualizedContainerService.HintSize="334,163.6" sap2010:WorkflowViewState.IdRef="MoveFile_3" Path="[g_TransactionItem]" />
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="334,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Completed&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
             <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="485.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_8" MethodName="Stop">
               <InvokeMethod.TargetObject>
                 <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
@@ -350,7 +385,11 @@
                   <av:PointCollection x:Key="ConnectorLocation">330,663.333333333333 330,693.3333333333329 210,693.3333333333329 210,715.6</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="If a BussinessRuleException is thrown during the process, the transaction item's status is updated as Failed (Exception Type: Business).&#xA;" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="547.6,2159.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence sap2010:Annotation.AnnotationText="If a BussinessRuleException is thrown during the process, the transaction item's status is updated as Failed (Exception Type: Business).&#xA;" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="200,194" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Int32" Name="intCounter" />
+                  <Variable x:TypeArguments="x:String" Name="strReviewPath" />
+                </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -379,7 +418,44 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:MoveOutlookMessage Account="[g_Config(&quot;AccountName&quot;).ToString]" DisplayName="Move Email to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="485.6,90.4" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_2" MailFolder="[g_Config(&quot;Review&quot;).ToString]" MailMessage="[g_TransactionItem]" />
+                <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strReviewPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - review BRE" sap:VirtualizedContainerService.HintSize="485.6,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
+                  <ui:InterruptibleDoWhile.Body>
+                    <Assign DisplayName="Construct destination filepath - review BRE" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_18">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[strReviewPath]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[g_Config("Review").ToString+"\"+Path.GetFileNameWithoutExtension(g_TransactionItem)+if(intCounter&lt;&gt;0,"_"+intCounter.ToString,"")+Path.GetExtension(g_TransactionItem)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </ui:InterruptibleDoWhile.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InterruptibleDoWhile>
+                <TryCatch DisplayName="Try Catch - move business exception to review" sap:VirtualizedContainerService.HintSize="485.6,189.2" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+                  <TryCatch.Try>
+                    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strReviewPath]" DisplayName="Move File to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="334,163.6" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[g_TransactionItem]" />
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="s:Exception">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                        </ActivityAction.Argument>
+                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="334,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Review&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                </TryCatch>
                 <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="485.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" MethodName="Stop">
                   <InvokeMethod.TargetObject>
                     <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
@@ -438,6 +514,8 @@
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="QueueRetry" />
                   <Variable x:TypeArguments="x:String" Name="ScreenshotPath" />
+                  <Variable x:TypeArguments="x:Int32" Name="intCounter" />
+                  <Variable x:TypeArguments="x:String" Name="strReviewPath" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -571,7 +649,44 @@
                     </Sequence>
                   </ui:CommentOut.Body>
                 </ui:CommentOut>
-                <ui:MoveOutlookMessage Account="[g_Config(&quot;AccountName&quot;).ToString]" DisplayName="Move Email to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="572,90.4" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_3" MailFolder="[g_Config(&quot;Review&quot;).ToString]" MailMessage="[g_TransactionItem]" />
+                <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strReviewPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - review SE" sap:VirtualizedContainerService.HintSize="572,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
+                  <ui:InterruptibleDoWhile.Body>
+                    <Assign DisplayName="Construct destination filepath - review SE" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[strReviewPath]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[g_Config("Review").ToString+"\"+Path.GetFileNameWithoutExtension(g_TransactionItem)+if(intCounter&lt;&gt;0,"_"+intCounter.ToString,"")+Path.GetExtension(g_TransactionItem)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </ui:InterruptibleDoWhile.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InterruptibleDoWhile>
+                <TryCatch DisplayName="Try Catch - move system exception to review" sap:VirtualizedContainerService.HintSize="572,189.2" sap2010:WorkflowViewState.IdRef="TryCatch_17">
+                  <TryCatch.Try>
+                    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strReviewPath]" DisplayName="Move File to &quot;Review&quot; SE" sap:VirtualizedContainerService.HintSize="334,163.6" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[g_TransactionItem]" />
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_17">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="s:Exception">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                        </ActivityAction.Argument>
+                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="334,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Review&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                </TryCatch>
                 <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="572,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Stop">
                   <InvokeMethod.TargetObject>
                     <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>

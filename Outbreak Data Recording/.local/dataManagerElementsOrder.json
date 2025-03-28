@@ -18,11 +18,11 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85",
+        "g_arrCaseID&Sequence_89",
+        "g_Config&Sequence_89",
+        "g_swProcessingTimer&Sequence_89",
+        "g_intExitPoint&Sequence_89",
+        "g_TransactionItem&Sequence_89",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
         "TransactionNumber&StateMachine_1",
@@ -52,34 +52,16 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Sequence1.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85",
-        "strText&Sequence_3",
-        "strHTML&Sequence_3"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Framework/GetTransactionData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&Sequence_83",
-        "g_Config&Sequence_83",
-        "g_swProcessingTimer&Sequence_83",
-        "g_intExitPoint&Sequence_83",
-        "g_TransactionItem&Sequence_83",
-        "listMailMessages&Sequence_1",
-        "mailCurrentMessage&Sequence_2",
-        "mailInProgressMessage&Sequence_2",
-        "credNetworkCredentials&Sequence_2"
+        "g_arrCaseID&Sequence_89",
+        "g_Config&Sequence_89",
+        "g_swProcessingTimer&Sequence_89",
+        "g_intExitPoint&Sequence_89",
+        "g_TransactionItem&Sequence_89",
+        "ienumFiles&Sequence_1",
+        "strCurrentFile&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_TransactionNumber",
@@ -94,6 +76,11 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&Sequence_89",
+        "g_Config&Sequence_89",
+        "g_swProcessingTimer&Sequence_89",
+        "g_intExitPoint&Sequence_89",
+        "g_TransactionItem&Sequence_89",
         "dtFormValues&Sequence_8",
         "boolDateTimeParsed&Flowchart_1",
         "datetimeVisit&Sequence_22",
@@ -107,11 +94,6 @@
         "dateVisit&Sequence_4",
         "arrPostVisitActions&Sequence_7",
         "strPostVisitActions&Sequence_7",
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85",
         "dtStockTable&Flowchart_1",
         "strNameDate&Sequence_3",
         "dictFormValues&Flowchart_1",
@@ -123,39 +105,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Sequence.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85",
-        "strBirds&Sequence_1",
-        "strTable&Sequence_1",
-        "strDocText&Sequence_1",
-        "strCPH&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Sequence2.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Read stock table 195, 196, 197.xaml",
+      "Path": "Process/Process Subflows/Read stock table 195, 196, 197.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "g_arrCaseID&Sequence_85",
@@ -184,7 +134,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Read stock table 644.xaml",
+      "Path": "Process/Process Subflows/Read stock table 644.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "intRowCount&Sequence_1",
@@ -217,7 +167,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Read stock table 44.xaml",
+      "Path": "Process/Process Subflows/Read stock table 44.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "g_arrCaseID&Sequence_85",
@@ -250,54 +200,51 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Sequence3.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "strComments&Sequence_1",
-        "arrPostVisitActions&Sequence_1",
-        "strPostVisit&Sequence_1",
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "in_strDocText"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Sequence4.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "boolParsed&Sequence_1",
-        "dateTest&Sequence_1",
-        "strDate&Sequence_1",
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Sequence5.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "strCPH&Sequence_1",
-        "dictFormValues&Sequence_1",
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85"
+        "g_arrCaseID&Sequence_89",
+        "g_Config&Sequence_89",
+        "g_swProcessingTimer&Sequence_89",
+        "g_intExitPoint&Sequence_89",
+        "g_TransactionItem&Sequence_89"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_strJRF",
+        "in_strCPH"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&Sequence_89",
+        "g_Config&Sequence_89",
+        "g_swProcessingTimer&Sequence_89",
+        "g_intExitPoint&Sequence_89",
+        "g_TransactionItem&Sequence_89",
+        "strLogNote&Flowchart_2",
+        "intCounter&Sequence_11",
+        "strCompletedPath&Sequence_11",
+        "intCounter&Sequence_14",
+        "strReviewPath&Sequence_14",
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17",
+        "intCounter&Sequence_17",
+        "strReviewPath&Sequence_17",
+        "strLogNote&Sequence_31"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_dateCaseStartTime",
+        "in_strWorkLogFilepath",
+        "in_SystemException",
+        "io_intConSysEx",
+        "io_RetryNumber",
+        "io_TransactionNumber"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
