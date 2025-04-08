@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,2351.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,3668</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Read_stock_table_44__644_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,7 +114,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Stock tables of EXD44 and EXD644 look functionally identical, but the spacing is subtly different enough that they require slightly different Regex patterns." DisplayName="Read stock table 644" sap:VirtualizedContainerService.HintSize="648,3626" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Stock tables of EXD44 and EXD644 look functionally identical, but the spacing is subtly different enough that they require slightly different Regex patterns." DisplayName="Read stock table 644" sap:VirtualizedContainerService.HintSize="648,3602.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strBirds" />
       <Variable x:TypeArguments="s:String[]" Name="arrBirdLines" />
@@ -136,8 +136,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadPDFText DisplayName="TESTING - DELETE THIS" FileName="C:\Users\rm000121\OneDrive - Defra\UiPath\APHA-Outbreak-Data-Recording\Test data\EXD644\test table 3.pdf" sap:VirtualizedContainerService.HintSize="586,83.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[in_strDocText]" />
-    <Assign DisplayName="Scrape stock table species" sap:VirtualizedContainerService.HintSize="586,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Scrape stock table species" sap:VirtualizedContainerService.HintSize="586,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strBirds]</OutArgument>
       </Assign.To>
@@ -160,7 +159,7 @@
         <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6" />
       </If.Else>
     </If>
-    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Set up 5 empty rows. We want to maintain 5 available rows throughout this workflow so that the user can correct the table later and add any missed data if needed." DataTable="[out_dtStockTable]" DisplayName="Build stock table" sap:VirtualizedContainerService.HintSize="586,137.6" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Species&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Inspected_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Examined_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xD;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xD;&#xA;    &lt;Examined_x0020_Count /&gt;&#xD;&#xA;    &lt;Total /&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xD;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xD;&#xA;    &lt;Examined_x0020_Count /&gt;&#xD;&#xA;    &lt;Total /&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xD;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xD;&#xA;    &lt;Examined_x0020_Count /&gt;&#xD;&#xA;    &lt;Total /&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xD;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xD;&#xA;    &lt;Examined_x0020_Count /&gt;&#xD;&#xA;    &lt;Total /&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xD;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xD;&#xA;    &lt;Examined_x0020_Count /&gt;&#xD;&#xA;    &lt;Total /&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Set up 5 empty rows. We want to maintain 5 available rows throughout this workflow so that the user can correct the table later and add any missed data if needed." DataTable="[out_dtStockTable]" DisplayName="Build stock table" sap:VirtualizedContainerService.HintSize="586,137.6" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Species&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Inspected_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Examined_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xA;    &lt;Examined_x0020_Count /&gt;&#xA;    &lt;Total /&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xA;    &lt;Examined_x0020_Count /&gt;&#xA;    &lt;Total /&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xA;    &lt;Examined_x0020_Count /&gt;&#xA;    &lt;Total /&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xA;    &lt;Examined_x0020_Count /&gt;&#xA;    &lt;Total /&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Species&gt;(blank)&lt;/Species&gt;&#xA;    &lt;Inspected_x0020_Count /&gt;&#xA;    &lt;Examined_x0020_Count /&gt;&#xA;    &lt;Total /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -218,7 +217,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Assign DisplayName="Split species on line breaks" sap:VirtualizedContainerService.HintSize="586,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Split species on line breaks" sap:VirtualizedContainerService.HintSize="586,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[arrBirdLines]</OutArgument>
       </Assign.To>
@@ -226,13 +225,13 @@
         <InArgument x:TypeArguments="s:String[]">[Strings.Split(strBirds, Environment.NewLine)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[intLineCount]" DisplayName="For Each line" sap:VirtualizedContainerService.HintSize="586,823.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrBirdLines]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[intLineCount]" DisplayName="For Each line" sap:VirtualizedContainerService.HintSize="586,925.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrBirdLines]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="line" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,686" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,737.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strLineTrimmed" />
               <Variable x:TypeArguments="s:String[]" Name="arrBirdParts" />
@@ -264,7 +263,7 @@
                 <InArgument x:TypeArguments="s:String[]">[Regex.Split(strLineTrimmed,"\s{3,20}")]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[intPartCount]" DisplayName="For Each part" sap:VirtualizedContainerService.HintSize="510,308" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[arrBirdParts]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[intPartCount]" DisplayName="For Each part" sap:VirtualizedContainerService.HintSize="510,359.2" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[arrBirdParts]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
@@ -292,7 +291,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <Assign sap2010:Annotation.AnnotationText="Used for iterating through only relevant rows later - extra blank rows are left alone." DisplayName="Count non-empty rows" sap:VirtualizedContainerService.HintSize="586,127.2" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <Assign sap2010:Annotation.AnnotationText="Used for iterating through only relevant rows later - extra blank rows are left alone." DisplayName="Count non-empty rows" sap:VirtualizedContainerService.HintSize="586,126.4" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[intSpeciesCount]</OutArgument>
       </Assign.To>
@@ -399,7 +398,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="Max iterations property is set to number of populated rows (i.e. intSpeciesCount)" CurrentIndex="[intCount]" DisplayName="Update all populated rows" sap:VirtualizedContainerService.HintSize="586,436.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2" MaxIterations="[intSpeciesCount]">
+    <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="Max iterations property is set to number of populated rows (i.e. intSpeciesCount)" Condition="True" CurrentIndex="[intCount]" DisplayName="Update all populated rows" sap:VirtualizedContainerService.HintSize="586,436.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2" MaxIterations="[intSpeciesCount]">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="521.6,268.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
@@ -439,9 +438,6 @@
           </ui:MultipleAssign>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <Literal x:TypeArguments="x:Boolean" Value="True" />
-      </ui:InterruptibleWhile.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

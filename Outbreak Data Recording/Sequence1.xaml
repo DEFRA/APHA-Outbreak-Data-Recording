@@ -1,0 +1,160 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence1" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410,1184" sap2010:WorkflowViewState.IdRef="Sequence1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence1" sap:VirtualizedContainerService.HintSize="546,1118.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Welcome to NDOMS" sap:VirtualizedContainerService.HintSize="484,1007.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="72f3261f-9db7-4d0a-bf25-01fcb5e120e8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,789.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strHTML" />
+              <Variable x:TypeArguments="x:String" Name="strText" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NInjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Visit Date'" sap:VirtualizedContainerService.HintSize="388,252" sap2010:WorkflowViewState.IdRef="NInjectJsScript_1" InputParameter="2021-05-15" ScopeIdentifier="72f3261f-9db7-4d0a-bf25-01fcb5e120e8" ScriptCode="[&quot;function(e,in_date){&#xD;&#xA;document.getElementById(&quot;&quot;visitdate&quot;&quot;).value = in_date;&#xD;&#xA;}&quot;]" Version="V3">
+              <uix:NInjectJsScript.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" CVScreenId="4a69bbc3-9eb3-4683-8101-12462f12d62d" CvTextArea="292, 907, 200, 35" CvTextArgument="11/08/2022" CvType="Text" DesignTimeRectangle="266, 881, 366, 90" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'2022-08-11'" FullSelectorArgument="&lt;webctrl id='visitdate' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='visitdate' tag='INPUT' type='date' class='border-0 text-defra-warm-grey-900 block rounded-md py-1.5 shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 ring-1 ring-defra-warm-grey-300 sm:text-sm sm:leading-6' aaname='Visit Date' /&gt;" Guid="6f7fb2ea-b390-4b3c-9177-bb85652ce4e8" InformativeScreenshot="c6fd334acae905e8346934d08bc305b4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="4a69bbc3-9eb3-4683-8101-12462f12d62d" CvTextArea="262, 822, 680, 32" CvTextArgument="Visit Date Visit" CvType="Text" DesignTimeRectangle="266, 811, 640, 60" ElementType="Text" FriendlyName="'Visit Date'" FullSelectorArgument="&lt;webctrl aaname='Visit Date' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Visit Date' tag='LABEL' type='' class='leading-6 text-defra-warm-grey-950 block w-64 text-sm font-semibold' check:innerText='Visit Date' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NInjectJsScript.Target>
+            </uix:NInjectJsScript>
+            <uix:NInjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Visit Time'" sap:VirtualizedContainerService.HintSize="388,252" sap2010:WorkflowViewState.IdRef="NInjectJsScript_2" InputParameter="05:00" ScopeIdentifier="72f3261f-9db7-4d0a-bf25-01fcb5e120e8" ScriptCode="[&quot;function(e,in_time){&#xA;document.getElementById(&quot;&quot;visittime&quot;&quot;).value = in_time;&#xA;}&quot;]" Version="V3">
+              <uix:NInjectJsScript.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" CVScreenId="ad4a0099-7e38-478c-bbeb-55992fb1d80d" CvTextArea="895, 907, 100, 32" CvTextArgument="01:00" CvType="Text" DesignTimeRectangle="866, 881, 234, 90" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'01:00'" FullSelectorArgument="&lt;webctrl id='visittime' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='visittime' tag='INPUT' type='time' class='border-0 text-defra-warm-grey-900 block rounded-md py-1.5 shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 ring-1 ring-defra-warm-grey-300 sm:text-sm sm:leading-6' aaname='Visit Time' /&gt;" Guid="8fb4204e-a5e0-43d9-a74e-04aa81200018" InformativeScreenshot="16e303ebddc614d97321c17ba1719f36.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="ad4a0099-7e38-478c-bbeb-55992fb1d80d" CvTextArea="862, 822, 172, 32" CvTextArgument="Visit Time" CvType="Text" DesignTimeRectangle="866, 811, 640, 60" ElementType="Text" FriendlyName="'Visit Time'" FullSelectorArgument="&lt;webctrl aaname='Visit Time' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Visit Time' tag='LABEL' type='' class='leading-6 text-defra-warm-grey-950 block w-64 text-sm font-semibold' check:innerText='Visit Time' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NInjectJsScript.Target>
+            </uix:NInjectJsScript>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_1" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-16, -16, 3872, 2312" BrowserType="Edge" IconBase64="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" InformativeScreenshot="9e91b80986daf29d883cedbe949705d2.jpg" Selector="&lt;html app='msedge.exe' title='Welcome to NDOMS' /&gt;" Title="Welcome to NDOMS" Url="https://t1ndoms.app.defra.gov.uk/*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
