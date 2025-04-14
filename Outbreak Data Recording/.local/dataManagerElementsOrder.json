@@ -76,13 +76,19 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dtStockForm&Flowchart_1",
-        "dtStockNDOMS&Sequence_28",
+        "strIssueReason&Sequence_36",
+        "strDisease&Sequence_36",
+        "strStockNDOMSUnprocessed&Sequence_33",
+        "strStockFormUnprocessed&Sequence_33",
+        "dtStockNDOMSUnprocessed&Flowchart_1",
         "g_arrCaseID&Sequence_91",
         "g_Config&Sequence_91",
         "g_swProcessingTimer&Sequence_91",
         "g_intExitPoint&Sequence_91",
         "g_TransactionItem&Sequence_91",
+        "dtStockFormUnprocessed&Flowchart_1",
+        "dtStockNDOMS&Flowchart_1",
+        "dtStockForm&Flowchart_1",
         "dtFormValues&Sequence_8",
         "boolDateTimeParsed&Flowchart_1",
         "datetimeVisit&Sequence_22",
@@ -109,23 +115,18 @@
       "Path": "Process/Process Subflows/Read stock table 195, 196, 197.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&Sequence_85",
-        "g_Config&Sequence_85",
-        "g_swProcessingTimer&Sequence_85",
-        "g_intExitPoint&Sequence_85",
-        "g_TransactionItem&Sequence_85",
+        "g_arrCaseID&Sequence_2",
+        "g_Config&Sequence_2",
+        "g_swProcessingTimer&Sequence_2",
+        "g_intExitPoint&Sequence_2",
+        "g_TransactionItem&Sequence_2",
         "intCount&Sequence_1",
         "strType&Sequence_1",
         "strBird&Sequence_1",
         "strNumber&Sequence_1",
         "arrCols&Sequence_2",
         "arrRows&Sequence_1",
-        "strStockTable&Sequence_1",
-        "g_arrCaseID&Sequence_83",
-        "g_Config&Sequence_83",
-        "g_swProcessingTimer&Sequence_83",
-        "g_intExitPoint&Sequence_83",
-        "g_TransactionItem&Sequence_83"
+        "strStockTable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "out_dtStockTable",
@@ -171,11 +172,11 @@
       "Path": "Process/Process Subflows/Read stock table 44.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&Sequence_89",
-        "g_Config&Sequence_89",
-        "g_swProcessingTimer&Sequence_89",
-        "g_intExitPoint&Sequence_89",
-        "g_TransactionItem&Sequence_89",
+        "g_arrCaseID&Sequence_2",
+        "g_Config&Sequence_2",
+        "g_swProcessingTimer&Sequence_2",
+        "g_intExitPoint&Sequence_2",
+        "g_TransactionItem&Sequence_2",
         "strBirds&Sequence_1",
         "arrBirdLines&Sequence_1",
         "dictStockTable&Sequence_1",
@@ -315,11 +316,11 @@
       "Path": "Process/Process Subflows/Check Birds.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "g_arrCaseID&Sequence_89",
-        "g_Config&Sequence_89",
-        "g_swProcessingTimer&Sequence_89",
-        "g_intExitPoint&Sequence_89",
-        "g_TransactionItem&Sequence_89",
+        "g_arrCaseID&Sequence_91",
+        "g_Config&Sequence_91",
+        "g_swProcessingTimer&Sequence_91",
+        "g_intExitPoint&Sequence_91",
+        "g_TransactionItem&Sequence_91",
         "rowBird&Flowchart_1",
         "boolTermFound&Flowchart_1",
         "listTerms&Sequence_9"
@@ -332,11 +333,31 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Compare form stock with NDOMS.xaml",
+      "Path": "Process/Process Subflows/Compare form stock with NDOMS.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&Sequence_91",
+        "g_Config&Sequence_91",
+        "g_swProcessingTimer&Sequence_91",
+        "g_intExitPoint&Sequence_91",
+        "g_TransactionItem&Sequence_91",
+        "strSpecies&Sequence_8",
         "strSpecies&Sequence_1",
-        "rowStockNDOMS&Flowchart_1",
+        "rowStockNDOMS&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strFormType",
+        "io_rowStockForm",
+        "in_dtStockNDOMS"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process Subflows/Add New Form.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strIssueReason&Sequence_2",
         "g_arrCaseID&Sequence_91",
         "g_Config&Sequence_91",
         "g_swProcessingTimer&Sequence_91",
@@ -344,9 +365,24 @@
         "g_TransactionItem&Sequence_91"
       ],
       "ArgumentsSectionElementsOrder": [
-        "io_rowStockForm",
-        "in_dtStockNDOMS"
+        "in_strFormType",
+        "in_strDisease",
+        "in_dictFormValues"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "g_arrCaseID&Sequence_91",
+        "g_Config&Sequence_91",
+        "g_swProcessingTimer&Sequence_91",
+        "g_intExitPoint&Sequence_91",
+        "g_TransactionItem&Sequence_91"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
