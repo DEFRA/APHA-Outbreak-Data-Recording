@@ -76,6 +76,7 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strSpecies&Sequence_29",
         "strIssueReason&Sequence_36",
         "strDisease&Sequence_36",
         "strStockNDOMSUnprocessed&Sequence_33",
@@ -107,7 +108,9 @@
         "strDocText&Flowchart_1",
         "strFormType&Flowchart_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtSpecies"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -237,6 +240,11 @@
       "Path": "Process/Process Subflows/tc01 Navigate to NDOMS visit details.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&Sequence_2",
+        "g_Config&Sequence_2",
+        "g_swProcessingTimer&Sequence_2",
+        "g_intExitPoint&Sequence_2",
+        "g_TransactionItem&Sequence_2",
         "g_arrCaseID&Sequence_89",
         "g_Config&Sequence_89",
         "g_swProcessingTimer&Sequence_89",
@@ -302,6 +310,11 @@
       "Path": "Process/Process Subflows/tc01 Edit NDOMS vist details.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "g_arrCaseID&Sequence_2",
+        "g_Config&Sequence_2",
+        "g_swProcessingTimer&Sequence_2",
+        "g_intExitPoint&Sequence_2",
+        "g_TransactionItem&Sequence_2",
         "g_arrCaseID&Sequence_89",
         "g_Config&Sequence_89",
         "g_swProcessingTimer&Sequence_89",
@@ -313,9 +326,11 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Process/Process Subflows/Check Birds.xaml",
+      "Path": "Process/Process Subflows/Check Species.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strButtonSelected&Flowchart_1",
+        "boolDismissed&Flowchart_1",
         "g_arrCaseID&Sequence_91",
         "g_Config&Sequence_91",
         "g_swProcessingTimer&Sequence_91",
@@ -326,8 +341,8 @@
         "listTerms&Sequence_9"
       ],
       "ArgumentsSectionElementsOrder": [
-        "io_strBird",
-        "in_dtBirds"
+        "io_strSpecies",
+        "in_dtSpecies"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -376,6 +391,8 @@
       "Path": "Sequence.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "matchesOptions&Sequence_2",
+        "strInnerHTML&Sequence_2",
         "g_arrCaseID&Sequence_91",
         "g_Config&Sequence_91",
         "g_swProcessingTimer&Sequence_91",
@@ -383,6 +400,50 @@
         "g_TransactionItem&Sequence_91"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Update Sharepoint Masterlist.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intIndex&Sequence_10",
+        "boolUpdateSuccess&Sequence_1",
+        "test&Sequence_3",
+        "sstrPassword&Sequence_1",
+        "strUsername&Sequence_1",
+        "dtListItems&Sequence_3",
+        "spList&Sequence_3",
+        "credSPOL&Sequence_1",
+        "g_arrCaseID&Sequence_2",
+        "g_Config&Sequence_2",
+        "g_swProcessingTimer&Sequence_2",
+        "g_intExitPoint&Sequence_2",
+        "g_TransactionItem&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtStockForm",
+        "in_dictFormValues"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Find Sharepoint Field Index.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "fieldCurrent&Sequence_1",
+        "g_arrCaseID&Sequence_2",
+        "g_Config&Sequence_2",
+        "g_swProcessingTimer&Sequence_2",
+        "g_intExitPoint&Sequence_2",
+        "g_TransactionItem&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_intIndex",
+        "in_spListItem",
+        "in_strFieldName"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

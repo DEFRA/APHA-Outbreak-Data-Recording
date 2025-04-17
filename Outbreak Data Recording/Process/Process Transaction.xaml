@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,2794.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,3089.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -146,7 +146,7 @@
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="698,2729.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="704,3046.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strDocText" />
       <Variable x:TypeArguments="x:String" Name="strFormType" />
@@ -165,13 +165,13 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75.2</av:Size>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        <x:Double x:Key="Height">2614.9999999999995</x:Double>
-        <x:Double x:Key="Width">664</x:Double>
+        <x:Double x:Key="Height">2932.2</x:Double>
+        <x:Double x:Key="Width">670.0000000000001</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,97.7</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID27</x:Reference>
+      <x:Reference>__ReferenceID29</x:Reference>
     </Flowchart.StartNode>
     <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID11" DisplayName="Form type" Expression="[strFormType]" sap:VirtualizedContainerService.HintSize="70,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
       <FlowSwitch.Default>
@@ -344,11 +344,6 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <InvokeMethod DisplayName="Stop timer - PP1" sap:VirtualizedContainerService.HintSize="606,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Stop">
-                <InvokeMethod.TargetObject>
-                  <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
-                </InvokeMethod.TargetObject>
-              </InvokeMethod>
               <ui:BuildDataTable DataTable="[dtFormValues]" DisplayName="Build Data Table - form values" sap:VirtualizedContainerService.HintSize="606,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;key&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
               <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each formValue" sap:VirtualizedContainerService.HintSize="606,466.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dictFormValues]">
                 <ui:ForEach.Body>
@@ -367,13 +362,18 @@
                   </ActivityAction>
                 </ui:ForEach.Body>
               </ui:ForEach>
-              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open PDF in browser" sap:VirtualizedContainerService.HintSize="606,1792.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="01f77a08-b66b-48b6-8ae0-099f43b8c257" Version="V2">
+              <InvokeMethod DisplayName="Stop timer - PP1" sap:VirtualizedContainerService.HintSize="606,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Stop">
+                <InvokeMethod.TargetObject>
+                  <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
+                </InvokeMethod.TargetObject>
+              </InvokeMethod>
+              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open PDF in browser" sap:VirtualizedContainerService.HintSize="606,1790.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="01f77a08-b66b-48b6-8ae0-099f43b8c257" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Display pause points for data correction" sap:VirtualizedContainerService.HintSize="572,1574.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <Sequence DisplayName="Display pause points for data correction" sap:VirtualizedContainerService.HintSize="572,1572.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -619,7 +619,7 @@
                                                     <av:PointCollection x:Key="ConnectorLocation">230,1808.6 230,1828.6</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtStockForm]" DisplayName="For Each Stock Row" sap:VirtualizedContainerService.HintSize="510,789.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtStockForm]" DisplayName="For Each Stock Row" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                                   <ui:ForEachRow.Body>
                                                     <ActivityAction x:TypeArguments="sd:DataRow">
                                                       <ActivityAction.Argument>
@@ -644,12 +644,8 @@
                                                         </Assign>
                                                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Process Subflows\Check Birds.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Process\Process Subflows\Check Species.xaml">
                                                           <ui:InvokeWorkflowFile.Arguments>
-                                                            <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSpecies">
-                                                              <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtSpecies" />
-                                                            </InArgument>
-                                                            <InOutArgument x:TypeArguments="x:String" x:Key="io_strSpecies">
-                                                              <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strSpecies" />
-                                                            </InOutArgument>
+                                                            <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSpecies">[in_dtSpecies]</InArgument>
+                                                            <InOutArgument x:TypeArguments="x:String" x:Key="io_strSpecies">[strSpecies]</InOutArgument>
                                                           </ui:InvokeWorkflowFile.Arguments>
                                                         </ui:InvokeWorkflowFile>
                                                         <Assign DisplayName="Update species after checking" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_8">
@@ -837,21 +833,30 @@
                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                 </uix:NApplicationCard>
                                                                 <FlowStep.Next>
-                                                                  <FlowStep x:Name="__ReferenceID24">
+                                                                  <FlowStep x:Name="__ReferenceID24" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <av:Point x:Key="ShapeLocation">230,2244.9999999999995</av:Point>
-                                                                        <av:Size x:Key="ShapeSize">200,53.2</av:Size>
-                                                                        <av:PointCollection x:Key="ConnectorLocation">330,2298.1999999999994 330,2318.1999999999994</av:PointCollection>
+                                                                        <av:Size x:Key="ShapeSize">200,180</av:Size>
+                                                                        <av:PointCollection x:Key="ConnectorLocation">330,2424.9999999999995 330,2438.1999999999994</av:PointCollection>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add New Form" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add New Form.xaml">
+                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Disease is currently fixed for each form:&#xD;&#xA;EXD44 = Bluetongue&#xD;&#xA;EXD644/195/196/197 = Avian Influenza&#xD;&#xA;&#xD;&#xA;This may change in future." DisplayName="Add New Form" sap:VirtualizedContainerService.HintSize="200,180" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add New Form.xaml">
                                                                       <ui:InvokeWorkflowFile.Arguments>
-                                                                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_dictFormValues">
+                                                                          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="dictFormValues" />
+                                                                        </InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_strDisease">
+                                                                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="if(strFormType=&quot;EXD44&quot;,&quot;Bluetongue&quot;,&quot;Avian Influenza&quot;)" />
+                                                                        </InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_strFormType">
+                                                                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strFormType" />
+                                                                        </InArgument>
                                                                       </ui:InvokeWorkflowFile.Arguments>
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                     </ui:InvokeWorkflowFile>
@@ -860,19 +865,19 @@
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                            <av:Point x:Key="ShapeLocation">289,2318.1999999999994</av:Point>
+                                                                            <av:Point x:Key="ShapeLocation">289,2438.1999999999994</av:Point>
                                                                             <av:Size x:Key="ShapeSize">82,87.2</av:Size>
-                                                                            <av:PointCollection x:Key="TrueConnector">289,2361.7999999999993 250,2361.7999999999993 250,2418.2</av:PointCollection>
-                                                                            <av:PointCollection x:Key="FalseConnector">371,2361.7999999999993 401.00000000000006,2361.7999999999993 401.00000000000006,2531.7999999999997 320,2531.7999999999997 320,2561.7999999999997</av:PointCollection>
+                                                                            <av:PointCollection x:Key="TrueConnector">289,2481.7999999999993 250,2481.7999999999993 250,2538.2</av:PointCollection>
+                                                                            <av:PointCollection x:Key="FalseConnector">371,2481.7999999999993 401.00000000000006,2481.7999999999993 401.00000000000006,2651.7999999999997 320,2651.7999999999997 320,2681.7999999999997</av:PointCollection>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <FlowDecision.True>
-                                                                          <FlowStep x:Name="__ReferenceID26">
+                                                                          <FlowStep x:Name="__ReferenceID26" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                <av:Point x:Key="ShapeLocation">150,2418.2</av:Point>
+                                                                                <av:Point x:Key="ShapeLocation">150,2538.2</av:Point>
                                                                                 <av:Size x:Key="ShapeSize">200,83.6</av:Size>
-                                                                                <av:PointCollection x:Key="ConnectorLocation">250,2501.7999999999997 250,2531.7999999999997 320,2531.7999999999997 320,2561.7999999999997</av:PointCollection>
+                                                                                <av:PointCollection x:Key="ConnectorLocation">250,2621.7999999999997 250,2651.7999999999997 320,2651.7999999999997 320,2681.7999999999997</av:PointCollection>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                             <Sequence DisplayName="Pause Point 5" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_36">
@@ -898,11 +903,12 @@
                                                                               </InvokeMethod>
                                                                             </Sequence>
                                                                             <FlowStep.Next>
-                                                                              <FlowStep x:Name="__ReferenceID0">
+                                                                              <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                    <av:Point x:Key="ShapeLocation">220,2561.7999999999997</av:Point>
+                                                                                    <av:Point x:Key="ShapeLocation">220,2681.7999999999997</av:Point>
                                                                                     <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                                                                                    <av:PointCollection x:Key="ConnectorLocation">320,2734.9999999999995 320,2754.9999999999995</av:PointCollection>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                 <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Submit form" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1c48ec2b-4036-4f07-a91c-851c8af5899c" Version="V2">
@@ -934,6 +940,84 @@
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                                 </uix:NApplicationCard>
+                                                                                <FlowStep.Next>
+                                                                                  <FlowDecision x:Name="__ReferenceID27" DisplayName="Contains EXD37?" sap:VirtualizedContainerService.HintSize="95.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                                                                                    <FlowDecision.Condition>
+                                                                                      <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Regex.Match(strDocText,&quot;EXD37&quot;).Success" />
+                                                                                    </FlowDecision.Condition>
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                        <av:Point x:Key="ShapeLocation">272.4,2754.9999999999995</av:Point>
+                                                                                        <av:Size x:Key="ShapeSize">95.2,87.2</av:Size>
+                                                                                        <av:PointCollection x:Key="TrueConnector">272.4,2798.5999999999995 250,2798.5999999999995 250,2848.6</av:PointCollection>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                    <FlowDecision.True>
+                                                                                      <FlowStep x:Name="__ReferenceID28" sap2010:WorkflowViewState.IdRef="FlowStep_4">
+                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                            <av:Point x:Key="ShapeLocation">150,2848.6</av:Point>
+                                                                                            <av:Size x:Key="ShapeSize">200,83.6</av:Size>
+                                                                                          </scg:Dictionary>
+                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                        <Sequence DisplayName="Manually input EXD37" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                            </scg:Dictionary>
+                                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Set up for adding EXD37 manually" sap:VirtualizedContainerService.HintSize="434,296" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;),UiPath.Core.UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="dc8b5c38-03d3-4ad6-b7a5-e4e12179a7cd" Version="V2">
+                                                                                            <uix:NApplicationCard.Body>
+                                                                                              <ActivityAction x:TypeArguments="x:Object">
+                                                                                                <ActivityAction.Argument>
+                                                                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                                                                </ActivityAction.Argument>
+                                                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add New Form'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dc8b5c38-03d3-4ad6-b7a5-e4e12179a7cd" Version="V3">
+                                                                                                  <uix:NClick.Target>
+                                                                                                    <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms" DesignTimeRectangle="3402, 931, 364, 90" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Add New Form'" FullSelectorArgument="&lt;webctrl visibleInnerText='Add New Form' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                         Add New Form                         ' tag='BUTTON' type='button' class='bg-defra-lime-green-200 text-defra-lime-green-950 inline-flex items-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:bg-defra-lime-green-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-lime-green-600' check:innerText='Add New Form' /&gt;" Guid="c63839ba-1bf8-4751-83d6-bdec684b5f4a" ImageBase64="" InformativeScreenshot="06e2320ed8a7a4671f7311d4cff9c793.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                                                                                  </uix:NClick.Target>
+                                                                                                </uix:NClick>
+                                                                                              </ActivityAction>
+                                                                                            </uix:NApplicationCard.Body>
+                                                                                            <uix:NApplicationCard.TargetApp>
+                                                                                              <uix:TargetApp Area="0, 0, 0, 0" />
+                                                                                            </uix:NApplicationCard.TargetApp>
+                                                                                          </uix:NApplicationCard>
+                                                                                          <InvokeMethod DisplayName="Stop timer - EXD37" sap:VirtualizedContainerService.HintSize="434,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_24" MethodName="Stop">
+                                                                                            <InvokeMethod.TargetObject>
+                                                                                              <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
+                                                                                            </InvokeMethod.TargetObject>
+                                                                                          </InvokeMethod>
+                                                                                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open PDF in browser - EXD37" sap:VirtualizedContainerService.HintSize="434,623.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" OpenMode="Always" ScopeGuid="01f77a08-b66b-48b6-8ae0-099f43b8c257" Version="V2">
+                                                                                            <uix:NApplicationCard.Body>
+                                                                                              <ActivityAction x:TypeArguments="x:Object">
+                                                                                                <ActivityAction.Argument>
+                                                                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                                                                </ActivityAction.Argument>
+                                                                                                <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Manually input EXD37 prompt" sap:VirtualizedContainerService.HintSize="334,405.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at EXD37 data entry" IN_PopupMessage="[&quot;&lt;h1&gt;Manually input EXD37 data&lt;/h1&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;An EXD37 form is attached to the current form. Because this is handwritten, manual data entry is required.&quot;+&#xD;&#xA;&quot;Please manually enter the relevant EXD37 data into NDOMS, then click 'Continue' on this pop-up.&lt;br&gt;&quot;+&#xD;&#xA;&quot;The robot has opened the PDF for your reference.&lt;/p&gt;&quot;]" IN_PopupTitle="EXD37 found" IN_WidthHeight="[{500,300}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_6">
+                                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                    </scg:Dictionary>
+                                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                                </d:Generic_PopUp>
+                                                                                              </ActivityAction>
+                                                                                            </uix:NApplicationCard.Body>
+                                                                                            <uix:NApplicationCard.TargetApp>
+                                                                                              <uix:TargetApp Area="0, 0, 0, 0" Selector="&lt;html app='msedge.exe' title='*.pdf' /&gt;" Title="*.pdf" Url="[&quot;file://&quot;+g_TransactionItem]" />
+                                                                                            </uix:NApplicationCard.TargetApp>
+                                                                                          </uix:NApplicationCard>
+                                                                                          <InvokeMethod DisplayName="Start timer - EXD37" sap:VirtualizedContainerService.HintSize="434,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_25" MethodName="Start">
+                                                                                            <InvokeMethod.TargetObject>
+                                                                                              <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
+                                                                                            </InvokeMethod.TargetObject>
+                                                                                          </InvokeMethod>
+                                                                                        </Sequence>
+                                                                                      </FlowStep>
+                                                                                    </FlowDecision.True>
+                                                                                  </FlowDecision>
+                                                                                </FlowStep.Next>
                                                                               </FlowStep>
                                                                             </FlowStep.Next>
                                                                           </FlowStep>
@@ -1641,7 +1725,7 @@
         <x:Reference>__ReferenceID11</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID27" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+    <FlowStep x:Name="__ReferenceID29" sap2010:WorkflowViewState.IdRef="FlowStep_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">139,97.7</av:Point>
@@ -1678,5 +1762,7 @@
     <x:Reference>__ReferenceID25</x:Reference>
     <x:Reference>__ReferenceID26</x:Reference>
     <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID27</x:Reference>
+    <x:Reference>__ReferenceID28</x:Reference>
   </Flowchart>
 </Activity>
