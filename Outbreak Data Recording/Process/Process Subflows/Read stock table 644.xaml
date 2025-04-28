@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,3668</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,3539.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Read_stock_table_44__644_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,7 +114,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Stock tables of EXD44 and EXD644 look functionally identical, but the spacing is subtly different enough that they require slightly different Regex patterns." DisplayName="Read stock table 644" sap:VirtualizedContainerService.HintSize="648,3602.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Stock tables of EXD44 and EXD644 look functionally identical, but the spacing is subtly different enough that they require slightly different Regex patterns." DisplayName="Read stock table 644" sap:VirtualizedContainerService.HintSize="648,3474" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strBirds" />
       <Variable x:TypeArguments="s:String[]" Name="arrBirdLines" />
@@ -136,7 +136,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Scrape stock table species" sap:VirtualizedContainerService.HintSize="586,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Scrape stock table species" sap:VirtualizedContainerService.HintSize="586,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strBirds]</OutArgument>
       </Assign.To>
@@ -217,7 +217,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Assign DisplayName="Split species on line breaks" sap:VirtualizedContainerService.HintSize="586,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Split species on line breaks" sap:VirtualizedContainerService.HintSize="586,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[arrBirdLines]</OutArgument>
       </Assign.To>
@@ -291,7 +291,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <Assign sap2010:Annotation.AnnotationText="Used for iterating through only relevant rows later - extra blank rows are left alone." DisplayName="Count non-empty rows" sap:VirtualizedContainerService.HintSize="586,126.4" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <Assign sap2010:Annotation.AnnotationText="Used for iterating through only relevant rows later - extra blank rows are left alone." DisplayName="Count non-empty rows" sap:VirtualizedContainerService.HintSize="586,127.2" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[intSpeciesCount]</OutArgument>
       </Assign.To>
@@ -444,6 +444,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleWhile>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="586,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_3" />
   </Sequence>
 </Activity>

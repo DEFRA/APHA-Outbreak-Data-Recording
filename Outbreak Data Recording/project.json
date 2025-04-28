@@ -6,7 +6,7 @@
   "dependencies": {
     "DRACOE.Logging.64": "[1.0.9]",
     "DRACOE.PopUps.64": "[1.0.8]",
-    "UiPath.Excel.Activities": "[2.22.3]",
+    "UiPath.Excel.Activities": "[3.0.1]",
     "UiPath.IntelligentOCR.Activities": "[6.22.1]",
     "UiPath.Mail.Activities": "[1.23.11]",
     "UiPath.MicrosoftOffice365.Activities": "[3.1.1-preview]",
@@ -64,6 +64,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Edit NDOMS vist details.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0373ebc7-f6a2-4267-9e9d-c87437f23aa2",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Add New Form.xaml"
       }
     ],
     "modernBehavior": true,

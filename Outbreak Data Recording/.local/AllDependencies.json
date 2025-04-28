@@ -1816,19 +1816,6 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Web.WebView2/1.0.1264.42": {
         "type": "package",
         "compile": {
@@ -2188,11 +2175,11 @@
           }
         }
       },
-      "NPOI/2.5.5": {
+      "NPOI/2.5.6": {
         "type": "package",
         "dependencies": {
           "Portable.BouncyCastle": "1.8.9",
-          "SharpZipLib": "1.3.2",
+          "SharpZipLib": "1.3.3",
           "System.Configuration.ConfigurationManager": "4.5.0",
           "System.Drawing.Common": "4.5.0"
         },
@@ -2550,15 +2537,15 @@
           }
         }
       },
-      "SharpZipLib/1.3.3": {
+      "SharpZipLib/1.4.2": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll": {
+          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -4853,7 +4840,7 @@
           }
         }
       },
-      "UiPath.CodedWorkflows/24.10.0": {
+      "UiPath.CodedWorkflows/24.10.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
@@ -5326,30 +5313,44 @@
           "lib/net6.0/vcruntime140_1.dll": {}
         }
       },
-      "UiPath.Excel.Activities/2.22.3": {
+      "UiPath.Excel.Activities/3.0.1": {
         "type": "package",
         "dependencies": {
-          "ClosedXML": "0.95.4",
+          "ClosedXML": "0.100.3",
           "CsvHelper": "15.0.5",
-          "DocumentFormat.OpenXml": "2.12.1",
-          "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
-          "NPOI": "2.5.5",
-          "SharpZipLib": "1.3.3",
+          "DocumentFormat.OpenXml": "2.16.0",
+          "NPOI": "2.5.6",
+          "SharpZipLib": "1.4.2",
+          "System.Activities.ViewModels": "1.0.0-20250124.2",
+          "System.Drawing.Common": "6.0.0",
+          "System.Formats.Asn1": "6.0.1",
+          "System.IO.Packaging": "6.0.1",
+          "System.Net.Http": "4.3.4",
           "System.Text.Encoding.CodePages": "6.0.0",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "System.Text.RegularExpressions": "4.3.1",
+          "UiPath.CodedWorkflows": "24.10.1",
+          "UiPath.OfficeLibs": "1.0.0",
+          "UiPath.Platform": "24.10.3",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
-          "lib/net6.0-windows7.0/_._": {}
+          "lib/net6.0-windows7.0/_._": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll": {},
-          "lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll": {},
-          "lib/net6.0-windows7.0/Office.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Excel.Activities.API.dll": {
+            "related": ".xml"
+          },
           "lib/net6.0-windows7.0/UiPath.Excel.Activities.Design.dll": {},
           "lib/net6.0-windows7.0/UiPath.Excel.Activities.Package.dll": {},
-          "lib/net6.0-windows7.0/UiPath.Excel.Activities.dll": {},
-          "lib/net6.0-windows7.0/UiPath.Excel.dll": {}
+          "lib/net6.0-windows7.0/UiPath.Excel.Activities.ViewModels.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Excel.Activities.dll": {
+            "related": ".API.xml"
+          },
+          "lib/net6.0-windows7.0/UiPath.Excel.dll": {
+            "related": ".Activities.API.xml"
+          }
         },
         "resource": {
           "lib/net6.0-windows7.0/de/UiPath.Excel.Activities.Design.resources.dll": {
@@ -9987,19 +9988,6 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Web.WebView2/1.0.1264.42": {
         "type": "package",
         "compile": {
@@ -10333,11 +10321,11 @@
           }
         }
       },
-      "NPOI/2.5.5": {
+      "NPOI/2.5.6": {
         "type": "package",
         "dependencies": {
           "Portable.BouncyCastle": "1.8.9",
-          "SharpZipLib": "1.3.2",
+          "SharpZipLib": "1.3.3",
           "System.Configuration.ConfigurationManager": "4.5.0",
           "System.Drawing.Common": "4.5.0"
         },
@@ -10895,15 +10883,15 @@
           "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
-      "SharpZipLib/1.3.3": {
+      "SharpZipLib/1.4.2": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll": {
+          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -13010,7 +12998,7 @@
           }
         }
       },
-      "UiPath.CodedWorkflows/24.10.0": {
+      "UiPath.CodedWorkflows/24.10.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
@@ -13483,30 +13471,44 @@
           "lib/net6.0/vcruntime140_1.dll": {}
         }
       },
-      "UiPath.Excel.Activities/2.22.3": {
+      "UiPath.Excel.Activities/3.0.1": {
         "type": "package",
         "dependencies": {
-          "ClosedXML": "0.95.4",
+          "ClosedXML": "0.100.3",
           "CsvHelper": "15.0.5",
-          "DocumentFormat.OpenXml": "2.12.1",
-          "Microsoft.VisualStudio.OLE.Interop": "16.7.30328.74",
-          "NPOI": "2.5.5",
-          "SharpZipLib": "1.3.3",
+          "DocumentFormat.OpenXml": "2.16.0",
+          "NPOI": "2.5.6",
+          "SharpZipLib": "1.4.2",
+          "System.Activities.ViewModels": "1.0.0-20250124.2",
+          "System.Drawing.Common": "6.0.0",
+          "System.Formats.Asn1": "6.0.1",
+          "System.IO.Packaging": "6.0.1",
+          "System.Net.Http": "4.3.4",
           "System.Text.Encoding.CodePages": "6.0.0",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "System.Text.RegularExpressions": "4.3.1",
+          "UiPath.CodedWorkflows": "24.10.1",
+          "UiPath.OfficeLibs": "1.0.0",
+          "UiPath.Platform": "24.10.3",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
-          "lib/net6.0-windows7.0/_._": {}
+          "lib/net6.0-windows7.0/_._": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll": {},
-          "lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll": {},
-          "lib/net6.0-windows7.0/Office.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Excel.Activities.API.dll": {
+            "related": ".xml"
+          },
           "lib/net6.0-windows7.0/UiPath.Excel.Activities.Design.dll": {},
           "lib/net6.0-windows7.0/UiPath.Excel.Activities.Package.dll": {},
-          "lib/net6.0-windows7.0/UiPath.Excel.Activities.dll": {},
-          "lib/net6.0-windows7.0/UiPath.Excel.dll": {}
+          "lib/net6.0-windows7.0/UiPath.Excel.Activities.ViewModels.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Excel.Activities.dll": {
+            "related": ".API.xml"
+          },
+          "lib/net6.0-windows7.0/UiPath.Excel.dll": {
+            "related": ".Activities.API.xml"
+          }
         },
         "resource": {
           "lib/net6.0-windows7.0/de/UiPath.Excel.Activities.Design.resources.dll": {
@@ -19118,23 +19120,6 @@
         "version.txt"
       ]
     },
-    "Microsoft.VisualStudio.OLE.Interop/16.7.30328.74": {
-      "sha512": "82RWNPPaQRfFlEtkRQZgSo16a6WpHgL2gfeXbo/ISFHHJWNg/vtyKQrAW7iAsDNp5f3uiZP+9pQWxShAFrlbMw==",
-      "type": "package",
-      "path": "microsoft.visualstudio.ole.interop/16.7.30328.74",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "PackageIcon.png",
-        "lib/net45/Microsoft.VisualStudio.OLE.Interop.dll",
-        "lib/net45/Microsoft.VisualStudio.OLE.Interop.xml",
-        "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.dll",
-        "lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.xml",
-        "microsoft.visualstudio.ole.interop.16.7.30328.74.nupkg.sha512",
-        "microsoft.visualstudio.ole.interop.nuspec"
-      ]
-    },
     "Microsoft.Web.WebView2/1.0.1264.42": {
       "sha512": "7OBUTkzQ5VI/3gb0ufi5U4zjuCowAJwQg2li0zXXzqkM+S1kmOlivTy1R4jAW+gY5Vyg510M+qMAESCQUjrfgA==",
       "type": "package",
@@ -19645,10 +19630,10 @@
         "nlog.nuspec"
       ]
     },
-    "NPOI/2.5.5": {
-      "sha512": "xTCJOXdcBWV9GUAVRJTC73L5bU3Ahgtuk13U/rOix8Gi05XWf9E4K+vGx63JZt35WoroXq+hM0RZ+aad2y8Ceg==",
+    "NPOI/2.5.6": {
+      "sha512": "xQfr09LZN3fr4rjSuV3li+WJUo2LiSg00IUtnomzrKO51zhhavyIgvbZ1f8c8zwHXvRbFc1JB4PNZpxqyxizWw==",
       "type": "package",
-      "path": "npoi/2.5.5",
+      "path": "npoi/2.5.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -19657,6 +19642,7 @@
         "lib/net45/NPOI.OOXML.XML",
         "lib/net45/NPOI.OOXML.dll",
         "lib/net45/NPOI.OOXML.pdb",
+        "lib/net45/NPOI.OpenXml4Net.XML",
         "lib/net45/NPOI.OpenXml4Net.dll",
         "lib/net45/NPOI.OpenXml4Net.pdb",
         "lib/net45/NPOI.OpenXmlFormats.dll",
@@ -19688,7 +19674,7 @@
         "logo/240_240.png",
         "logo/32_32.jpg",
         "logo/60_60.jpg",
-        "npoi.2.5.5.nupkg.sha512",
+        "npoi.2.5.6.nupkg.sha512",
         "npoi.nuspec"
       ]
     },
@@ -20764,24 +20750,24 @@
         "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
-    "SharpZipLib/1.3.3": {
-      "sha512": "N8+hwhsKZm25tDJfWpBSW7EGhH/R7EMuiX+KJ4C4u+fCWVc1lJ5zg1u3S1RPPVYgTqhx/C3hxrqUpi6RwK5+Tg==",
+    "SharpZipLib/1.4.2": {
+      "sha512": "yjj+3zgz8zgXpiiC3ZdF/iyTBbz2fFvMxZFEBPUcwZjIvXOf37Ylm+K58hqMfIBt5JgU/Z2uoUS67JmTLe973A==",
       "type": "package",
-      "path": "sharpziplib/1.3.3",
+      "path": "sharpziplib/1.4.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "images/sharpziplib-nuget-256x256.png",
-        "lib/net45/ICSharpCode.SharpZipLib.dll",
-        "lib/net45/ICSharpCode.SharpZipLib.pdb",
-        "lib/net45/ICSharpCode.SharpZipLib.xml",
+        "lib/net6.0/ICSharpCode.SharpZipLib.dll",
+        "lib/net6.0/ICSharpCode.SharpZipLib.pdb",
+        "lib/net6.0/ICSharpCode.SharpZipLib.xml",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.pdb",
         "lib/netstandard2.0/ICSharpCode.SharpZipLib.xml",
         "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll",
         "lib/netstandard2.1/ICSharpCode.SharpZipLib.pdb",
         "lib/netstandard2.1/ICSharpCode.SharpZipLib.xml",
-        "sharpziplib.1.3.3.nupkg.sha512",
+        "sharpziplib.1.4.2.nupkg.sha512",
         "sharpziplib.nuspec"
       ]
     },
@@ -27514,10 +27500,10 @@
         "uipath.cefsharpbundle.netcore.nuspec"
       ]
     },
-    "UiPath.CodedWorkflows/24.10.0": {
-      "sha512": "Ol5pmU38rruyLgjIe+zSgeG5GS07eh45K/1f93Zz/Cvx1rIN0jgo7Cz/kX0BiD94aLXIZkiHJf9VeITrwnNtWg==",
+    "UiPath.CodedWorkflows/24.10.1": {
+      "sha512": "durylwdV+2QzBD22xE4eG7xck3WO/cO3hdoL98Da9MKdptMqCq3zpdVXTATIliP9UIlEG4/z6kxH8/lFgdMhPA==",
       "type": "package",
-      "path": "uipath.codedworkflows/24.10.0",
+      "path": "uipath.codedworkflows/24.10.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -27549,7 +27535,7 @@
         "lib/net6.0/tr/UiPath.CodedWorkflows.resources.dll",
         "lib/net6.0/zh-CN/UiPath.CodedWorkflows.resources.dll",
         "lib/net6.0/zh-TW/UiPath.CodedWorkflows.resources.dll",
-        "uipath.codedworkflows.24.10.0.nupkg.sha512",
+        "uipath.codedworkflows.24.10.1.nupkg.sha512",
         "uipath.codedworkflows.nuspec"
       ]
     },
@@ -27900,61 +27886,18 @@
         "uipath.emgucvbundle.nuspec"
       ]
     },
-    "UiPath.Excel.Activities/2.22.3": {
-      "sha512": "LBAn2iRu7QrjGlL0gO0BV3tZTuJeTcgyZZ8efa17VMgrQC21gUewRP+2DUOxmMGiZqvf4XmD1BDFpYZIFPUKAA==",
+    "UiPath.Excel.Activities/3.0.1": {
+      "sha512": "k7H96GQ7toXUo7khvqSl9L6x3N3rtezHYs3DoqEvd0VienU+CB+O0JGWMikTs0oFF2p8dX8ToF1YqPUKEig1uA==",
       "type": "package",
-      "path": "uipath.excel.activities/2.22.3",
+      "path": "uipath.excel.activities/3.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net461/Microsoft.Office.Interop.Excel.dll",
-        "lib/net461/Microsoft.Vbe.Interop.dll",
-        "lib/net461/Office.dll",
-        "lib/net461/UiPath.Excel.Activities.Design.dll",
-        "lib/net461/UiPath.Excel.Activities.Package.dll",
-        "lib/net461/UiPath.Excel.Activities.dll",
-        "lib/net461/UiPath.Excel.dll",
-        "lib/net461/de/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/de/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/de/UiPath.Excel.resources.dll",
-        "lib/net461/es-MX/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/es-MX/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/es-MX/UiPath.Excel.resources.dll",
-        "lib/net461/es/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/es/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/es/UiPath.Excel.resources.dll",
-        "lib/net461/fr/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/fr/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/fr/UiPath.Excel.resources.dll",
-        "lib/net461/ja/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/ja/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/ja/UiPath.Excel.resources.dll",
-        "lib/net461/ko/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/ko/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/ko/UiPath.Excel.resources.dll",
-        "lib/net461/pt-BR/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/pt-BR/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/pt-BR/UiPath.Excel.resources.dll",
-        "lib/net461/pt/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/pt/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/pt/UiPath.Excel.resources.dll",
-        "lib/net461/ru/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/ru/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/ru/UiPath.Excel.resources.dll",
-        "lib/net461/tr/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/tr/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/tr/UiPath.Excel.resources.dll",
-        "lib/net461/zh-CN/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/zh-CN/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/zh-CN/UiPath.Excel.resources.dll",
-        "lib/net461/zh-TW/UiPath.Excel.Activities.Design.resources.dll",
-        "lib/net461/zh-TW/UiPath.Excel.Activities.resources.dll",
-        "lib/net461/zh-TW/UiPath.Excel.resources.dll",
-        "lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
-        "lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll",
-        "lib/net6.0-windows7.0/Office.dll",
+        "lib/net6.0-windows7.0/UiPath.Excel.Activities.API.dll",
+        "lib/net6.0-windows7.0/UiPath.Excel.Activities.API.xml",
         "lib/net6.0-windows7.0/UiPath.Excel.Activities.Design.dll",
         "lib/net6.0-windows7.0/UiPath.Excel.Activities.Package.dll",
+        "lib/net6.0-windows7.0/UiPath.Excel.Activities.ViewModels.dll",
         "lib/net6.0-windows7.0/UiPath.Excel.Activities.dll",
         "lib/net6.0-windows7.0/UiPath.Excel.dll",
         "lib/net6.0-windows7.0/de/UiPath.Excel.Activities.Design.resources.dll",
@@ -27993,7 +27936,10 @@
         "lib/net6.0-windows7.0/zh-TW/UiPath.Excel.Activities.Design.resources.dll",
         "lib/net6.0-windows7.0/zh-TW/UiPath.Excel.Activities.resources.dll",
         "lib/net6.0-windows7.0/zh-TW/UiPath.Excel.resources.dll",
+        "lib/net6.0/UiPath.Excel.Activities.API.dll",
+        "lib/net6.0/UiPath.Excel.Activities.API.xml",
         "lib/net6.0/UiPath.Excel.Activities.Package.dll",
+        "lib/net6.0/UiPath.Excel.Activities.ViewModels.dll",
         "lib/net6.0/UiPath.Excel.Activities.dll",
         "lib/net6.0/UiPath.Excel.dll",
         "lib/net6.0/de/UiPath.Excel.Activities.resources.dll",
@@ -28020,7 +27966,7 @@
         "lib/net6.0/zh-CN/UiPath.Excel.resources.dll",
         "lib/net6.0/zh-TW/UiPath.Excel.Activities.resources.dll",
         "lib/net6.0/zh-TW/UiPath.Excel.resources.dll",
-        "uipath.excel.activities.2.22.3.nupkg.sha512",
+        "uipath.excel.activities.3.0.1.nupkg.sha512",
         "uipath.excel.activities.nuspec"
       ]
     },
@@ -28107,6 +28053,8 @@
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/AutoLaunchProtocolsComponent/1.0.0.9/manifest.fingerprint",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/AutoLaunchProtocolsComponent/1.0.0.9/manifest.json",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/AutoLaunchProtocolsComponent/1.0.0.9/protocols.json",
+        "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/BrowserMetrics/BrowserMetrics-67FF9405-6574.pma",
+        "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/BrowserMetrics/BrowserMetrics-67FF940C-6288.pma",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/CertificateRevocation/6498.2024.12.2/crl-set",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/CertificateRevocation/6498.2024.12.2/manifest.fingerprint",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/CertificateRevocation/6498.2024.12.2/manifest.json",
@@ -28239,6 +28187,7 @@
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000001",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000002",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000003",
+        "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000004",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/index",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Last Version",
         "bin/net461/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Local State",
@@ -28377,6 +28326,167 @@
         "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.deps.json",
         "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.dll",
         "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/CertificateRevocation/6498.2024.12.2/crl-set",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/CertificateRevocation/6498.2024.12.2/manifest.fingerprint",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/CertificateRevocation/6498.2024.12.2/manifest.json",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Crashpad/metadata",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Crashpad/settings.dat",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Crashpad/throttle_store.dat",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/AutofillStrikeDatabase/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/AutofillStrikeDatabase/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/AutofillStrikeDatabase/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/BudgetDatabase/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/BudgetDatabase/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/BudgetDatabase/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/data_0",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/data_1",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/data_2",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/data_3",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/f_000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/f_000002",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/f_000003",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/f_000004",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/f_000005",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Cache/Cache_Data/index",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Code Cache/js/index",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Code Cache/js/index-dir/the-real-index",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Code Cache/wasm/index",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Code Cache/wasm/index-dir/the-real-index",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/EdgeCoupons/coupons_data.db/000003.log",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/EdgeCoupons/coupons_data.db/CURRENT",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/EdgeCoupons/coupons_data.db/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/EdgeCoupons/coupons_data.db/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/EdgeCoupons/coupons_data.db/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/EdgeCoupons/coupons_data.db/MANIFEST-000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension Scripts/000003.log",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension Scripts/CURRENT",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension Scripts/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension Scripts/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension Scripts/MANIFEST-000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension State/000003.log",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension State/CURRENT",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension State/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension State/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension State/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Extension State/MANIFEST-000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/ExtensionActivityComp",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/ExtensionActivityComp-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/ExtensionActivityEdge",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/ExtensionActivityEdge-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Favicons",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Favicons-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Feature Engagement Tracker/AvailabilityDB/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Feature Engagement Tracker/AvailabilityDB/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Feature Engagement Tracker/AvailabilityDB/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Feature Engagement Tracker/EventDB/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Feature Engagement Tracker/EventDB/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Feature Engagement Tracker/EventDB/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/GPUCache/data_0",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/GPUCache/data_1",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/GPUCache/data_2",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/GPUCache/data_3",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/GPUCache/index",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/History",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/History-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Local Storage/leveldb/000003.log",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Local Storage/leveldb/CURRENT",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Local Storage/leveldb/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Local Storage/leveldb/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Local Storage/leveldb/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Local Storage/leveldb/MANIFEST-000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Login Data",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Login Data-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network Action Predictor",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network Action Predictor-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network/Cookies",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network/Cookies-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network/Network Persistent State",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network/NetworkDataMigrated",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network/Reporting and NEL",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network/Reporting and NEL-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Network/TransportSecurity",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Preferences",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/README",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Safe Browsing Network/NetworkDataMigrated",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Safe Browsing Network/Safe Browsing Cookies",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Safe Browsing Network/Safe Browsing Cookies-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Secure Preferences",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Session Storage/000003.log",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Session Storage/CURRENT",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Session Storage/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Session Storage/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Session Storage/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Session Storage/MANIFEST-000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Site Characteristics Database/000003.log",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Site Characteristics Database/CURRENT",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Site Characteristics Database/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Site Characteristics Database/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Site Characteristics Database/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Site Characteristics Database/MANIFEST-000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Top Sites",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Top Sites-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Visited Links",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Web Data",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/Web Data-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/WebAssistDatabase",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/WebAssistDatabase-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/heavy_ad_intervention_opt_out.db",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/heavy_ad_intervention_opt_out.db-journal",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/optimization_guide_hint_cache_store/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/optimization_guide_hint_cache_store/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/optimization_guide_hint_cache_store/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/optimization_guide_model_and_features_store/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/optimization_guide_model_and_features_store/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/optimization_guide_model_and_features_store/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/000003.log",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/CURRENT",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/MANIFEST-000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/metadata/000003.log",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/metadata/CURRENT",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/metadata/LOCK",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/metadata/LOG",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/metadata/LOG.old",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Default/shared_proto_db/metadata/MANIFEST-000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/data_0",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/data_1",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/data_2",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/data_3",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000001",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000002",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000003",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000004",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000005",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000006",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000007",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000008",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/f_000009",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/GrShaderCache/GPUCache/index",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Last Version",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Local State",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/ShaderCache/GPUCache/data_0",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/ShaderCache/GPUCache/data_1",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/ShaderCache/GPUCache/data_2",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/ShaderCache/GPUCache/data_3",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/ShaderCache/GPUCache/index",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/local/cache",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/local/download_cache",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/local/warnStateCache",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/remote/customSynchronousLookupUris",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/remote/customSynchronousLookupUris_3155378975999999999-0",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/remote/edgeSettings",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/remote/edgeSettings_2.0-2f9188b68640dbf72295f9083a21d674a314721ef06f82db281cbcb052ff8ec1",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/remote/synchronousLookupUris",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/remote/synchronousLookupUris_638343870221005468",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/remote/topTraffic",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/SmartScreen/remote/topTraffic_638004170464094982",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/Variations",
+        "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.exe.WebView2/EBWebView/persisted_first_party_sets.json",
         "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.runtimeconfig.dev.json",
         "bin/net5.0-windows7.0/UiPath.OutOfProcessUi.ServerHost.runtimeconfig.json",
         "bin/net5.0-windows7.0/WebView2Loader.dll",
@@ -32650,7 +32760,7 @@
     "net6.0-windows7.0": [
       "DRACOE.Logging.64 >= 1.0.9 <= 1.0.9",
       "DRACOE.PopUps.64 >= 1.0.8 <= 1.0.8",
-      "UiPath.Excel.Activities >= 2.22.3 <= 2.22.3",
+      "UiPath.Excel.Activities >= 3.0.1 <= 3.0.1",
       "UiPath.IntelligentOCR.Activities >= 6.22.1 <= 6.22.1",
       "UiPath.Mail.Activities >= 1.23.11 <= 1.23.11",
       "UiPath.MicrosoftOffice365.Activities >= 3.1.1-preview <= 3.1.1-preview",
@@ -32689,7 +32799,7 @@
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.22.3, 2.22.3]"
+            "version": "[3.0.1, 3.0.1]"
           },
           "UiPath.IntelligentOCR.Activities": {
             "include": "Runtime",
@@ -32747,6 +32857,17 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: DRACOE.Logging.64 1.0.9 requires UiPath.Excel.Activities (= 2.22.3) but version UiPath.Excel.Activities 3.0.1 was resolved.",
+      "libraryId": "UiPath.Excel.Activities",
+      "targetGraphs": [
+        "net6.0-windows7.0",
+        "net6.0-windows7.0/win10-x64"
+      ]
+    },
     {
       "code": "NU1107",
       "level": "Error",

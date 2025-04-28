@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="in_dtSpecies" Type="InArgument(sd:DataTable)" />
     <x:Property Name="io_strSpecies" Type="InOutArgument(x:String)" />
+    <x:Property Name="out_strSPOLSpecies" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,702</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,1004</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Check_Birds_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="58">
@@ -44,69 +45,70 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="120">
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
-      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
-      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.CodeDom</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Check Species" sap:VirtualizedContainerService.HintSize="724,837.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Check Species" sap:VirtualizedContainerService.HintSize="724,938.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataRow" Name="rowBird" />
       <Variable x:TypeArguments="x:Boolean" Name="boolTermFound" />
@@ -120,16 +122,13 @@
         <av:Size x:Key="ShapeSize">60,75.2</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,97.7</av:PointCollection>
         <x:Double x:Key="Width">690</x:Double>
-        <x:Double x:Key="Height">800.4</x:Double>
+        <x:Double x:Key="Height">902</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID9</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID3" DisplayName="Not existing NDOMS species?" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-      <FlowDecision.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_dtSpecies.Select(&quot;Species='&quot;+io_strSpecies+&quot;'&quot;).Count=0" />
-      </FlowDecision.Condition>
+    <FlowDecision x:Name="__ReferenceID3" Condition="[in_dtSpecies.Select(&quot;Species='&quot;+io_strSpecies+&quot;'&quot;).Count=0]" DisplayName="Not existing NDOMS species?" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -154,7 +153,7 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,935.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1058" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="scg:List(x:String)" Name="listTerms" />
                   </Sequence.Variables>
@@ -171,9 +170,9 @@
                       <InArgument x:TypeArguments="scg:List(x:String)">[Split(CurrentRow("Other Terms").ToString,",").ToList()]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <If Condition="[listTerms.Where(function(x) io_strSpecies.Trim.ToLower.Contains(x.Trim.ToLower)).Count&gt;0]" DisplayName="If input species contains any of the matching terms for the current row" sap:VirtualizedContainerService.HintSize="510,724.8" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[listTerms.Where(function(x) io_strSpecies.Trim.ToLower.Contains(x.Trim.ToLower)).Count&gt;0]" DisplayName="If input species contains any of the matching terms for the current row" sap:VirtualizedContainerService.HintSize="510,847.2" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476,541.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,664" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -187,6 +186,19 @@
                           <Assign.Value>
                             <InArgument x:TypeArguments="x:String">[CurrentRow("Species").ToString]</InArgument>
                           </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Add SPOL column name" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_14">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[out_strSPOLSpecies]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[CurrentRow("SPOL term").ToString]</InArgument>
+                          </Assign.Value>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </Assign>
                         <Assign DisplayName="Confirm matching term found" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_9">
                           <Assign.To>
@@ -225,16 +237,16 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">120.6,337.21999999999997</av:Point>
                   <av:Size x:Key="ShapeSize">138.8,87.2</av:Size>
-                  <av:PointCollection x:Key="FalseConnector">259.4,380.82 270,380.82 270,478.4</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">259.4,380.82 270,380.82 270,548.4</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.False>
                 <FlowStep x:Name="__ReferenceID6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">168,478.4</av:Point>
+                      <av:Point x:Key="ShapeLocation">168,548.4</av:Point>
                       <av:Size x:Key="ShapeSize">204,143.2</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">270,621.5999999999999 270,641.5999999999999</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">270,691.5999999999999 270,711.5999999999999</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" FormFieldsInputData="{x:Null}" FormFieldsOutputData="{x:Null}" IconPath="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="df5dfef4-0aa4-4e3b-bfe0-aa2b77595120" DevTools="False" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="False" Dismissed="[boolDismissed]" DisplayName="Replace species manually" EnableAccessibility="False" FormHeight="800" FormSchema="%[{&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;{{data.PopupMessage}}&quot;,&quot;refreshOnChange&quot;:true,&quot;key&quot;:&quot;html&quot;,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false},{&quot;label&quot;:&quot;Select Species&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]},&quot;validate&quot;:{&quot;onlyAvailableItems&quot;:false},&quot;key&quot;:&quot;Species&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true},{&quot;label&quot;:&quot;Container&quot;,&quot;customClass&quot;:&quot;box_continue&quot;,&quot;key&quot;:&quot;container1&quot;,&quot;type&quot;:&quot;container&quot;,&quot;input&quot;:true,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Stop&quot;,&quot;theme&quot;:&quot;danger&quot;,&quot;leftIcon&quot;:&quot;fa fa-close&quot;,&quot;customClass&quot;:&quot;btn&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;no&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;isResetData&quot;:false},{&quot;label&quot;:&quot;Continue&quot;,&quot;theme&quot;:&quot;success&quot;,&quot;leftIcon&quot;:&quot;fa fa-check&quot;,&quot;customClass&quot;:&quot;btn&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;continue&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;isResetData&quot;:false}]}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;1642693326066&quot;,&quot;Name&quot;:&quot;Standard&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;body , h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {\n                      font-family : Calibri !important;\n                    }table, .btn, .form-control {\n                      font-size : 20px !important;\n                     }h1 {\n                      font-size : 42px !important;\n                    }h2 {\n                      font-size : 36px !important;\n                    }h3 {\n                      font-size : 30px !important;\n                    }h4 {\n                      font-size : 24px !important;\n                    }h5 {\n                      font-size : 20px !important;\n                    }h6 {\n                      font-size : 18px !important;\n                    }body {\n      background:  #ffffff !important;\n      font-size : 20px !important;\n      font-family : Calibri !important;\n      color : #000000 !important\n    } .panel-default {\n                        background:   !important;\n                        border-color :   !important;\n                      }\n                 .panel-default &gt; .panel-heading {\n                        background-color:  !important;\n                        color : #000000 !important\n                      }.btn-primary {\n                          background:  #ffffff !important;\n                          border-color:  #ffffff !important;\n                          color:  #000000 !important;\n                      } .btn-primary:hover {\n                          background:  #ffffff !important;\n                          color:  #000000 !important;\n                      } .btn-default {\n                        background:   !important;\n                        border-color:   !important;\n                        color:   !important;\n                      } .btn-default:hover {\n                        background:   !important;\n                        color:   !important;\n                      } &quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:true,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormTitle="Select county" FormWidth="600" GenerateInputFields="False" sap:VirtualizedContainerService.HintSize="204,143.2" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" LocalCSSFilePath="C:\Users\m1012882\OneDrive - Defra\UiPath\Poultry Registration\APHA-Poultry-Registrations\Assets\Generic\PausePoint.css" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False" SelectedButton="[strButtonSelected]" StartAsMinimized="False">
@@ -247,15 +259,9 @@
                       </ActivityAction>
                     </ufa:FormActivity.DelayBody>
                     <ufa:FormActivity.FormFieldsCollection>
-                      <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Species_dropdown">
-                        <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_dtSpecies.AsEnumerable.Select(function(x) x.Field(of string)(&quot;Species&quot;)).ToList" />
-                      </InArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="Species">
-                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_strSpecies" />
-                      </OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="PopupMessage">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;&lt;h1&gt;Please select Species&lt;/h1&gt;&lt;p&gt;Species '&quot;+io_strSpecies+&quot;' is not recognised as a selectable species option in NDOMS.&lt;br&gt;Please select an appropriate equivalent species option.&lt;/p&gt;Once you have selected a species, please click 'Continue'.&lt;br&gt;If there is a problem with this species, please click 'Stop'.&lt;/p&gt;&quot;" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="scg:List(x:String)" x:Key="Species_dropdown">[in_dtSpecies.AsEnumerable.Select(function(x) x.Field(of string)("Species")).ToList]</InArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="Species">[io_strSpecies]</OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="PopupMessage">["&lt;h1&gt;Please select Species&lt;/h1&gt;&lt;p&gt;Species '"+io_strSpecies+"' is not recognised as a selectable species option in NDOMS.&lt;br&gt;Please select an appropriate equivalent species option.&lt;/p&gt;Once you have selected a species, please click 'Continue'.&lt;br&gt;If there is a problem with this species, please click 'Stop'.&lt;/p&gt;"]</InArgument>
                     </ufa:FormActivity.FormFieldsCollection>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -264,27 +270,25 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ufa:FormActivity>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID7" DisplayName="Form dismissed?" sap:VirtualizedContainerService.HintSize="94.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-                      <FlowDecision.Condition>
-                        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolDismissed or strButtonSelected=&quot;no&quot;" />
-                      </FlowDecision.Condition>
+                    <FlowDecision x:Name="__ReferenceID7" Condition="[boolDismissed or strButtonSelected=&quot;no&quot;]" DisplayName="Form dismissed?" sap:VirtualizedContainerService.HintSize="94.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <av:Point x:Key="ShapeLocation">222.8,641.5999999999999</av:Point>
+                          <av:Point x:Key="ShapeLocation">222.8,711.5999999999999</av:Point>
                           <av:Size x:Key="ShapeSize">94.4,87.2</av:Size>
-                          <av:PointCollection x:Key="TrueConnector">222.8,685.1999999999999 200,685.1999999999999 200,738.8</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">222.8,755.1999999999999 200,755.1999999999999 200,808.8</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">317.20000000000005,755.1999999999999 347.20000000000005,755.1999999999999 347.20000000000005,755.4 357.20000000000005,755.4</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
                         <FlowStep x:Name="__ReferenceID8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">100,738.8</av:Point>
+                              <av:Point x:Key="ShapeLocation">100,808.8</av:Point>
                               <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Throw DisplayName="Throw BRE - form dismissed" Exception="[new BusinessRuleException(&quot;Form dismissed when selecting replacement Species term. Species: &quot;+io_strSpecies)]" sap:VirtualizedContainerService.HintSize="334,91.19999999999999" sap2010:WorkflowViewState.IdRef="Throw_1">
+                          <Throw DisplayName="Throw BRE - form dismissed" Exception="[new BusinessRuleException(&quot;Form dismissed when selecting replacement Species term. Species: &quot;+io_strSpecies)]" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Throw_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -293,6 +297,29 @@
                           </Throw>
                         </FlowStep>
                       </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">357.20000000000005,728.8</av:Point>
+                              <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="Output SPOL term" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_15">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[out_strSPOLSpecies]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[in_dtSpecies.Select("Species='"+io_strSpecies+"'")(0)("SPOL term").ToString]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                        </FlowStep>
+                      </FlowDecision.False>
                     </FlowDecision>
                   </FlowStep.Next>
                 </FlowStep>
@@ -346,20 +373,44 @@
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID0">
+                <FlowStep x:Name="__ReferenceID9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">330,414.28</av:Point>
                       <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">430,467.47999999999996 430,484.28</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Existing NDOMS species" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Species '&quot;+io_strSpecies+&quot;' found among selectable NDOMS species. No replacement required (aside from case sensitivity to match NDOMS).&quot;]">
+                  <Assign DisplayName="Add SPOL column name" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Assign_13">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[out_strSPOLSpecies]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[rowBird("SPOL term").ToString]</InArgument>
+                    </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:LogMessage>
+                  </Assign>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID0">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">330,484.28</av:Point>
+                          <av:Size x:Key="ShapeSize">200,53.2</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Existing NDOMS species" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Species '&quot;+io_strSpecies+&quot;' found among selectable NDOMS species. No replacement required (aside from case sensitivity to match NDOMS).&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                    </FlowStep>
+                  </FlowStep.Next>
                 </FlowStep>
               </FlowStep.Next>
             </FlowStep>
@@ -370,7 +421,7 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <FlowStep x:Name="__ReferenceID9">
+    <FlowStep x:Name="__ReferenceID11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,97.7</av:Point>
@@ -400,5 +451,7 @@
     <x:Reference>__ReferenceID6</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
   </Flowchart>
 </Activity>

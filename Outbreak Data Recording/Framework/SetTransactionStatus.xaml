@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,1299.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1104,1299.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetTransactionStatus_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -187,7 +187,7 @@
               <av:PointCollection x:Key="ConnectorLocation">110,665.6 110,695.6 210,695.6 210,715.6</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful and the email is moved to the Success subfolder." DisplayName="Success" sap:VirtualizedContainerService.HintSize="547.6,2015.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful and the email is moved to the Success subfolder." DisplayName="Success" sap:VirtualizedContainerService.HintSize="200,194" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="intCounter" />
               <Variable x:TypeArguments="x:String" Name="strCompletedPath" />
@@ -398,26 +398,6 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="485.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Error" Message="[in_BusinessException.Message]" />
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="485.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Warn" Message="[&quot;Remember to configure the BUSINESS set transaction status activity!&quot;]" />
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="485.6,384.4" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,306" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="388,194.8" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_10" Status="Successful" TransactionItem="[g_TransactionItem]">
-                        <ui:SetTransactionStatus.Analytics>
-                          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                        </ui:SetTransactionStatus.Analytics>
-                        <ui:SetTransactionStatus.Output>
-                          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                        </ui:SetTransactionStatus.Output>
-                      </ui:SetTransactionStatus>
-                    </Sequence>
-                  </ui:CommentOut.Body>
-                </ui:CommentOut>
                 <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strReviewPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - review BRE" sap:VirtualizedContainerService.HintSize="485.6,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
                   <ui:InterruptibleDoWhile.Body>
                     <Assign DisplayName="Construct destination filepath - review BRE" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_18">
@@ -435,7 +415,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InterruptibleDoWhile>
-                <TryCatch DisplayName="Try Catch - move business exception to review" sap:VirtualizedContainerService.HintSize="485.6,189.2" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+                <TryCatch DisplayName="Try Catch - move business exception to review" sap:VirtualizedContainerService.HintSize="485.6,396.8" sap2010:WorkflowViewState.IdRef="TryCatch_16">
                   <TryCatch.Try>
                     <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strReviewPath]" DisplayName="Move File to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="334,163.6" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[g_TransactionItem]" />
                   </TryCatch.Try>
@@ -510,7 +490,7 @@
                   <av:Size x:Key="ShapeSize">200,177.6</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="200,177.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="634,3944.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="QueueRetry" />
                   <Variable x:TypeArguments="x:String" Name="ScreenshotPath" />
@@ -532,7 +512,7 @@
                     <InArgument x:TypeArguments="x:Boolean">[g_TransactionItem isNot Nothing AndAlso (g_TransactionItem.GetType is GetType(Uipath.Core.QueueItem))]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RetryCurrentTransaction workflow" sap:VirtualizedContainerService.HintSize="572,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\RetryCurrentTransaction.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RetryCurrentTransaction workflow" sap:VirtualizedContainerService.HintSize="572,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\RetryCurrentTransaction.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InOutArgument x:TypeArguments="x:Int32" x:Key="io_RetryNumber">[io_RetryNumber]</InOutArgument>
                     <InOutArgument x:TypeArguments="x:Int32" x:Key="io_TransactionNumber">[io_TransactionNumber]</InOutArgument>
@@ -540,7 +520,7 @@
                     <InArgument x:TypeArguments="x:Boolean" x:Key="in_QueueRetry">[QueueRetry]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <TryCatch sap2010:Annotation.AnnotationText="Take a screenshot of the current state of the screen to facilitate debugging." DisplayName="Try taking screenshot" sap:VirtualizedContainerService.HintSize="572,454" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                <TryCatch sap2010:Annotation.AnnotationText="Take a screenshot of the current state of the screen to facilitate debugging." DisplayName="Try taking screenshot" sap:VirtualizedContainerService.HintSize="572,392" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -549,7 +529,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="334,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="in_Folder">[g_Config("ExScreenshotsFolderPath").ToString]</InArgument>
                         <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath" />
@@ -629,26 +609,6 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="572,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Warn" Message="[&quot;Remember to configure the SYSTEM set transaction status activity!&quot;]" />
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="572,384.4" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,306" sap2010:WorkflowViewState.IdRef="Sequence_34">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="388,194.8" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_11" Status="Successful" TransactionItem="[g_TransactionItem]">
-                        <ui:SetTransactionStatus.Analytics>
-                          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                        </ui:SetTransactionStatus.Analytics>
-                        <ui:SetTransactionStatus.Output>
-                          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                        </ui:SetTransactionStatus.Output>
-                      </ui:SetTransactionStatus>
-                    </Sequence>
-                  </ui:CommentOut.Body>
-                </ui:CommentOut>
                 <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strReviewPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - review SE" sap:VirtualizedContainerService.HintSize="572,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
                   <ui:InterruptibleDoWhile.Body>
                     <Assign DisplayName="Construct destination filepath - review SE" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_19">

@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,3568</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,3488</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Read_stock_table_44__644_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,7 +114,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Stock tables of EXD44 and EXD644 look functionally identical, but the spacing is subtly different enough that they require slightly different Regex patterns." DisplayName="Read stock table 44" sap:VirtualizedContainerService.HintSize="648,3502.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Stock tables of EXD44 and EXD644 look functionally identical, but the spacing is subtly different enough that they require slightly different Regex patterns." DisplayName="Read stock table 44" sap:VirtualizedContainerService.HintSize="648,3422.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strBirds" />
       <Variable x:TypeArguments="s:String[]" Name="arrBirdLines" />
@@ -225,7 +225,7 @@
         <InArgument x:TypeArguments="s:String[]">[Strings.Split(strBirds, Environment.NewLine)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[intLineCount]" DisplayName="For Each line" sap:VirtualizedContainerService.HintSize="586,823.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrBirdLines]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[intLineCount]" DisplayName="For Each line" sap:VirtualizedContainerService.HintSize="586,874.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrBirdLines]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
@@ -444,6 +444,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleWhile>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="586,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_3" />
   </Sequence>
 </Activity>
