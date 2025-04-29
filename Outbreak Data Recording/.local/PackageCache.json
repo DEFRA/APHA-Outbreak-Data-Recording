@@ -27,15 +27,15 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.logging.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.Logging.64_Expressions_52424502.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.logging.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.Logging.64_Expressions_64417963.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.logging.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.Logging.64_Expressions_9923843.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_13986945.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_16669707.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_43218171.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_55090317.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_5636878.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_60032083.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_61518600.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_66661912.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_11814350.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_1660971.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_31947624.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_3900587.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_45554499.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_64919594.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_65158171.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_9276599.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\excelnumberformat\\1.1.0\\lib/netstandard2.0/ExcelNumberFormat.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\h.formatters\\2.0.35\\lib/netstandard2.0/H.Formatters.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\h.formatters.binaryformatter\\2.0.35\\lib/netstandard2.0/H.Formatters.BinaryFormatter.dll",
@@ -54,11 +54,11 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\3.1.6\\lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.azure.cognitiveservices.vision.computervision\\7.0.1\\lib/netstandard2.0/Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\3.8.0\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\3.8.0\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.Scripting.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.CSharp.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.Scripting.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.VisualBasic.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.data.sqlclient\\4.1.0\\runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
@@ -87,9 +87,9 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.powershell.security\\7.1.0\\runtimes/win/lib/net5.0/Microsoft.PowerShell.Security.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.24\\lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.rest.clientruntime.azure\\3.3.18\\lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.wsman.management\\7.1.0\\runtimes/win/lib/net5.0/Microsoft.WSMan.Management.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.wsman.runtime\\7.1.0\\runtimes/win/lib/net5.0/Microsoft.WSMan.Runtime.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\namotion.reflection\\1.0.14\\lib/netstandard2.0/Namotion.Reflection.dll",
@@ -160,13 +160,13 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.excel.activities\\3.0.1\\lib/net6.0-windows7.0/UiPath.Excel.Activities.ViewModels.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.excel.activities\\3.0.1\\lib/net6.0-windows7.0/UiPath.Excel.Activities.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.excel.activities\\3.0.1\\lib/net6.0-windows7.0/UiPath.Excel.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.Activities.Design.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.Activities.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.Host.Local.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib/net5.0-windows7.0/UiPath.OutOfProcessUi.Common.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.Activities.Design.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.Activities.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.ActivityLibrary.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.Host.Local.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib/net6.0-windows7.0/UiPath.OutOfProcessUi.Common.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.imageprocessing\\23.4.0\\lib/net6.0-windows7.0/UiPath.ImageProcessingInterop.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.ocr.activities\\3.21.2\\lib/net6.0-windows7.0/UiPath.OCR.Activities.Design.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.ocr.activities\\3.21.2\\lib/net6.0-windows7.0/UiPath.OCR.Activities.dll",
@@ -539,9 +539,9 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\3.1.6\\lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\3.1.6\\lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\3.1.6\\lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.CSharp.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.VisualBasic.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\lib/netstandard2.1/Microsoft.Extensions.Logging.dll",
@@ -743,22 +743,22 @@
     {
       "Package": {
         "Id": "DRACOE.PopUps.64",
-        "Version": "1.0.8"
+        "Version": "1.0.9"
       },
       "Assemblies": [
         "C:\\Users\\rm000121\\.nuget\\packages\\avalonedit\\6.1.3.50\\lib/net6.0-windows7.0/ICSharpCode.AvalonEdit.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\closedxml\\0.100.3\\lib/netstandard2.0/ClosedXML.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\csvhelper\\16.0.0\\lib/netstandard2.1/CsvHelper.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\documentformat.openxml\\2.16.0\\lib/netstandard2.0/DocumentFormat.OpenXml.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_13986945.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_16669707.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_43218171.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_55090317.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_5636878.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_60032083.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_61518600.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_66661912.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_11814350.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_1660971.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_31947624.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_3900587.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_45554499.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_64919594.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_65158171.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib/net6.0-windows7.0/DRACOE.PopUps.64_Expressions_9276599.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\excelnumberformat\\1.1.0\\lib/netstandard2.0/ExcelNumberFormat.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\h.formatters\\2.0.35\\lib/netstandard2.0/H.Formatters.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\h.formatters.binaryformatter\\2.0.35\\lib/netstandard2.0/H.Formatters.BinaryFormatter.dll",
@@ -776,11 +776,11 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\3.1.6\\lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\3.1.6\\lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.azure.cognitiveservices.vision.computervision\\7.0.1\\lib/netstandard2.0/Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\3.8.0\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\3.8.0\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.Scripting.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.CSharp.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.Scripting.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.9.2\\lib/net6.0/Microsoft.CodeAnalysis.VisualBasic.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\lib/netstandard2.1/Microsoft.Extensions.Logging.dll",
@@ -800,9 +800,9 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.powershell.security\\7.1.0\\runtimes/win/lib/net5.0/Microsoft.PowerShell.Security.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.24\\lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.rest.clientruntime.azure\\3.3.18\\lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.wsman.management\\7.1.0\\runtimes/win/lib/net5.0/Microsoft.WSMan.Management.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.wsman.runtime\\7.1.0\\runtimes/win/lib/net5.0/Microsoft.WSMan.Runtime.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\namotion.reflection\\1.0.14\\lib/netstandard2.0/Namotion.Reflection.dll",
@@ -864,13 +864,13 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.excel.activities\\3.0.1\\lib/net6.0-windows7.0/UiPath.Excel.Activities.ViewModels.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.excel.activities\\3.0.1\\lib/net6.0-windows7.0/UiPath.Excel.Activities.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.excel.activities\\3.0.1\\lib/net6.0-windows7.0/UiPath.Excel.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.Activities.Design.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.Activities.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.Host.Local.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib/net5.0-windows7.0/UiPath.OutOfProcessUi.Common.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.Activities.Design.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.Activities.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.ActivityLibrary.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.Host.Local.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib/net6.0-windows7.0/UiPath.OutOfProcessUi.Common.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.8\\lib/net6.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.imageprocessing\\23.4.0\\lib/net6.0-windows7.0/UiPath.ImageProcessingInterop.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.ocr.activities\\3.21.2\\lib/net6.0-windows7.0/UiPath.OCR.Activities.Design.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.ocr.activities\\3.21.2\\lib/net6.0-windows7.0/UiPath.OCR.Activities.dll",
@@ -923,49 +923,10 @@
         "C:\\Users\\rm000121\\.nuget\\packages\\uipath.webapi.activities.runtime\\1.21.1\\lib/net6.0-windows7.0/UiPath.Web.dll",
         "C:\\Users\\rm000121\\.nuget\\packages\\xlparser\\1.5.2\\lib/netstandard1.6/XLParser.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9"
     }
   ],
-  "Conflicts": [
-    {
-      "AffectedPackages": [
-        {
-          "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
-          "Version": "3.8.0"
-        },
-        {
-          "Id": "UiPath.System.Activities",
-          "Version": "23.10.6"
-        }
-      ],
-      "CausingPackage": {
-        "Id": "Microsoft.CodeAnalysis.Common",
-        "Version": "4.5.0-2.22527.10"
-      },
-      "IsCycle": false,
-      "IsDowngrade": false,
-      "IsConflict": true
-    },
-    {
-      "AffectedPackages": [
-        {
-          "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
-          "Version": "3.8.0"
-        },
-        {
-          "Id": "UiPath.System.Activities",
-          "Version": "23.10.6"
-        }
-      ],
-      "CausingPackage": {
-        "Id": "Microsoft.CodeAnalysis.CSharp",
-        "Version": "4.5.0-2.22527.10"
-      },
-      "IsCycle": false,
-      "IsDowngrade": false,
-      "IsConflict": true
-    }
-  ],
+  "Conflicts": [],
   "ResolvedDependencies": {
     "AutoMapper": {
       "Id": "AutoMapper",
@@ -1211,7 +1172,7 @@
     },
     "DRACOE.PopUps.64": {
       "Id": "DRACOE.PopUps.64",
-      "Version": "1.0.8",
+      "Version": "1.0.9",
       "Dependencies": [
         {
           "Item1": "UiPath.Excel.Activities",
@@ -1219,7 +1180,7 @@
         },
         {
           "Item1": "UiPath.Form.Activities",
-          "Item2": "[2.0.7, )"
+          "Item2": "[2.0.8, )"
         },
         {
           "Item1": "UiPath.Persistence.Activities",
@@ -1577,92 +1538,80 @@
     },
     "Microsoft.CodeAnalysis.Analyzers": {
       "Id": "Microsoft.CodeAnalysis.Analyzers",
-      "Version": "3.3.3",
+      "Version": "3.3.4",
       "Dependencies": []
     },
     "Microsoft.CodeAnalysis.Common": {
       "Id": "Microsoft.CodeAnalysis.Common",
-      "Version": "4.5.0-2.22527.10",
+      "Version": "4.9.2",
       "Dependencies": [
         {
           "Item1": "Microsoft.CodeAnalysis.Analyzers",
-          "Item2": "[3.3.3, )"
+          "Item2": "[3.3.4, )"
         },
         {
           "Item1": "System.Collections.Immutable",
-          "Item2": "[6.0.0, )"
-        },
-        {
-          "Item1": "System.Memory",
-          "Item2": "[4.5.5, )"
+          "Item2": "[8.0.0, )"
         },
         {
           "Item1": "System.Reflection.Metadata",
-          "Item2": "[5.0.0, )"
+          "Item2": "[8.0.0, )"
         },
         {
           "Item1": "System.Runtime.CompilerServices.Unsafe",
           "Item2": "[6.0.0, )"
-        },
-        {
-          "Item1": "System.Text.Encoding.CodePages",
-          "Item2": "[6.0.0, )"
-        },
-        {
-          "Item1": "System.Threading.Tasks.Extensions",
-          "Item2": "[4.5.4, )"
         }
       ]
     },
     "Microsoft.CodeAnalysis.CSharp": {
       "Id": "Microsoft.CodeAnalysis.CSharp",
-      "Version": "4.5.0-2.22527.10",
+      "Version": "4.9.2",
       "Dependencies": [
         {
           "Item1": "Microsoft.CodeAnalysis.Common",
-          "Item2": "[4.5.0-2.22527.10, 4.5.0-2.22527.10]"
+          "Item2": "[4.9.2, 4.9.2]"
         }
       ]
     },
     "Microsoft.CodeAnalysis.CSharp.Scripting": {
       "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
-      "Version": "3.8.0",
+      "Version": "4.9.2",
       "Dependencies": [
         {
           "Item1": "Microsoft.CodeAnalysis.Common",
-          "Item2": "[3.8.0, 3.8.0]"
+          "Item2": "[4.9.2, 4.9.2]"
         },
         {
           "Item1": "Microsoft.CodeAnalysis.CSharp",
-          "Item2": "[3.8.0, 3.8.0]"
+          "Item2": "[4.9.2, 4.9.2]"
         },
         {
           "Item1": "Microsoft.CodeAnalysis.Scripting.Common",
-          "Item2": "[3.8.0, 3.8.0]"
+          "Item2": "[4.9.2, 4.9.2]"
         },
         {
           "Item1": "Microsoft.CSharp",
-          "Item2": "[4.3.0, )"
+          "Item2": "[4.7.0, )"
         }
       ]
     },
     "Microsoft.CodeAnalysis.Scripting.Common": {
       "Id": "Microsoft.CodeAnalysis.Scripting.Common",
-      "Version": "3.8.0",
+      "Version": "4.9.2",
       "Dependencies": [
         {
           "Item1": "Microsoft.CodeAnalysis.Common",
-          "Item2": "[3.8.0, 3.8.0]"
+          "Item2": "[4.9.2, 4.9.2]"
         }
       ]
     },
     "Microsoft.CodeAnalysis.VisualBasic": {
       "Id": "Microsoft.CodeAnalysis.VisualBasic",
-      "Version": "4.5.0-2.22527.10",
+      "Version": "4.9.2",
       "Dependencies": [
         {
           "Item1": "Microsoft.CodeAnalysis.Common",
-          "Item2": "[4.5.0-2.22527.10, 4.5.0-2.22527.10]"
+          "Item2": "[4.9.2, 4.9.2]"
         }
       ]
     },
@@ -2290,7 +2239,7 @@
     },
     "Microsoft.Web.WebView2": {
       "Id": "Microsoft.Web.WebView2",
-      "Version": "1.0.1264.42",
+      "Version": "1.0.1823.32",
       "Dependencies": []
     },
     "Microsoft.Win32.Primitives": {
@@ -3207,7 +3156,7 @@
     },
     "System.Collections.Immutable": {
       "Id": "System.Collections.Immutable",
-      "Version": "6.0.0",
+      "Version": "8.0.0",
       "Dependencies": [
         {
           "Item1": "System.Runtime.CompilerServices.Unsafe",
@@ -4075,7 +4024,7 @@
     },
     "System.Memory": {
       "Id": "System.Memory",
-      "Version": "4.5.5",
+      "Version": "4.5.4",
       "Dependencies": []
     },
     "System.Memory.Data": {
@@ -4383,8 +4332,13 @@
     },
     "System.Reflection.Metadata": {
       "Id": "System.Reflection.Metadata",
-      "Version": "5.0.0",
-      "Dependencies": []
+      "Version": "8.0.0",
+      "Dependencies": [
+        {
+          "Item1": "System.Collections.Immutable",
+          "Item2": "[8.0.0, )"
+        }
+      ]
     },
     "System.Reflection.Primitives": {
       "Id": "System.Reflection.Primitives",
@@ -5789,19 +5743,27 @@
     },
     "UiPath.Form.Activities": {
       "Id": "UiPath.Form.Activities",
-      "Version": "2.0.7",
+      "Version": "2.0.8",
       "Dependencies": [
+        {
+          "Item1": "UiPath.FormActivityLibrary",
+          "Item2": "[2.0.8, )"
+        },
         {
           "Item1": "H.Pipes",
           "Item2": "[2.0.35, )"
         },
         {
           "Item1": "Microsoft.CodeAnalysis.CSharp.Scripting",
-          "Item2": "[3.8.0, )"
+          "Item2": "[4.9.2, )"
+        },
+        {
+          "Item1": "Microsoft.CodeAnalysis.VisualBasic",
+          "Item2": "[4.9.2, )"
         },
         {
           "Item1": "Microsoft.Web.WebView2",
-          "Item2": "[1.0.1264.42, )"
+          "Item2": "[1.0.1823.32, )"
         },
         {
           "Item1": "ReflectionMagic",
@@ -5820,16 +5782,8 @@
           "Item2": "[5.0.0, )"
         },
         {
-          "Item1": "System.Runtime.CompilerServices.Unsafe",
-          "Item2": "[4.7.1, )"
-        },
-        {
           "Item1": "System.Threading.Tasks.Extensions",
           "Item2": "[4.5.4, )"
-        },
-        {
-          "Item1": "UiPath.FormActivityLibrary",
-          "Item2": "[2.0.7, )"
         },
         {
           "Item1": "UiPath.Telemetry.Client",
@@ -5839,35 +5793,31 @@
     },
     "UiPath.FormActivityLibrary": {
       "Id": "UiPath.FormActivityLibrary",
-      "Version": "2.0.7",
+      "Version": "2.0.8",
       "Dependencies": [
+        {
+          "Item1": "UiPath.FormActivityLibrary.Contracts",
+          "Item2": "[2.0.8, )"
+        },
         {
           "Item1": "H.Pipes",
           "Item2": "[2.0.35, )"
         },
         {
           "Item1": "Microsoft.Web.WebView2",
-          "Item2": "[1.0.1264.42, )"
+          "Item2": "[1.0.1823.32, )"
         },
         {
           "Item1": "Newtonsoft.Json",
-          "Item2": "[11.0.2, )"
+          "Item2": "[13.0.3, )"
         },
         {
           "Item1": "System.Drawing.Common",
-          "Item2": "[5.0.2, )"
-        },
-        {
-          "Item1": "System.Runtime.CompilerServices.Unsafe",
-          "Item2": "[4.7.1, )"
+          "Item2": "[6.0.0, )"
         },
         {
           "Item1": "System.ValueTuple",
           "Item2": "[4.3.0, )"
-        },
-        {
-          "Item1": "UiPath.FormActivityLibrary.Contracts",
-          "Item2": "[2.0.7, )"
         },
         {
           "Item1": "UiPath.WebView2.Runtime.x64",
@@ -5877,7 +5827,7 @@
     },
     "UiPath.FormActivityLibrary.Contracts": {
       "Id": "UiPath.FormActivityLibrary.Contracts",
-      "Version": "2.0.7",
+      "Version": "2.0.8",
       "Dependencies": [
         {
           "Item1": "System.Resources.Extensions",
@@ -6966,20 +6916,20 @@
     {
       "Package": {
         "Id": "DRACOE.PopUps.64",
-        "Version": "1.0.8"
+        "Version": "1.0.9"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_13986945.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_16669707.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_43218171.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_55090317.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_5636878.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_60032083.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_61518600.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_66661912.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_11814350.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_1660971.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_31947624.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_3900587.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_45554499.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_64919594.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_65158171.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9\\lib\\net6.0-windows7.0\\DRACOE.PopUps.64_Expressions_9276599.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.8"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\dracoe.popups.64\\1.0.9"
     },
     {
       "Package": {
@@ -7255,60 +7205,60 @@
     {
       "Package": {
         "Id": "Microsoft.CodeAnalysis.Analyzers",
-        "Version": "3.3.3"
+        "Version": "3.3.4"
       },
       "Assemblies": [],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.4"
     },
     {
       "Package": {
         "Id": "Microsoft.CodeAnalysis.Common",
-        "Version": "4.5.0-2.22527.10"
+        "Version": "4.9.2"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0-2.22527.10\\lib\\netcoreapp3.1\\Microsoft.CodeAnalysis.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.9.2\\lib\\net6.0\\Microsoft.CodeAnalysis.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0-2.22527.10"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.common\\4.9.2"
     },
     {
       "Package": {
         "Id": "Microsoft.CodeAnalysis.CSharp",
-        "Version": "4.5.0-2.22527.10"
+        "Version": "4.9.2"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0-2.22527.10\\lib\\netcoreapp3.1\\Microsoft.CodeAnalysis.CSharp.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.9.2\\lib\\net6.0\\Microsoft.CodeAnalysis.CSharp.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0-2.22527.10"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.9.2"
     },
     {
       "Package": {
         "Id": "Microsoft.CodeAnalysis.CSharp.Scripting",
-        "Version": "3.8.0"
+        "Version": "4.9.2"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\3.8.0\\lib\\netcoreapp3.1\\Microsoft.CodeAnalysis.CSharp.Scripting.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\4.9.2\\lib\\net6.0\\Microsoft.CodeAnalysis.CSharp.Scripting.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\3.8.0"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.csharp.scripting\\4.9.2"
     },
     {
       "Package": {
         "Id": "Microsoft.CodeAnalysis.Scripting.Common",
-        "Version": "3.8.0"
+        "Version": "4.9.2"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\3.8.0\\lib\\netcoreapp3.1\\Microsoft.CodeAnalysis.Scripting.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\4.9.2\\lib\\net6.0\\Microsoft.CodeAnalysis.Scripting.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\3.8.0"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\4.9.2"
     },
     {
       "Package": {
         "Id": "Microsoft.CodeAnalysis.VisualBasic",
-        "Version": "4.5.0-2.22527.10"
+        "Version": "4.9.2"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.5.0-2.22527.10\\lib\\netcoreapp3.1\\Microsoft.CodeAnalysis.VisualBasic.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.9.2\\lib\\net6.0\\Microsoft.CodeAnalysis.VisualBasic.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.5.0-2.22527.10"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.9.2"
     },
     {
       "Package": {
@@ -7726,14 +7676,14 @@
     {
       "Package": {
         "Id": "Microsoft.Web.WebView2",
-        "Version": "1.0.1264.42"
+        "Version": "1.0.1823.32"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib\\netcoreapp3.0\\Microsoft.Web.WebView2.Core.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib\\netcoreapp3.0\\Microsoft.Web.WebView2.WinForms.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42\\lib\\netcoreapp3.0\\Microsoft.Web.WebView2.Wpf.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib\\netcoreapp3.0\\Microsoft.Web.WebView2.Core.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib\\netcoreapp3.0\\Microsoft.Web.WebView2.WinForms.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32\\lib\\netcoreapp3.0\\Microsoft.Web.WebView2.Wpf.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1264.42"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\microsoft.web.webview2\\1.0.1823.32"
     },
     {
       "Package": {
@@ -8519,12 +8469,12 @@
     {
       "Package": {
         "Id": "System.Collections.Immutable",
-        "Version": "6.0.0"
+        "Version": "8.0.0"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\system.collections.immutable\\6.0.0\\lib\\net6.0\\System.Collections.Immutable.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\system.collections.immutable\\8.0.0\\lib\\net6.0\\System.Collections.Immutable.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\system.collections.immutable\\6.0.0"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\system.collections.immutable\\8.0.0"
     },
     {
       "Package": {
@@ -8933,12 +8883,12 @@
     {
       "Package": {
         "Id": "System.Memory",
-        "Version": "4.5.5"
+        "Version": "4.5.4"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\system.memory\\4.5.5\\lib\\netcoreapp2.1\\_._"
+        "C:\\Users\\rm000121\\.nuget\\packages\\system.memory\\4.5.4\\lib\\netcoreapp2.1\\_._"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\system.memory\\4.5.5"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\system.memory\\4.5.4"
     },
     {
       "Package": {
@@ -9103,12 +9053,12 @@
     {
       "Package": {
         "Id": "System.Reflection.Metadata",
-        "Version": "5.0.0"
+        "Version": "8.0.0"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\system.reflection.metadata\\5.0.0\\lib\\netstandard2.0\\System.Reflection.Metadata.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\system.reflection.metadata\\8.0.0\\lib\\net6.0\\System.Reflection.Metadata.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\system.reflection.metadata\\5.0.0"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\system.reflection.metadata\\8.0.0"
     },
     {
       "Package": {
@@ -9779,36 +9729,36 @@
     {
       "Package": {
         "Id": "UiPath.Form.Activities",
-        "Version": "2.0.7"
+        "Version": "2.0.8"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.7\\lib\\net5.0-windows7.0\\UiPath.Form.Activities.Design.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.7\\lib\\net5.0-windows7.0\\UiPath.Form.Activities.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.8\\lib\\net6.0-windows7.0\\UiPath.Form.Activities.Design.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.8\\lib\\net6.0-windows7.0\\UiPath.Form.Activities.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.7"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\uipath.form.activities\\2.0.8"
     },
     {
       "Package": {
         "Id": "UiPath.FormActivityLibrary",
-        "Version": "2.0.7"
+        "Version": "2.0.8"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib\\net5.0-windows7.0\\UiPath.Form.ActivityLibrary.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib\\net5.0-windows7.0\\UiPath.Form.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib\\net5.0-windows7.0\\UiPath.Form.Host.Local.dll",
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7\\lib\\net5.0-windows7.0\\UiPath.OutOfProcessUi.Common.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib\\net6.0-windows7.0\\UiPath.Form.ActivityLibrary.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib\\net6.0-windows7.0\\UiPath.Form.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib\\net6.0-windows7.0\\UiPath.Form.Host.Local.dll",
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8\\lib\\net6.0-windows7.0\\UiPath.OutOfProcessUi.Common.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.7"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary\\2.0.8"
     },
     {
       "Package": {
         "Id": "UiPath.FormActivityLibrary.Contracts",
-        "Version": "2.0.7"
+        "Version": "2.0.8"
       },
       "Assemblies": [
-        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.7\\lib\\net5.0-windows7.0\\UiPath.Form.ActivityLibrary.Contracts.dll"
+        "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.8\\lib\\net6.0-windows7.0\\UiPath.Form.ActivityLibrary.Contracts.dll"
       ],
-      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.7"
+      "Path": "C:\\Users\\rm000121\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.8"
     },
     {
       "Package": {

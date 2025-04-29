@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1104,9544</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,8023.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Update_Sharepoint_Masterlist_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -185,17 +185,13 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="882,9478.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="882,7958.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sn:NetworkCredential" Name="credSPOL" />
       <Variable x:TypeArguments="x:String" Name="strUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrPassword" />
       <Variable x:TypeArguments="x:Int32" Name="intListItemID" />
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dictPausePoint">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="new Dictionary(of String, String)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[new Dictionary(of String, String)]" Name="dictPausePoint" />
       <Variable x:TypeArguments="x:String" Name="strSharepointURL" />
       <Variable x:TypeArguments="x:String" Name="strSharepointListName" />
       <Variable x:TypeArguments="x:String" Name="strSharepointDirectory" />
@@ -206,121 +202,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="820,1023.6" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="603.6,905.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="TESTING" sap:VirtualizedContainerService.HintSize="541.6,794" sap2010:WorkflowViewState.IdRef="Sequence_8">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="TESTING - DELETE OR COMMENT OUT" sap:VirtualizedContainerService.HintSize="479.6,398.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
-              <ui:MultipleAssign.AssignOperations>
-                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[g_Config]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(of String, Object)]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Object">[g_Config("SharepointURL")]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Object">["https://defra.sharepoint.com/sites/Community290/"]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Object">[g_Config("SharepointListName")]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Object">["DEVTEST AI Surveillance Masterlist 2024-25"]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Object">[g_Config("TenantID")]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Object">["770a2450-0227-4c62-90c7-4e38537f1102"]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[in_dictFormValues]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[new Dictionary(of String, String)]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[in_dictFormValues("CPH")]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">01/001/0003</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[in_dictFormValues("JRF")]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">AIV157</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[g_TransactionItem]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">C:\Users\rm000121\OneDrive - Defra\UiPath\APHA-Outbreak-Data-Recording\Test data\644 test.docx</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[in_dictFormValues("Comments")]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">Hello World!</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[in_dictFormValues("VisitDate")]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">22/04/2025</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                </scg:List>
-              </ui:MultipleAssign.AssignOperations>
-            </ui:MultipleAssign>
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="DRACOEAuthenticationCreds" CacheStrategy="None" DisplayName="TESTING - Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="479.6,144.4" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrPassword]" Username="[strUsername]" />
-            <ui:BuildDataTable DataTable="[in_dtStockForm]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="479.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Species&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Species&gt;Chicken&lt;/Species&gt;&#xA;    &lt;Total&gt;10&lt;/Total&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
-          </Sequence>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <d:Get_Credential IN_strRequestMessage="{x:Null}" in_strRequestTitle="{x:Null}" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="820,248.4" sap2010:WorkflowViewState.IdRef="Get_Credential_1" in_strCredentialName="[g_Config(&quot;SharepointCredentialTarget&quot;).ToString]" out_credNetworkCredential="[credSPOL]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="820,148.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Store username and password" sap:VirtualizedContainerService.HintSize="820,148.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -342,7 +225,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="820,753.2" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="820,296.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Default>
         <Throw DisplayName="Throw BRE - disease not recognised" Exception="[new BusinessRuleException(&quot;Disease '&quot;+in_strDisease+&quot;' is not currently supported by this automation. The automation is currently compatible for Avian Influenza and Bluetongue.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_3" />
       </Switch.Default>
@@ -730,18 +613,10 @@
               </umas:ForEachListItem>
               <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process - add file attachment" sap:VirtualizedContainerService.HintSize="682,168.8" sap2010:WorkflowViewState.IdRef="InvokeProcess_2" ProcessName="Add.Sharepoint.File.Attachment">
                 <ui:InvokeProcess.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_strSharepointURL">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strSharepointURL" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:Int32" x:Key="in_strListID">
-                    <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="intListItemID" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_strListName">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strSharepointListName" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="scg:IEnumerable(x:String)" x:Key="in_ieFilePaths">
-                    <VisualBasicValue x:TypeArguments="scg:IEnumerable(x:String)" ExpressionText="{}{g_TransactionItem}" />
-                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_strSharepointURL">[strSharepointURL]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32" x:Key="in_strListID">[intListItemID]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_strListName">[strSharepointListName]</InArgument>
+                  <InArgument x:TypeArguments="scg:IEnumerable(x:String)" x:Key="in_ieFilePaths">[{g_TransactionItem}]</InArgument>
                 </ui:InvokeProcess.Arguments>
               </ui:InvokeProcess>
             </Sequence>

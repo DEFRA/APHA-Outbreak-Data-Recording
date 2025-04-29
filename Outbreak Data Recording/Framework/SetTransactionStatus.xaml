@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1104,1299.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,1299.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetTransactionStatus_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -199,27 +199,8 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="485.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Transaction Successful&quot;]" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="485.6,384.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,306" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="388,194.8" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_9" Status="Successful" TransactionItem="[g_TransactionItem]">
-                    <ui:SetTransactionStatus.Analytics>
-                      <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                    </ui:SetTransactionStatus.Analytics>
-                    <ui:SetTransactionStatus.Output>
-                      <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                    </ui:SetTransactionStatus.Output>
-                  </ui:SetTransactionStatus>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strCompletedPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - completed" sap:VirtualizedContainerService.HintSize="485.6,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="490,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Transaction Successful&quot;]" />
+            <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strCompletedPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - completed" sap:VirtualizedContainerService.HintSize="490,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
               <ui:InterruptibleDoWhile.Body>
                 <Assign DisplayName="Construct destination filepath - review" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_20">
                   <Assign.To>
@@ -236,15 +217,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleDoWhile>
-            <TryCatch DisplayName="Try Catch - move file to completed" sap:VirtualizedContainerService.HintSize="485.6,189.2" sap2010:WorkflowViewState.IdRef="TryCatch_18">
+            <TryCatch DisplayName="Try Catch - move file to completed" sap:VirtualizedContainerService.HintSize="490,618" sap2010:WorkflowViewState.IdRef="TryCatch_18">
               <TryCatch.Try>
                 <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strCompletedPath]" DisplayName="Move File to &quot;Completed&quot;" sap:VirtualizedContainerService.HintSize="334,163.6" sap2010:WorkflowViewState.IdRef="MoveFile_3" Path="[g_TransactionItem]" />
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_18">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,451.6" sap2010:WorkflowViewState.IdRef="Catch`1_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -252,17 +233,25 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="334,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Completed&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                    <Sequence sap:VirtualizedContainerService.HintSize="450,381.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Completed&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                      <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="388,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Completed&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                    </Sequence>
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="485.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_8" MethodName="Stop">
+            <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="490,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_8" MethodName="Stop">
               <InvokeMethod.TargetObject>
                 <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
               </InvokeMethod.TargetObject>
             </InvokeMethod>
-            <d:LogTransaction sap:VirtualizedContainerService.HintSize="485.6,24.8" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="-1" IN_strFileName="[g_Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" IN_strOutcome="Success" IN_strTotalTime="[(Math.Round(g_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, g_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[g_Config(&quot;Username&quot;).ToString]" IN_strVersion="[g_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[g_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_1">
+            <d:LogTransaction sap:VirtualizedContainerService.HintSize="490,24.8" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="-1" IN_strFileName="[g_Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" IN_strOutcome="Success" IN_strTotalTime="[(Math.Round(g_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, g_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[g_Config(&quot;Username&quot;).ToString]" IN_strVersion="[g_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[g_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_1">
               <d:LogTransaction.IN_strMiscNotes>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" DisplayName="Literal&lt;String&gt;" Value="" />
@@ -274,7 +263,7 @@
                 </InArgument>
               </d:LogTransaction.IN_strOutcomeNotes>
             </d:LogTransaction>
-            <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="485.6,378" sap2010:WorkflowViewState.IdRef="If_7">
+            <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="490,378" sap2010:WorkflowViewState.IdRef="If_7">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="300,81.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
                   <sap:WorkflowViewStateService.ViewState>
@@ -397,8 +386,8 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="485.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Error" Message="[in_BusinessException.Message]" />
-                <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strReviewPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - review BRE" sap:VirtualizedContainerService.HintSize="485.6,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
+                <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="490,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Error" Message="[in_BusinessException.Message]" />
+                <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="This avoids duplicate filenames by iterating through path names with an incrementing suffix until the filename does not exist e.g:&#xA;File.txt exists&#xA;File_1.txt exists&#xA;File_2.txt exists&#xA;File_3.txt does not exist, loop breaks.&#xA;&#xA;Max iterations asset applied to avoid endless loop." Condition="[File.Exists(strReviewPath)]" CurrentIndex="[intCounter]" DisplayName="Do While - construct destination filepath - review BRE" sap:VirtualizedContainerService.HintSize="490,362.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2" MaxIterations="[Cint(g_Config(&quot;MaxFileDuplicates&quot;))]">
                   <ui:InterruptibleDoWhile.Body>
                     <Assign DisplayName="Construct destination filepath - review BRE" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_18">
                       <Assign.To>
@@ -415,15 +404,15 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InterruptibleDoWhile>
-                <TryCatch DisplayName="Try Catch - move business exception to review" sap:VirtualizedContainerService.HintSize="485.6,396.8" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+                <TryCatch DisplayName="Try Catch - move business exception to review" sap:VirtualizedContainerService.HintSize="490,618" sap2010:WorkflowViewState.IdRef="TryCatch_16">
                   <TryCatch.Try>
                     <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strReviewPath]" DisplayName="Move File to &quot;Review&quot;" sap:VirtualizedContainerService.HintSize="334,163.6" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[g_TransactionItem]" />
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,451.6" sap2010:WorkflowViewState.IdRef="Catch`1_16">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -431,24 +420,32 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                         </ActivityAction.Argument>
-                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="334,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Review&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                        <Sequence sap:VirtualizedContainerService.HintSize="450,381.2" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Review&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                          <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="388,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Review&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                        </Sequence>
                       </ActivityAction>
                     </Catch>
                   </TryCatch.Catches>
                 </TryCatch>
-                <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="485.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" MethodName="Stop">
+                <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="490,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" MethodName="Stop">
                   <InvokeMethod.TargetObject>
                     <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
                   </InvokeMethod.TargetObject>
                 </InvokeMethod>
-                <d:LogTransaction sap:VirtualizedContainerService.HintSize="485.6,24.8" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[g_intExitPoint]" IN_strFileName="[g_Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" IN_strOutcome="Business Exception" IN_strOutcomeNotes="[in_BusinessException.Message]" IN_strTotalTime="[(Math.Round(g_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, g_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[g_Config(&quot;Username&quot;).ToString]" IN_strVersion="[g_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[g_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_2">
+                <d:LogTransaction sap:VirtualizedContainerService.HintSize="490,24.8" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[g_intExitPoint]" IN_strFileName="[g_Config(&quot;SQLTransactionLogFilepath&quot;).ToString]" IN_strOutcome="Business Exception" IN_strOutcomeNotes="[in_BusinessException.Message]" IN_strTotalTime="[(Math.Round(g_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, g_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[g_Config(&quot;Username&quot;).ToString]" IN_strVersion="[g_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[g_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_2">
                   <d:LogTransaction.IN_strMiscNotes>
                     <InArgument x:TypeArguments="x:String">
                       <Literal x:TypeArguments="x:String" DisplayName="Literal&lt;String&gt;" Value="" />
                     </InArgument>
                   </d:LogTransaction.IN_strMiscNotes>
                 </d:LogTransaction>
-                <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="485.6,823.6" sap2010:WorkflowViewState.IdRef="If_8">
+                <If Condition="[Cbool(g_Config(&quot;Unattended&quot;))]" DisplayName="If - unattended" sap:VirtualizedContainerService.HintSize="490,823.6" sap2010:WorkflowViewState.IdRef="If_8">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="300,81.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
                       <sap:WorkflowViewStateService.ViewState>
@@ -490,7 +487,7 @@
                   <av:Size x:Key="ShapeSize">200,177.6</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="634,3944.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="634,4373.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="QueueRetry" />
                   <Variable x:TypeArguments="x:String" Name="ScreenshotPath" />
@@ -626,15 +623,15 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InterruptibleDoWhile>
-                <TryCatch DisplayName="Try Catch - move system exception to review" sap:VirtualizedContainerService.HintSize="572,189.2" sap2010:WorkflowViewState.IdRef="TryCatch_17">
+                <TryCatch DisplayName="Try Catch - move system exception to review" sap:VirtualizedContainerService.HintSize="572,618" sap2010:WorkflowViewState.IdRef="TryCatch_17">
                   <TryCatch.Try>
                     <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strReviewPath]" DisplayName="Move File to &quot;Review&quot; SE" sap:VirtualizedContainerService.HintSize="334,163.6" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[g_TransactionItem]" />
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_17">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,451.6" sap2010:WorkflowViewState.IdRef="Catch`1_17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -642,7 +639,15 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                         </ActivityAction.Argument>
-                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="334,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Review&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                        <Sequence sap:VirtualizedContainerService.HintSize="450,381.2" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Review&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                          <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="Could not move file" DisplayName="Notify user of file move exception" sap:VirtualizedContainerService.HintSize="388,86.4" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Exception encountered while attempting to move transaction item to &quot;+g_Config(&quot;Review&quot;).ToString+Environment.NewLine+exception.Message+Environment.NewLine+&quot;File will remain in folder &quot;+g_Config(&quot;InProgress&quot;).ToString+&quot; until moved manually or overwritten by robot.&quot;]" />
+                        </Sequence>
                       </ActivityAction>
                     </Catch>
                   </TryCatch.Catches>
