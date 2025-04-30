@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,8023.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,2723.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Update_Sharepoint_Masterlist_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -185,7 +185,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="882,7958.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="634,2658.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sn:NetworkCredential" Name="credSPOL" />
       <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -202,8 +202,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <d:Get_Credential IN_strRequestMessage="{x:Null}" in_strRequestTitle="{x:Null}" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="820,248.4" sap2010:WorkflowViewState.IdRef="Get_Credential_1" in_strCredentialName="[g_Config(&quot;SharepointCredentialTarget&quot;).ToString]" out_credNetworkCredential="[credSPOL]" />
-    <ui:MultipleAssign DisplayName="Store username and password" sap:VirtualizedContainerService.HintSize="820,148.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <d:Get_Credential DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="572,248.4" IN_strRequestMessage="&lt;p&gt;Your device does not have the credentials stored for the robot to interact with Sharepoint. Please contact DRACoE to provide these credentials for you.&lt;/p&gt;&lt;p&gt;Note: these are NOT your log in credentials. These are specific credentials managed by DRACoE.&lt;/p&gt;" sap2010:WorkflowViewState.IdRef="Get_Credential_1" in_strCredentialName="[g_Config(&quot;SharepointCredentialTarget&quot;).ToString]" in_strRequestTitle="Please contact DRACoE" out_credNetworkCredential="[credSPOL]" />
+    <ui:MultipleAssign DisplayName="Store username and password" sap:VirtualizedContainerService.HintSize="572,148.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -225,7 +225,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="820,296.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="572,754" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Default>
         <Throw DisplayName="Throw BRE - disease not recognised" Exception="[new BusinessRuleException(&quot;Disease '&quot;+in_strDisease+&quot;' is not currently supported by this automation. The automation is currently compatible for Avian Influenza and Bluetongue.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_3" />
       </Switch.Default>
@@ -290,7 +290,7 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Switch>
-    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[strUsername]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="820,7033.6" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstrPassword]" TenantId="[g_Config(&quot;TenantID&quot;).ToString]" UseConnectionService="False">
+    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[strUsername]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="572,1276" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstrPassword]" TenantId="[g_Config(&quot;TenantID&quot;).ToString]" UseConnectionService="False">
       <uma:Office365ApplicationScope.AuthenticationScopes>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </uma:Office365ApplicationScope.AuthenticationScopes>
@@ -299,7 +299,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="786,6790" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,1032.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="umm:Office365SharepointList" Name="spList" />
               <Variable x:TypeArguments="sd:DataTable" Name="dtListItems" />
@@ -310,13 +310,14 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Update master list" sap:VirtualizedContainerService.HintSize="744,6024.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <Sequence DisplayName="Update master list" sap:VirtualizedContainerService.HintSize="496,83.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message - updating master list" sap:VirtualizedContainerService.HintSize="682,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Updating &quot;+in_strDisease+&quot; master list&quot;]" />
               <umas:GetListInfo ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Get List Info" sap:VirtualizedContainerService.HintSize="682,190" sap2010:WorkflowViewState.IdRef="GetListInfo_1" IncludeColumnsDefinitions="True" List="[spList]" ListTitleOrId="[strSharepointListName]" SiteUrlOrId="[strSharepointURL]" />
               <umas:GetListItems ContinueOnError="{x:Null}" AuthScopesInvalid="False" ColumnsToRetrieve="[{&quot;CPH&quot;}]" DisplayName="Get List Items" Filter="[&quot;fields/CPH eq '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;' and fields/PZ_x002d_JRFNo_x002e_ eq '&quot;+in_dictFormValues(&quot;JRF&quot;)+&quot;'&quot;]" sap:VirtualizedContainerService.HintSize="682,215.2" sap2010:WorkflowViewState.IdRef="GetListItems_1" List="[spList]" ListItems="[dtListItems]" />
               <If Condition="[dtListItems.RowCount&lt;&gt;1]" DisplayName="If non-singular amount of list items returned" sap:VirtualizedContainerService.HintSize="682,362.8" sap2010:WorkflowViewState.IdRef="If_2">
@@ -334,7 +335,7 @@
                   <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13" />
                 </If.Else>
               </If>
-              <umas:ForEachListItem CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="The filter should return only one list item to update" DisplayName="For Each List Item" Filter="[&quot;fields/CPH eq '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;' and fields/PZ_x002d_JRFNo_x002e_ eq '&quot;+in_dictFormValues(&quot;JRF&quot;)+&quot;'&quot;]" sap:VirtualizedContainerService.HintSize="682,4816.8" sap2010:WorkflowViewState.IdRef="ForEachListItem_1" List="[spList]">
+              <umas:ForEachListItem CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="The filter should return only one list item to update" DisplayName="For Each List Item" Filter="[&quot;fields/CPH eq '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;' and fields/PZ_x002d_JRFNo_x002e_ eq '&quot;+in_dictFormValues(&quot;JRF&quot;)+&quot;'&quot;]" sap:VirtualizedContainerService.HintSize="682,4822.4" sap2010:WorkflowViewState.IdRef="ForEachListItem_1" List="[spList]">
                 <umas:ForEachListItem.Body>
                   <ActivityAction x:TypeArguments="umm:Office365SharepointListItem, x:Int32">
                     <ActivityAction.Argument1>
@@ -343,19 +344,19 @@
                     <ActivityAction.Argument2>
                       <DelegateInArgument x:TypeArguments="x:Int32" Name="ListItemIndex" />
                     </ActivityAction.Argument2>
-                    <Sequence DisplayName="Update fields" sap:VirtualizedContainerService.HintSize="648,4608.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence DisplayName="Update fields" sap:VirtualizedContainerService.HintSize="648,4614" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dtStockForm]" DisplayName="For Each Species" sap:VirtualizedContainerService.HintSize="586,634" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dtStockForm]" DisplayName="For Each Species" sap:VirtualizedContainerService.HintSize="586,635.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence sap:VirtualizedContainerService.HintSize="476,445.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,447.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -368,7 +369,7 @@
                                   <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
-                              <Assign DisplayName="Update species count" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign DisplayName="Update species count" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
                                 </Assign.To>
@@ -376,7 +377,7 @@
                                   <InArgument x:TypeArguments="x:Object">[CInt(CurrentRow("Total"))]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_8">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
                                 </Assign.To>
@@ -395,7 +396,7 @@
                           <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <Assign DisplayName="Update surveillance comments field" sap:VirtualizedContainerService.HintSize="586,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign DisplayName="Update surveillance comments field" sap:VirtualizedContainerService.HintSize="586,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
                         </Assign.To>
@@ -403,7 +404,7 @@
                           <InArgument x:TypeArguments="x:Object">[in_dictFormValues("Comments")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="586,81.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="586,82.4" sap2010:WorkflowViewState.IdRef="Assign_9">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
                         </Assign.To>
@@ -418,7 +419,7 @@
                           <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <Assign DisplayName="Update date visit completed field" sap:VirtualizedContainerService.HintSize="586,81.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign DisplayName="Update date visit completed field" sap:VirtualizedContainerService.HintSize="586,82.4" sap2010:WorkflowViewState.IdRef="Assign_6">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
                         </Assign.To>
@@ -426,7 +427,7 @@
                           <InArgument x:TypeArguments="x:Object">[DateTime.Parse(in_dictFormValues("VisitDate"),System.Globalization.CultureInfo.GetCultureInfo("en-GB"))]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="586,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+                      <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="586,82.4" sap2010:WorkflowViewState.IdRef="Assign_10">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
                         </Assign.To>
@@ -534,9 +535,9 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <If Condition="[CBool(g_Config(&quot;PausePoint6&quot;))]" DisplayName="Pause Point 6?" sap:VirtualizedContainerService.HintSize="586,1428.4" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If Condition="[CBool(g_Config(&quot;PausePoint6&quot;))]" DisplayName="Pause Point 6?" sap:VirtualizedContainerService.HintSize="586,1429.2" sap2010:WorkflowViewState.IdRef="If_3">
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="552,1245.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                          <Sequence sap:VirtualizedContainerService.HintSize="552,1246" sap2010:WorkflowViewState.IdRef="Sequence_16">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="strSharepointFields" />
                             </Sequence.Variables>
@@ -545,19 +546,19 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each updated list field" sap:VirtualizedContainerService.HintSize="510,358.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[dictPausePoint]">
+                            <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each updated list field" sap:VirtualizedContainerService.HintSize="510,359.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[dictPausePoint]">
                               <ui:ForEach.Body>
                                 <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="currentItem" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,170.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign DisplayName="Construct Pause Point string" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                    <Assign DisplayName="Construct Pause Point string" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_11">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[strSharepointFields]</OutArgument>
                                       </Assign.To>
@@ -620,7 +621,7 @@
                 </ui:InvokeProcess.Arguments>
               </ui:InvokeProcess>
             </Sequence>
-            <Sequence DisplayName="Upload form to library" sap:VirtualizedContainerService.HintSize="744,636.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <Sequence DisplayName="Upload form to library" sap:VirtualizedContainerService.HintSize="496,820.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="strUploadPath" />
                 <Variable x:TypeArguments="mg:DriveItem" Name="diUploadPath" />
@@ -631,6 +632,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message - uploading transaction item" sap:VirtualizedContainerService.HintSize="434,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Uploading current transaction item to Sharepoint&quot;]" />
               <Assign DisplayName="Construct upload directory" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_12">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strUploadPath]</OutArgument>
