@@ -165,10 +165,10 @@
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to NDOMS visit details - Invoke Workflow File (Navigate to NDOMS visit details.xaml)" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Process Subflows\Navigate to NDOMS visit details.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_strCPH">
-            <Literal x:TypeArguments="x:String">01/001/0003</Literal>
+            <Literal x:TypeArguments="x:String">33/110/0004</Literal>
           </InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_strJRF">
-            <Literal x:TypeArguments="x:String">AIV157</Literal>
+            <Literal x:TypeArguments="x:String">AIV158</Literal>
           </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>

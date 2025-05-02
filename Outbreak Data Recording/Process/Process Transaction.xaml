@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,3131.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1104,3299.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -147,7 +147,7 @@
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="698,3232.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="698,3234.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strDocText" />
       <Variable x:TypeArguments="x:String" Name="strFormType" />
@@ -180,10 +180,10 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">0,488.09999999999997</av:Point>
-              <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+              <av:Size x:Key="ShapeSize">200,53.2</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw DisplayName="Throw BRE - unrecognised form" Exception="[new BusinessRuleException(&quot;Unrecognised form type. This may indicate that the form is scanned and handwritten or that it is not one of the recognised codes. This automation is currently equipped to process EXD codes 195, 196, 197, 644 and 44.&quot;)]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="Throw_1">
+          <Throw DisplayName="Throw BRE - unrecognised form" Exception="[new BusinessRuleException(&quot;Unrecognised form type. This may indicate that the form is scanned and handwritten or that it is not one of the recognised codes. This automation is currently equipped to process EXD codes 195, 196, 197, 644 and 44.&quot;)]" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Throw_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -208,11 +208,11 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,678.0999999999999</av:Point>
-            <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+            <av:Size x:Key="ShapeSize">200,83.6</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">300,760.8999999999999 300,851.6999999999999</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Scrape EXD195" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Scrape EXD195" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strNameDate" />
             <Variable x:TypeArguments="s:DateTime" Name="datetimeVisit" />
@@ -339,11 +339,11 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">200,851.6999999999999</av:Point>
-                <av:Size x:Key="ShapeSize">200,222.4</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">300,1074.1 300,1098.5</av:PointCollection>
+                <av:Size x:Key="ShapeSize">200,226.8</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">300,1078.5 300,1098.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="We keep the name &quot;Pause Point&quot; for ease and consistency, but this one is not on-off asset toggleable like the others. We always need the user to check if any scraped form data needs correcting." DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,222.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence sap2010:Annotation.AnnotationText="We keep the name &quot;Pause Point&quot; for ease and consistency, but this one is not on-off asset toggleable like the others. We always need the user to check if any scraped form data needs correcting." DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,226.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dtFormValues" />
               </Sequence.Variables>
@@ -354,48 +354,48 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:BuildDataTable DataTable="[dtFormValues]" DisplayName="Build Data Table - form values" sap:VirtualizedContainerService.HintSize="606,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;key&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-              <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each formValue" sap:VirtualizedContainerService.HintSize="606,464.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dictFormValues]">
+              <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each formValue" sap:VirtualizedContainerService.HintSize="606,466.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dictFormValues]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="formValue" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,277.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,278.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{formValue.Key+&quot;&lt;read only&gt;&quot;,formValue.Value}]" DataTable="[dtFormValues]" DisplayName="Add Data Row - form values" sap:VirtualizedContainerService.HintSize="334,188.8" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{formValue.Key+&quot;&lt;read only&gt;&quot;,formValue.Value}]" DataTable="[dtFormValues]" DisplayName="Add Data Row - form values" sap:VirtualizedContainerService.HintSize="334,190" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                     </Sequence>
                   </ActivityAction>
                 </ui:ForEach.Body>
               </ui:ForEach>
-              <InvokeMethod DisplayName="Stop timer - PP1" sap:VirtualizedContainerService.HintSize="606,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Stop">
+              <InvokeMethod DisplayName="Stop timer - PP1" sap:VirtualizedContainerService.HintSize="606,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Stop">
                 <InvokeMethod.TargetObject>
                   <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                 </InvokeMethod.TargetObject>
               </InvokeMethod>
-              <uix:NApplicationCard sap2010:Annotation.AnnotationText="Use google as dummy URL to prevent extra homepage tab opening." AttachMode="ByInstance" CloseMode="Always" DisplayName="Open PDF in browser" sap:VirtualizedContainerService.HintSize="606,1981.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="01f77a08-b66b-48b6-8ae0-099f43b8c257" Version="V2">
+              <uix:NApplicationCard sap2010:Annotation.AnnotationText="Use google as dummy URL to prevent extra homepage tab opening." AttachMode="ByInstance" CloseMode="Always" DisplayName="Open PDF in browser" sap:VirtualizedContainerService.HintSize="606,1991.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="01f77a08-b66b-48b6-8ae0-099f43b8c257" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Display pause points for data correction" sap:VirtualizedContainerService.HintSize="572,1732.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <Sequence DisplayName="Display pause points for data correction" sap:VirtualizedContainerService.HintSize="572,1742" sap2010:WorkflowViewState.IdRef="Sequence_25">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NGoToUrl sap2010:Annotation.AnnotationText="Stops extra homepage tab opening that prevents whole window from being closed" DisplayName="Go To URL - open PDF" sap:VirtualizedContainerService.HintSize="510,126.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[&quot;file://&quot;+g_TransactionItem]" Version="V3">
+                      <uix:NGoToUrl sap2010:Annotation.AnnotationText="Stops extra homepage tab opening that prevents whole window from being closed" DisplayName="Go To URL - open PDF" sap:VirtualizedContainerService.HintSize="510,127.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[&quot;file://&quot;+g_TransactionItem]" Version="V3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NGoToUrl>
-                      <d:Editable_DataTable out_TableHTML="{x:Null}" DisplayName="PP1 - form values" sap:VirtualizedContainerService.HintSize="510,506.8" sap2010:WorkflowViewState.IdRef="Editable_DataTable_2" in_Body="[&quot;&lt;h1&gt;Form data correction&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please review the data scraped from the pdf form and correct any values where necessary.&lt;br&gt;&quot;+&#xA;&quot;&lt;li&gt;&quot;+&#xA;&quot;&lt;ul&gt;Please ensure the CPH is in &lt;strong&gt;nn/nnn/nnnn&lt;/strong&gt; format&lt;/ul&gt;&quot;+&#xA;&quot;&lt;ul&gt;Please ensure that the Disease Reference is formatted to match its corresponding Sharepoint folder (e.g. AIV2025 - 01)&lt;/ul&gt;&quot;+&#xA;&quot;&lt;ul&gt;Please pay special attention to the VisitDate and VisitTime fields, correcting them to &lt;strong&gt;dd/MM/yyyy&lt;/strong&gt; and &lt;strong&gt;HH:mm&lt;/strong&gt;, respectively&lt;/ul&gt;&quot;+&#xA;&quot;&lt;/li&gt;&quot;+&#xA;&quot;Visit date and time as retrieved from pdf: &amp;ensp;&quot;+dictFormValues(&quot;VisitDateTime&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;The PDF has also been opened in a browser window for your reference.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;Please note that data corrected here &lt;strong&gt;will not&lt;/strong&gt; be re-validated. Please ensure that formatting etc is correct before continuing.&quot;]" in_CSS_Path="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Editable Standard Template.css&quot;]" in_FormHTMLPath="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\FormRender.html&quot;]" in_FullReadOnly="False" in_ShowForm="True" in_TemplatePath="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\FormCreatorTemplate.html&quot;]" in_WidthHeight="[{1000,700}]" io_Table="[dtFormValues]">
+                      <d:Editable_DataTable out_TableHTML="{x:Null}" DisplayName="PP1 - form values" sap:VirtualizedContainerService.HintSize="510,510.4" sap2010:WorkflowViewState.IdRef="Editable_DataTable_2" in_Body="[&quot;&lt;h1&gt;Form data correction&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please review the data scraped from the pdf form and correct any values where necessary.&lt;br&gt;&quot;+&#xA;&quot;&lt;li&gt;&quot;+&#xA;&quot;&lt;ul&gt;Please ensure the CPH is in &lt;strong&gt;nn/nnn/nnnn&lt;/strong&gt; format&lt;/ul&gt;&quot;+&#xA;&quot;&lt;ul&gt;Please ensure that the Disease Reference is formatted to match its corresponding Sharepoint folder (e.g. AIV2025 - 01)&lt;/ul&gt;&quot;+&#xA;&quot;&lt;ul&gt;Please pay special attention to the VisitDate and VisitTime fields, correcting them to &lt;strong&gt;dd/MM/yyyy&lt;/strong&gt; and &lt;strong&gt;HH:mm&lt;/strong&gt;, respectively&lt;/ul&gt;&quot;+&#xA;&quot;&lt;/li&gt;&quot;+&#xA;&quot;Visit date and time as retrieved from pdf: &amp;ensp;&quot;+dictFormValues(&quot;VisitDateTime&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;The PDF has also been opened in a browser window for your reference.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;Please note that data corrected here &lt;strong&gt;will not&lt;/strong&gt; be re-validated. Please ensure that formatting etc is correct before continuing.&quot;]" in_CSS_Path="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Editable Standard Template.css&quot;]" in_FormHTMLPath="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\FormRender.html&quot;]" in_FullReadOnly="False" in_ShowForm="True" in_TemplatePath="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\FormCreatorTemplate.html&quot;]" in_WidthHeight="[{1000,700}]" io_Table="[dtFormValues]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -403,19 +403,19 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </d:Editable_DataTable>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFormValues]" DisplayName="For Each Row in Data Table - edited form values" sap:VirtualizedContainerService.HintSize="510,358" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtFormValues]" DisplayName="For Each Row in Data Table - edited form values" sap:VirtualizedContainerService.HintSize="510,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,170.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,170.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Update dictionary value" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                              <Assign DisplayName="Update dictionary value" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_6">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[dictFormValues(CurrentRow("key").ToString.Replace("&lt;read only&gt;",""))]</OutArgument>
                                 </Assign.To>
@@ -427,7 +427,7 @@
                           </ActivityAction>
                         </ui:ForEachRow.Body>
                       </ui:ForEachRow>
-                      <d:Editable_DataTable in_FullReadOnly="{x:Null}" out_TableHTML="{x:Null}" DisplayName="PP1 - stock table" sap:VirtualizedContainerService.HintSize="510,506.8" sap2010:WorkflowViewState.IdRef="Editable_DataTable_1" in_Body="[&quot;&lt;h1&gt;Stock table corrections&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please review the Stock data scraped from the pdf form and correct any values where necessary.&lt;br&gt;&quot;+&#xA;&quot;&lt;p&gt;Please note that data corrected here &lt;strong&gt;will not&lt;/strong&gt; be re-validated. Please ensure that formatting etc is correct before continuing.&quot;]" in_CSS_Path="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Editable Standard Template.css&quot;]" in_FormHTMLPath="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\FormRender.html&quot;]" in_ShowForm="True" in_TemplatePath="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\FormCreatorTemplate.html&quot;]" in_WidthHeight="[{1000,700}]" io_Table="[dtStockForm]" />
+                      <d:Editable_DataTable in_FullReadOnly="{x:Null}" out_TableHTML="{x:Null}" DisplayName="PP1 - stock table" sap:VirtualizedContainerService.HintSize="510,510.4" sap2010:WorkflowViewState.IdRef="Editable_DataTable_1" in_Body="[&quot;&lt;h1&gt;Stock table corrections&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please review the Stock data scraped from the pdf form and correct any values where necessary.&lt;br&gt;&quot;+&#xA;&quot;Please note that there should only be &lt;strong&gt;1 species per row&lt;/strong&gt;. For example, if there are two or more rows for 'Chicken', please consolidate these by summing up their totals.&lt;/p&gt;&quot;]" in_CSS_Path="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Editable Standard Template.css&quot;]" in_FormHTMLPath="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\FormRender.html&quot;]" in_ShowForm="True" in_TemplatePath="[System.IO.Directory.GetCurrentDirectory + &quot;\Assets\FormCreatorTemplate.html&quot;]" in_WidthHeight="[{1000,700}]" io_Table="[dtStockForm]" />
                     </Sequence>
                   </ActivityAction>
                 </uix:NApplicationCard.Body>
@@ -440,25 +440,25 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NApplicationCard>
-              <InvokeMethod DisplayName="Start timer - PP1" sap:VirtualizedContainerService.HintSize="606,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
+              <InvokeMethod DisplayName="Start timer - PP1" sap:VirtualizedContainerService.HintSize="606,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
                 <InvokeMethod.TargetObject>
                   <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                 </InvokeMethod.TargetObject>
               </InvokeMethod>
-              <If sap2010:Annotation.AnnotationText="If all rows are returned empty from the stock table, the column data ends up being lost, so we re-initialise the datatable." Condition="[dtStockForm.ColumnCount=0]" DisplayName="If stock table returned empty" sap:VirtualizedContainerService.HintSize="606,800.4" sap2010:WorkflowViewState.IdRef="If_8">
+              <If sap2010:Annotation.AnnotationText="If all rows are returned empty from the stock table, the column data ends up being lost, so we re-initialise the datatable." Condition="[dtStockForm.ColumnCount=0]" DisplayName="If stock table returned empty" sap:VirtualizedContainerService.HintSize="606,805.2" sap2010:WorkflowViewState.IdRef="If_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="539.2,322" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                  <Sequence sap:VirtualizedContainerService.HintSize="539.6,324.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Switch x:TypeArguments="x:String" DisplayName="Switch - reinitialise stock table" Expression="[strFormType]" sap:VirtualizedContainerService.HintSize="497.2,233.6" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                    <Switch x:TypeArguments="x:String" DisplayName="Switch - reinitialise stock table" Expression="[strFormType]" sap:VirtualizedContainerService.HintSize="497.6,236.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                       <Switch.Default>
                         <Throw DisplayName="Throw BRE - form type not recognised" Exception="[new BusinessRuleException(&quot;Form type '&quot;+strFormType+&quot;' not recognised at reinitialising of stock table.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_3" />
                       </Switch.Default>
@@ -471,13 +471,13 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,251.6" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,252.4" sap2010:WorkflowViewState.IdRef="Sequence_55">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:FilterDataTable DataTable="[dtStockForm]" DisplayName="Remove empty rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,163.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtStockForm]" SelectColumnsMode="Remove">
+                    <ui:FilterDataTable DataTable="[dtStockForm]" DisplayName="Remove empty rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtStockForm]" SelectColumnsMode="Remove">
                       <ui:FilterDataTable.Filters>
                         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                           <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -502,11 +502,11 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">200,1098.5</av:Point>
-                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                    <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                     <av:PointCollection x:Key="ConnectorLocation">300,1151.3 300,1171.7</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to NDOMS visit details - Invoke Workflow File (Process\Process Subflows\Navigate to NDOMS visit details.xaml)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\Process Subflows\Navigate to NDOMS visit details.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigate to NDOMS visit details - Invoke Workflow File (Process\Process Subflows\Navigate to NDOMS visit details.xaml)" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\Process Subflows\Navigate to NDOMS visit details.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="in_strCPH">[dictFormValues("CPH")]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_strJRF">[dictFormValues("JRF")]</InArgument>
@@ -533,11 +533,11 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">140,1268.6</av:Point>
-                            <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+                            <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                             <av:PointCollection x:Key="ConnectorLocation">240,1351.3999999999999 240,1381.3999999999999 300,1381.3999999999999 300,1412.1999999999998</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Pause Point 2" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                        <Sequence DisplayName="Pause Point 2" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_26">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -567,11 +567,11 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">200,1412.1999999999998</av:Point>
-                                <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                                 <av:PointCollection x:Key="ConnectorLocation">300,1464.9999999999998 300,1485.3999999999999</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Edit NDOMS visit details" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\Process Subflows\Edit NDOMS visit details.xaml">
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Edit NDOMS visit details" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\Process Subflows\Edit NDOMS visit details.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="x:String" x:Key="in_strVisitDate">[Date.Parse(dictFormValues("VisitDate"),CultureInfo.GetCultureInfo("en-GB")).ToString("yyyy-MM-dd")]</InArgument>
                                 <InArgument x:TypeArguments="x:String" x:Key="in_strVisitTime">[dictFormValues("VisitTime")]</InArgument>
@@ -600,11 +600,11 @@
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <av:Point x:Key="ShapeLocation">110,1578.2</av:Point>
-                                        <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+                                        <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                                         <av:PointCollection x:Key="ConnectorLocation">210,1661 210,1691 300,1691 300,1718.2</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence DisplayName="Pause Point 3" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                    <Sequence DisplayName="Pause Point 3" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -634,44 +634,74 @@
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">200,1718.2</av:Point>
-                                            <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+                                            <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                                             <av:PointCollection x:Key="ConnectorLocation">300,1801 300,1821.8</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence DisplayName="Scrape stock data and edit" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                        <Sequence DisplayName="Scrape stock data and edit" sap:VirtualizedContainerService.HintSize="1112,1723.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Message - scrape stock details" sap:VirtualizedContainerService.HintSize="484,142.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Comparing stock details between NDOMS and form&quot;]" />
-                                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Scrape NDOMS stock details table" sap:VirtualizedContainerService.HintSize="484,409.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="dee6da6b-dfb7-4e47-a921-5419fb376287" Version="V2">
-                                            <uix:NApplicationCard.Body>
-                                              <ActivityAction x:TypeArguments="x:Object">
-                                                <ActivityAction.Argument>
-                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                                                </ActivityAction.Argument>
-                                                <Sequence DisplayName="Extract stock details table" sap:VirtualizedContainerService.HintSize="450,271.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtStockNDOMS]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Species' ReferenceName='Species' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Category' ReferenceName='Category' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number of Stock at Premises' ReferenceName='Number of Stock&amp;#xA;at Premises' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Inspected (Not Examined)' ReferenceName='Inspected&amp;#xA;(Not Examined)' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number Examined' ReferenceName='Number&amp;#xA;Examined' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Reason Not Examined' ReferenceName='Reason Not&amp;#xA;Examined' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number Eligible For Statistical Sampling' ReferenceName='Number Eligible&amp;#xA;For Statistical&amp;#xA;Sampling' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Sample Types Taken' ReferenceName='Sample Types Taken' ReferenceIdx='7'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number of Animals Sampled' ReferenceName='Number of&amp;#xA;Animals Sampled' ReferenceIdx='8'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number is Estimated?' ReferenceName='Number is&amp;#xA;Estimated?' ReferenceIdx='9'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number Already Dead' ReferenceName='Number Already&amp;#xA;Dead' ReferenceIdx='10'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Stock Present But Not Counted' ReferenceName='Stock Present&amp;#xA;But Not Counted' ReferenceIdx='11'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-12' ReferenceName='Column-12' ReferenceIdx='12'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Species' attr='fulltext' /&gt;&lt;column name='Category' attr='fulltext' /&gt;&lt;column name='Number of Stock&amp;#xA;at Premises' attr='fulltext' /&gt;&lt;column name='Inspected&amp;#xA;(Not Examined)' attr='fulltext' /&gt;&lt;column name='Number&amp;#xA;Examined' attr='fulltext' /&gt;&lt;column name='Reason Not&amp;#xA;Examined' attr='fulltext' /&gt;&lt;column name='Number Eligible&amp;#xA;For Statistical&amp;#xA;Sampling' attr='fulltext' /&gt;&lt;column name='Sample Types Taken' attr='fulltext' /&gt;&lt;column name='Number of&amp;#xA;Animals Sampled' attr='fulltext' /&gt;&lt;column name='Number is&amp;#xA;Estimated?' attr='fulltext' /&gt;&lt;column name='Number Already&amp;#xA;Dead' attr='fulltext' /&gt;&lt;column name='Stock Present&amp;#xA;But Not Counted' attr='fulltext' /&gt;&lt;column name='Column-12' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="388,157.2" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="None" MaximumResults="0" Version="V3">
-                                                    <uix:NExtractData.Target>
-                                                      <uix:TargetAnchorable DesignTimeRectangle="266, 1729, 3475, 280" DesignTimeScaleFactor="2.5" FriendlyName="'Species Category'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="e19937d6-dfc3-4b4b-8892-e7c1281d6e2a" InformativeScreenshot="4fcaeae9fd1d6e05505e8e54864b3a17.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                                    </uix:NExtractData.Target>
-                                                  </uix:NExtractData>
-                                                </Sequence>
-                                              </ActivityAction>
-                                            </uix:NApplicationCard.Body>
-                                            <uix:NApplicationCard.TargetApp>
-                                              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAJOgAACToAYJjBRwAAAX+SURBVFhHrZcJUFVlFMefu2hBai7puEDTZAWYuWSTTSUqamrkiAih8h76WB+bjJGFaYKCS5bToFlgwQjmggqCWs00Zc2IDaMjmoKiAgpli5U5Vvru6f///J5d0GZ8yJn5zb33u/d853znnG+5lpbSbnykCw/Q2fT8CKgG0/Vze9AbqG/aTHTnHcE7IAt0123DwS/App+fAt+AAD63mejO24FU8AdYZwmwxVrGRey1jLP+g+sxXOlcOagDvkBr34OwE00PwPBz5MUwLh5T450DrRnymGO98+Go1YbXjFTBO2kXYDuIa1/AdDwIOgHdo5tCReAJdoNtIAU0+dizjZDcQ8740vNG0r6LRmJ5gzG3sMrwTc1zdpoc64SDhfhuJTgKngO6RzeFioC5jwa16BijXeWMKj5tpBxoEhiXxPILElvaIEn7G8W285z4pxU6OwTaDXx/BXwEBgDdYyuEyqqDANsSj2kOmZ1X4XQZT4bRqN11MjO/WuLghKPsggTlnTD6zs0U1MR30OvVauPaMAuP08obhVYyOHKFJJTVG7ZPT8iItFyxbT2OCFyU6D316poIp2YX1opfWhHr4RLgbOgP3J+WVAA0/jloxIiu+SbnOJP3N0lE4THxDEqWUYs/vhkJwCsJK6qVp5eXGx0m2p3Q+xGcBVOB7vkuhQqgKwgHSxGBBv+UDXCgURmicR/7KokvrVN14Nhbf8uBMRn7DNTBdejlggTgDXTPbgoVgaflxYgKv5QNKu8kdnetMBW8n7i6VIalfgBnzpsduIYpOQ26AwGnsO7RDdHGiQ8iUAUHDBpMQLHZUXzMeVzJORkwb5kMiVyJKNSZHbgBvZOgHkxhP24JFQA9XwpOoQau+6dsvKFGX1KvK/+ChG4+LF2nxMoLmTslGbPD5ACn4iGQBFhLuue7FCoAL7AJ5CICda4a4Mjj996c+3MKjsgTSe+rGcF3Jgf+QgrUyInb4lIEXFK9zDXgqnjek4SyBrHvqpMYTMcWDkxslXGKNs51gOu5LyJw1FyErHz7zhqJKq5R92FFZyRi+9nmDoy3zYHuQ+Ce14Em1MDfSIGqgeji0zIyLU96Bi+SXrNekzHpBRK9q1YtRi1q4Cdwz+tAGHgLEahnDTD0o7EGdAyMlj4Ra6X33FXqfuyyrUhLsxrgOsC9wAHuuA6wDTDKasds9o1uYP4HgcGsATggMZj/vUMXw3C2jM6ukNFZh6RH6HI1FeNKblsHeFJ6FDwAdM//CdvASJAHmCr9BqJfch2vACeRgsv+Czc6Y/eclX6vpkvPsAwZueJbGZF5ULxmLZFBtgy1Kpoc4DrA4xqX41Cge74pfNYwQlwrmkdJv2TxzABFcOCKn9oLGuX5zB3SaVK0eAany/0z35DOk2PUasgUhGw5Y94LvgDzQbN1gPeafuBrUAaYbv2FSdgIuqEGDngvyOKUMxwY6fjsPTJk/kph26S1Zdwl1Zb8yic1MmzxNu6GvwKG12yQueZInwEhQBU4mADUN7fJrRcBtjXdpydKeH6lOg8wEtyAaJj3LM7wrbUyZVOV9LdmiyXAehx6Kq+aoYCbE8P9G/gdHAasExaitmgSNgJ6bQXVPAsOjX+XdaBORDScvP+i2hvmYQ2YnndKhr+5w+iI9OD7qyAfDAaPgyOAU3IZYFrHAnVgIXcU/ZILEfN0AOS0nzD/6lDHe0bI5kojEkcw645zElxQI4E5lYbvoi1Gl5ccGL2tFN9mAkZhJtgCvgc8xv+/wZaiP+ZU5JbKw2kXkAUDhgfS0d+aJT5xOcYg+zrxCn5d2k9YQOMc6RDAsHKEo8APwA7u3nhLcSmDdHAJhgowMyqRayeu1SAH7Tw9s6jMxRcEOBXV6FsturM+oApsBozMk+Bn8Dbge+aa/wUv62cSBRqAD59bLbozOvAheFY/c7vmnv+lvmdbT8BU8Z7X7eArcB/bWi1U1vA/QU0bTQxgxbPoXE6QbmAhuAxc/466tzYS3SlHth78CRj+DMCp9hngfF8D6IzWamNhx4BOxIMTgHsAYa3wj8pN4xbLv9xOAcgyHIumAAAAAElFTkSuQmCC" InformativeScreenshot="101d231c3364edb3f2ed3acaa210e1ef.jpg" Selector="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" Title="Edit Visit Details for Premises ID 152" />
-                                            </uix:NApplicationCard.TargetApp>
-                                          </uix:NApplicationCard>
-                                          <ui:AddDataColumn x:TypeArguments="x:Boolean" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="NDOMS present?" DataTable="[dtStockForm]" DefaultValue="False" DisplayName="Add Data Column to form data" sap:VirtualizedContainerService.HintSize="484,188.8" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6" />
-                                          <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="SPOL species" DataTable="[dtStockForm]" DisplayName="Add SPOL column name to form data" sap:VirtualizedContainerService.HintSize="484,188.8" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" />
-                                          <ui:AddDataColumn x:TypeArguments="x:Boolean" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Form present?" DataTable="[dtStockNDOMS]" DefaultValue="False" DisplayName="Add Data Column to NDOMS data" sap:VirtualizedContainerService.HintSize="484,188.8" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8" />
+                                          <ui:LogMessage DisplayName="Log Message - scrape stock details" sap:VirtualizedContainerService.HintSize="1050,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Comparing stock details between NDOMS and form&quot;]" />
+                                          <uix:NCheckState DisplayName="Check App State 'None'" sap:VirtualizedContainerService.HintSize="1050,968.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="0" Version="V3">
+                                            <uix:NCheckState.IfExists>
+                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,172.8" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:BuildDataTable DataTable="[dtStockNDOMS]" DisplayName="Build empty NDOMS datatable" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_7" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Species&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Category&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Number_x0020_of_x0020_Stock_x0020_at_x0020_Premises&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Inspected_x0020__x0028_Not_x0020_Examined_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Number_x0020_Examined&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Form_x0020_present_x003F_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:boolean&quot; default=&quot;false&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                                              </Sequence>
+                                            </uix:NCheckState.IfExists>
+                                            <uix:NCheckState.IfNotExists>
+                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="546,749.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Scrape NDOMS stock details table" sap:VirtualizedContainerService.HintSize="484,638.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="dee6da6b-dfb7-4e47-a921-5419fb376287" Version="V2">
+                                                  <uix:NApplicationCard.Body>
+                                                    <ActivityAction x:TypeArguments="x:Object">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="Extract stock details table" sap:VirtualizedContainerService.HintSize="450,500.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dtStockNDOMS]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Species' ReferenceName='Species' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Category' ReferenceName='Category' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number of Stock at Premises' ReferenceName='Number of Stock&amp;#xA;at Premises' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Inspected (Not Examined)' ReferenceName='Inspected&amp;#xA;(Not Examined)' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number Examined' ReferenceName='Number&amp;#xA;Examined' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Reason Not Examined' ReferenceName='Reason Not&amp;#xA;Examined' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number Eligible For Statistical Sampling' ReferenceName='Number Eligible&amp;#xA;For Statistical&amp;#xA;Sampling' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Sample Types Taken' ReferenceName='Sample Types Taken' ReferenceIdx='7'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number of Animals Sampled' ReferenceName='Number of&amp;#xA;Animals Sampled' ReferenceIdx='8'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number is Estimated?' ReferenceName='Number is&amp;#xA;Estimated?' ReferenceIdx='9'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Number Already Dead' ReferenceName='Number Already&amp;#xA;Dead' ReferenceIdx='10'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Stock Present But Not Counted' ReferenceName='Stock Present&amp;#xA;But Not Counted' ReferenceIdx='11'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Column-12' ReferenceName='Column-12' ReferenceIdx='12'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Species' attr='fulltext' /&gt;&lt;column name='Category' attr='fulltext' /&gt;&lt;column name='Number of Stock&amp;#xA;at Premises' attr='fulltext' /&gt;&lt;column name='Inspected&amp;#xA;(Not Examined)' attr='fulltext' /&gt;&lt;column name='Number&amp;#xA;Examined' attr='fulltext' /&gt;&lt;column name='Reason Not&amp;#xA;Examined' attr='fulltext' /&gt;&lt;column name='Number Eligible&amp;#xA;For Statistical&amp;#xA;Sampling' attr='fulltext' /&gt;&lt;column name='Sample Types Taken' attr='fulltext' /&gt;&lt;column name='Number of&amp;#xA;Animals Sampled' attr='fulltext' /&gt;&lt;column name='Number is&amp;#xA;Estimated?' attr='fulltext' /&gt;&lt;column name='Number Already&amp;#xA;Dead' attr='fulltext' /&gt;&lt;column name='Stock Present&amp;#xA;But Not Counted' attr='fulltext' /&gt;&lt;column name='Column-12' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="388,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="None" MaximumResults="0" Version="V3">
+                                                          <uix:NExtractData.Target>
+                                                            <uix:TargetAnchorable DesignTimeRectangle="266, 1729, 3475, 280" DesignTimeScaleFactor="2.5" FriendlyName="'Species Category'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="e19937d6-dfc3-4b4b-8892-e7c1281d6e2a" InformativeScreenshot="4fcaeae9fd1d6e05505e8e54864b3a17.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                                          </uix:NExtractData.Target>
+                                                        </uix:NExtractData>
+                                                        <ui:AddDataColumn x:TypeArguments="x:Boolean" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Form present?" DataTable="[dtStockNDOMS]" DefaultValue="False" DisplayName="Add Data Column to NDOMS data" sap:VirtualizedContainerService.HintSize="388,190" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8" />
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </uix:NApplicationCard.Body>
+                                                  <uix:NApplicationCard.TargetApp>
+                                                    <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAJOgAACToAYJjBRwAAAX+SURBVFhHrZcJUFVlFMefu2hBai7puEDTZAWYuWSTTSUqamrkiAih8h76WB+bjJGFaYKCS5bToFlgwQjmggqCWs00Zc2IDaMjmoKiAgpli5U5Vvru6f///J5d0GZ8yJn5zb33u/d853znnG+5lpbSbnykCw/Q2fT8CKgG0/Vze9AbqG/aTHTnHcE7IAt0123DwS/App+fAt+AAD63mejO24FU8AdYZwmwxVrGRey1jLP+g+sxXOlcOagDvkBr34OwE00PwPBz5MUwLh5T450DrRnymGO98+Go1YbXjFTBO2kXYDuIa1/AdDwIOgHdo5tCReAJdoNtIAU0+dizjZDcQ8740vNG0r6LRmJ5gzG3sMrwTc1zdpoc64SDhfhuJTgKngO6RzeFioC5jwa16BijXeWMKj5tpBxoEhiXxPILElvaIEn7G8W285z4pxU6OwTaDXx/BXwEBgDdYyuEyqqDANsSj2kOmZ1X4XQZT4bRqN11MjO/WuLghKPsggTlnTD6zs0U1MR30OvVauPaMAuP08obhVYyOHKFJJTVG7ZPT8iItFyxbT2OCFyU6D316poIp2YX1opfWhHr4RLgbOgP3J+WVAA0/jloxIiu+SbnOJP3N0lE4THxDEqWUYs/vhkJwCsJK6qVp5eXGx0m2p3Q+xGcBVOB7vkuhQqgKwgHSxGBBv+UDXCgURmicR/7KokvrVN14Nhbf8uBMRn7DNTBdejlggTgDXTPbgoVgaflxYgKv5QNKu8kdnetMBW8n7i6VIalfgBnzpsduIYpOQ26AwGnsO7RDdHGiQ8iUAUHDBpMQLHZUXzMeVzJORkwb5kMiVyJKNSZHbgBvZOgHkxhP24JFQA9XwpOoQau+6dsvKFGX1KvK/+ChG4+LF2nxMoLmTslGbPD5ACn4iGQBFhLuue7FCoAL7AJ5CICda4a4Mjj996c+3MKjsgTSe+rGcF3Jgf+QgrUyInb4lIEXFK9zDXgqnjek4SyBrHvqpMYTMcWDkxslXGKNs51gOu5LyJw1FyErHz7zhqJKq5R92FFZyRi+9nmDoy3zYHuQ+Ce14Em1MDfSIGqgeji0zIyLU96Bi+SXrNekzHpBRK9q1YtRi1q4Cdwz+tAGHgLEahnDTD0o7EGdAyMlj4Ra6X33FXqfuyyrUhLsxrgOsC9wAHuuA6wDTDKasds9o1uYP4HgcGsATggMZj/vUMXw3C2jM6ukNFZh6RH6HI1FeNKblsHeFJ6FDwAdM//CdvASJAHmCr9BqJfch2vACeRgsv+Czc6Y/eclX6vpkvPsAwZueJbGZF5ULxmLZFBtgy1Kpoc4DrA4xqX41Cge74pfNYwQlwrmkdJv2TxzABFcOCKn9oLGuX5zB3SaVK0eAany/0z35DOk2PUasgUhGw5Y94LvgDzQbN1gPeafuBrUAaYbv2FSdgIuqEGDngvyOKUMxwY6fjsPTJk/kph26S1Zdwl1Zb8yic1MmzxNu6GvwKG12yQueZInwEhQBU4mADUN7fJrRcBtjXdpydKeH6lOg8wEtyAaJj3LM7wrbUyZVOV9LdmiyXAehx6Kq+aoYCbE8P9G/gdHAasExaitmgSNgJ6bQXVPAsOjX+XdaBORDScvP+i2hvmYQ2YnndKhr+5w+iI9OD7qyAfDAaPgyOAU3IZYFrHAnVgIXcU/ZILEfN0AOS0nzD/6lDHe0bI5kojEkcw645zElxQI4E5lYbvoi1Gl5ccGL2tFN9mAkZhJtgCvgc8xv+/wZaiP+ZU5JbKw2kXkAUDhgfS0d+aJT5xOcYg+zrxCn5d2k9YQOMc6RDAsHKEo8APwA7u3nhLcSmDdHAJhgowMyqRayeu1SAH7Tw9s6jMxRcEOBXV6FsturM+oApsBozMk+Bn8Dbge+aa/wUv62cSBRqAD59bLbozOvAheFY/c7vmnv+lvmdbT8BU8Z7X7eArcB/bWi1U1vA/QU0bTQxgxbPoXE6QbmAhuAxc/466tzYS3SlHth78CRj+DMCp9hngfF8D6IzWamNhx4BOxIMTgHsAYa3wj8pN4xbLv9xOAcgyHIumAAAAAElFTkSuQmCC" InformativeScreenshot="101d231c3364edb3f2ed3acaa210e1ef.jpg" Selector="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" Title="Edit Visit Details for Premises ID 152" />
+                                                  </uix:NApplicationCard.TargetApp>
+                                                </uix:NApplicationCard>
+                                              </Sequence>
+                                            </uix:NCheckState.IfNotExists>
+                                            <uix:NCheckState.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="266, 1944, 3475, 60" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'None'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='None' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='None' type='' class='pt-1 text-sm' aaname='None' check:text='None' /&gt;" Guid="dc541b69-1216-4f31-b190-727577c5ae40" InformativeScreenshot="abb591e903aa06e0b2153d9ecb5b33ff.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="266, 1864, 277, 70" ElementType="Text" FriendlyName="'Stock Details'" FullSelectorArgument="&lt;webctrl tag='H2' visibleinnertext='Stock Details' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' visibleinnertext='Stock Details' type='' class='leading-7 text-defra-brown-700 text-lg font-medium' aaname='Stock Details' check:text='Stock Details' /&gt;" SearchSteps="Selector" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NCheckState.Target>
+                                          </uix:NCheckState>
+                                          <ui:AddDataColumn x:TypeArguments="x:Boolean" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="NDOMS present?" DataTable="[dtStockForm]" DefaultValue="False" DisplayName="Add Data Column to form data" sap:VirtualizedContainerService.HintSize="1050,190" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6" />
+                                          <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="SPOL species" DataTable="[dtStockForm]" DisplayName="Add SPOL column name to form data" sap:VirtualizedContainerService.HintSize="1050,190" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" />
                                         </Sequence>
                                         <FlowStep.Next>
                                           <FlowDecision x:Name="__ReferenceID22" Condition="[dtStockForm.RowCount&gt;0]" DisplayName="Any form stock?" sap:VirtualizedContainerService.HintSize="91.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
@@ -689,17 +719,17 @@
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">100,1915.3999999999999</av:Point>
-                                                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                    <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                                                     <av:PointCollection x:Key="ConnectorLocation">200,1968.1999999999998 200,1998.1999999999998 310,1998.1999999999998 310,2018.6</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtStockForm]" DisplayName="For Each Stock Row" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtStockForm]" DisplayName="For Each Stock Row" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                                   <ui:ForEachRow.Body>
                                                     <ActivityAction x:TypeArguments="sd:DataRow">
                                                       <ActivityAction.Argument>
                                                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                       </ActivityAction.Argument>
-                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,721.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,723.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                                         <Sequence.Variables>
                                                           <Variable x:TypeArguments="x:String" Name="strSpecies" />
                                                           <Variable x:TypeArguments="x:String" Name="strSPOLSpecies" />
@@ -709,7 +739,7 @@
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Assign DisplayName="Store current species for checking" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                                        <Assign DisplayName="Store current species for checking" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_7">
                                                           <Assign.To>
                                                             <OutArgument x:TypeArguments="x:String">[strSpecies]</OutArgument>
                                                           </Assign.To>
@@ -717,14 +747,14 @@
                                                             <InArgument x:TypeArguments="x:String">[CurrentRow("Species").ToString]</InArgument>
                                                           </Assign.Value>
                                                         </Assign>
-                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Process Subflows\Check Birds.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Process\Process Subflows\Check Species.xaml">
+                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Process Subflows\Check Birds.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Process\Process Subflows\Check Species.xaml">
                                                           <ui:InvokeWorkflowFile.Arguments>
                                                             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSpecies">[in_dtSpecies]</InArgument>
                                                             <InOutArgument x:TypeArguments="x:String" x:Key="io_strSpecies">[strSpecies]</InOutArgument>
                                                             <OutArgument x:TypeArguments="x:String" x:Key="out_strSPOLSpecies">[strSPOLSpecies]</OutArgument>
                                                           </ui:InvokeWorkflowFile.Arguments>
                                                         </ui:InvokeWorkflowFile>
-                                                        <Assign DisplayName="Update species after checking" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                        <Assign DisplayName="Update species after checking" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_8">
                                                           <Assign.To>
                                                             <OutArgument x:TypeArguments="x:Object">[CurrentRow("Species")]</OutArgument>
                                                           </Assign.To>
@@ -732,7 +762,7 @@
                                                             <InArgument x:TypeArguments="x:Object">[strSpecies]</InArgument>
                                                           </Assign.Value>
                                                         </Assign>
-                                                        <Assign DisplayName="Update SPOL species name" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                                        <Assign DisplayName="Update SPOL species name" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_10">
                                                           <Assign.To>
                                                             <OutArgument x:TypeArguments="x:Object">[CurrentRow("SPOL species")]</OutArgument>
                                                           </Assign.To>
@@ -761,11 +791,11 @@
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <av:Point x:Key="ShapeLocation">210,2018.6</av:Point>
-                                                        <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+                                                        <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                                                         <av:PointCollection x:Key="ConnectorLocation">310,2101.4 309.59999999999997,2101.4 309.59999999999997,2122.2</av:PointCollection>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Sequence DisplayName="Get unprocessed rows" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                    <Sequence DisplayName="Get unprocessed rows" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -842,12 +872,12 @@
                                                       </ui:FilterDataTable>
                                                     </Sequence>
                                                     <FlowStep.Next>
-                                                      <FlowDecision x:Name="__ReferenceID20" Condition="[dtStockNDOMSUnprocessed.RowCount&gt;0]" DisplayName="Unprocessed rows?" sap:VirtualizedContainerService.HintSize="108.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                                      <FlowDecision x:Name="__ReferenceID20" Condition="[dtStockNDOMSUnprocessed.RowCount&gt;0]" DisplayName="Unprocessed rows?" sap:VirtualizedContainerService.HintSize="109.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             <av:Point x:Key="ShapeLocation">255.39999999999998,2122.2</av:Point>
-                                                            <av:Size x:Key="ShapeSize">108.4,87.2</av:Size>
+                                                            <av:Size x:Key="ShapeSize">109.2,87.2</av:Size>
                                                             <av:PointCollection x:Key="TrueConnector">255.39999999999998,2165.7999999999997 230,2165.7999999999997 230,2218.2</av:PointCollection>
                                                             <av:PointCollection x:Key="FalseConnector">363.79999999999995,2165.7999999999997 390,2165.7999999999997 390,2331.7999999999997 300,2331.7999999999997 300,2361.7999999999997</av:PointCollection>
                                                           </scg:Dictionary>
@@ -857,11 +887,11 @@
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <av:Point x:Key="ShapeLocation">130,2218.2</av:Point>
-                                                                <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+                                                                <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                                                                 <av:PointCollection x:Key="ConnectorLocation">230,2301 230,2331 300,2331 300,2361.7999999999997</av:PointCollection>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <Sequence DisplayName="Present unprocessed rows to user" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                            <Sequence DisplayName="Present unprocessed rows to user" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                                               <Sequence.Variables>
                                                                 <Variable x:TypeArguments="x:String" Name="strStockFormUnprocessed" />
                                                                 <Variable x:TypeArguments="x:String" Name="strStockNDOMSUnprocessed" />
@@ -974,11 +1004,11 @@
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <av:Point x:Key="ShapeLocation">200,2361.7999999999997</av:Point>
-                                                                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                                    <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                                                                     <av:PointCollection x:Key="ConnectorLocation">300,2414.6 300,2434.9999999999995</av:PointCollection>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Save visit" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V2">
+                                                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Save visit" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V2">
                                                                   <uix:NApplicationCard.Body>
                                                                     <ActivityAction x:TypeArguments="x:Object">
                                                                       <ActivityAction.Argument>
@@ -1012,11 +1042,11 @@
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <av:Point x:Key="ShapeLocation">200,2434.9999999999995</av:Point>
-                                                                        <av:Size x:Key="ShapeSize">200,176.4</av:Size>
-                                                                        <av:PointCollection x:Key="ConnectorLocation">300,2611.3999999999996 300,2634.9999999999995</av:PointCollection>
+                                                                        <av:Size x:Key="ShapeSize">200,180</av:Size>
+                                                                        <av:PointCollection x:Key="ConnectorLocation">300,2614.9999999999995 300,2634.9999999999995</av:PointCollection>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Disease is currently fixed for each form:&#xA;EXD44 = Bluetongue&#xA;EXD644/195/196/197 = Avian Influenza&#xA;&#xA;This may change in future." DisplayName="Add New Form" sap:VirtualizedContainerService.HintSize="200,176.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add New Form.xaml">
+                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Disease is currently fixed for each form:&#xA;EXD44 = Bluetongue&#xA;EXD644/195/196/197 = Avian Influenza&#xA;&#xA;This may change in future." DisplayName="Add New Form" sap:VirtualizedContainerService.HintSize="200,180" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Add New Form.xaml">
                                                                       <ui:InvokeWorkflowFile.Arguments>
                                                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_dictFormValues">[dictFormValues]</InArgument>
                                                                         <InArgument x:TypeArguments="x:String" x:Key="in_strDisease">[if(strFormType="EXD44","Bluetongue","Avian Influenza")]</InArgument>
@@ -1045,11 +1075,11 @@
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <av:Point x:Key="ShapeLocation">130,2728.6</av:Point>
-                                                                                <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+                                                                                <av:Size x:Key="ShapeSize">200,83.6</av:Size>
                                                                                 <av:PointCollection x:Key="ConnectorLocation">230,2811.4 230,2841.4 300,2841.4 300,2870.2000000000003</av:PointCollection>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <Sequence DisplayName="Manually input EXD37" sap:VirtualizedContainerService.HintSize="568,2301.6" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                                            <Sequence DisplayName="Manually input EXD37" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1222,11 +1252,11 @@
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">310,1913.6</av:Point>
-                                                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                    <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                                                     <av:PointCollection x:Key="ConnectorLocation">410,1966.3999999999999 410,1996.3999999999999 310,1996.3999999999999 310,2018.6</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="No susceptible stock" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V2">
+                                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="No susceptible stock" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V2">
                                                   <uix:NApplicationCard.Body>
                                                     <ActivityAction x:TypeArguments="x:Object">
                                                       <ActivityAction.Argument>
@@ -1290,11 +1320,11 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">70,588.0999999999999</av:Point>
-            <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+            <av:Size x:Key="ShapeSize">200,83.6</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">170,670.8999999999999 170,821.6999999999999 300,821.6999999999999 300,851.6999999999999</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Scrape EXD196" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Scrape EXD196" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <Sequence.Variables>
             <Variable x:TypeArguments="s:DateOnly" Name="dateVisit" />
             <Variable x:TypeArguments="s:TimeOnly" Name="timeVisit" />
@@ -1447,11 +1477,11 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">330,578.0999999999999</av:Point>
-            <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+            <av:Size x:Key="ShapeSize">200,83.6</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">430,660.8999999999999 430,821.6999999999999 300,821.6999999999999 300,851.6999999999999</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Scrape EXD197" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Scrape EXD197" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
             <Variable x:TypeArguments="s:DateOnly" Name="dateVisit" />
           </Sequence.Variables>
@@ -1579,11 +1609,11 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">440,388.2</av:Point>
-            <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+            <av:Size x:Key="ShapeSize">200,83.6</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">640,429.59999999999997 660,429.59999999999997 660,821.6999999999999 300,821.6999999999999 300,851.6999999999999</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Scrape EXD44" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Scrape EXD44" sap:VirtualizedContainerService.HintSize="634,2206" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strPostVisitActions" />
             <Variable x:TypeArguments="s:String[]" Name="arrPostVisitActions" />
@@ -1595,13 +1625,13 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:MultipleAssign sap2010:Annotation.AnnotationText="We construct a seperate &quot;VisitDateTime&quot; entry purely for presentation in the Pause Point and consistency across forms." DisplayName="Scrape EXD44 values and store to dictionary" sap:VirtualizedContainerService.HintSize="572,380.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
             <ui:MultipleAssign.AssignOperations>
-              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
                   <ui:AssignOperation.To>
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("CPH")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=CPH No).*?(?=JRF)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=CPH No).*?(?=(JRF|Welsh Government))").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
@@ -1609,7 +1639,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("JRF")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=JRF).*?(?=APH Office)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=JRF).*?(?=APHA? Office)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
@@ -1617,7 +1647,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("VetName")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Part Three.*?Name).*?(?=Mobile No)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=(Part Three|PART THREE).*?Name).*?(?=Mobile No)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
@@ -1625,7 +1655,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("VisitDate")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Date of visit).*?(?=Time visit began)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=(Part One|PART ONE).*?Date of visit).*?(?=Time visit began)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
@@ -1633,7 +1663,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("VisitTime")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Time visit began).*?(?=3\. Location of Stock)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Time visit began).*?(?=3\. *?Location of (S|s)tock)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_48">
@@ -1649,7 +1679,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("DiseaseRef")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=disease control zone).*?(?=Revocation of restrictions)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=disease control zone).*?(?=Revocation of restrictions)").Value.Trim.Replace("/"," - ")]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_55">
@@ -1670,28 +1700,36 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
+          <Assign DisplayName="Remove possible trailing bullet point from DiseaseRef" sap:VirtualizedContainerService.HintSize="572,82.4" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[dictFormValues("DiseaseRef")]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[Regex.Replace(dictFormValues("DiseaseRef"),"[^A-z0-9]$","")]</InArgument>
+            </Assign.Value>
+          </Assign>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Read stock table 44 - Invoke Workflow File (Read stock table 44.xaml)" sap:VirtualizedContainerService.HintSize="572,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\Process Subflows\Read stock table 44.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_strDocText">[strDocText]</InArgument>
               <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtStockTable">[dtStockForm]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <Sequence DisplayName="Post visit actions - EXD44" sap:VirtualizedContainerService.HintSize="572,715.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <Sequence DisplayName="Post visit actions - EXD44" sap:VirtualizedContainerService.HintSize="572,712.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Scrape post visit actions" sap:VirtualizedContainerService.HintSize="510,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Scrape post visit actions" sap:VirtualizedContainerService.HintSize="510,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[strPostVisitActions]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Post visit actions.*?initiated\)).*?(?=Summary of key points to be recorded on NDOMS)").Value.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Post (V|v)isit (A|a)ctions.*?initiated\)).*?(?=Summary of key points to be recorded on NDOMS)").Value.Trim]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Split on line breaks" sap:VirtualizedContainerService.HintSize="510,82.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Split on line breaks" sap:VirtualizedContainerService.HintSize="510,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:String[]">[arrPostVisitActions]</OutArgument>
               </Assign.To>
@@ -1699,19 +1737,19 @@
                 <InArgument x:TypeArguments="s:String[]">[Strings.Split(strPostVisitActions,Environment.NewLine)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each line" sap:VirtualizedContainerService.HintSize="510,359.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrPostVisitActions]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each line" sap:VirtualizedContainerService.HintSize="510,358.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrPostVisitActions]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="line" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,170.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Concatenate comment" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign DisplayName="Concatenate comment" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[dictFormValues("Comments")]</OutArgument>
                       </Assign.To>
@@ -1789,11 +1827,11 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">445,483.09999999999997</av:Point>
-            <av:Size x:Key="ShapeSize">200,82.8</av:Size>
+            <av:Size x:Key="ShapeSize">200,83.6</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">545,565.9 545,821.6999999999999 300,821.6999999999999 300,851.6999999999999</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Scrape EXD644" sap:VirtualizedContainerService.HintSize="200,82.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Scrape EXD644" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1839,7 +1877,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("Comments")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Debrief and Surveillance Vet comments).*?(?=Using and sharing your information)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Debrief and Surveillance Vet comments).*?(?=Using and sharing your information|Data Protection)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_51">
@@ -1859,7 +1897,7 @@
               <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtStockTable">[dtStockForm]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <Sequence DisplayName="TryParse date and time - EXD644" sap:VirtualizedContainerService.HintSize="541.6,468" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <Sequence DisplayName="TryParse date and time - EXD644" sap:VirtualizedContainerService.HintSize="541.6,467.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:DateTime" Name="datetimeVisit" />
             </Sequence.Variables>
@@ -1868,7 +1906,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <InvokeMethod DisplayName="TryParse visit datetime - 644" sap:VirtualizedContainerService.HintSize="479.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_15" MethodName="TryParse" TargetType="s:DateTime">
+            <InvokeMethod DisplayName="TryParse visit datetime - 644" sap:VirtualizedContainerService.HintSize="479.6,136" sap2010:WorkflowViewState.IdRef="InvokeMethod_15" MethodName="TryParse" TargetType="s:DateTime">
               <InvokeMethod.Result>
                 <OutArgument x:TypeArguments="x:Boolean">[boolDateTimeParsed]</OutArgument>
               </InvokeMethod.Result>
@@ -1922,11 +1960,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,266.9</av:Point>
-          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+          <av:Size x:Key="ShapeSize">200,53.2</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,319.7 300,349.7</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Get form type from footer" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign DisplayName="Get form type from footer" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[strFormType]</OutArgument>
         </Assign.To>
@@ -1940,15 +1978,15 @@
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID29">
+        <FlowStep x:Name="__ReferenceID29" sap2010:WorkflowViewState.IdRef="FlowStep_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,349.7</av:Point>
-              <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+              <av:Size x:Key="ShapeSize">200,53.2</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">300,402.5 300,430.9</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - form type" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Form type: &quot;+strFormType]">
+          <ui:LogMessage DisplayName="Log Message - form type" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Form type: &quot;+strFormType]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1965,11 +2003,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">139,177.7</av:Point>
-          <av:Size x:Key="ShapeSize">322,68.8</av:Size>
+          <av:Size x:Key="ShapeSize">322,69.2</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,246.5 300,266.9</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadPDFText DisplayName="Read PDF Text" FileName="[g_TransactionItem]" sap:VirtualizedContainerService.HintSize="322,68.8" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[strDocText]">
+      <ui:ReadPDFText DisplayName="Read PDF Text" FileName="[g_TransactionItem]" sap:VirtualizedContainerService.HintSize="322,69.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" PreserveFormatting="True" Range="All" Text="[strDocText]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1999,15 +2037,15 @@
     <x:Reference>__ReferenceID27</x:Reference>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <FlowStep x:Name="__ReferenceID30">
+    <FlowStep x:Name="__ReferenceID30" sap2010:WorkflowViewState.IdRef="FlowStep_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,97.7</av:Point>
-          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+          <av:Size x:Key="ShapeSize">200,53.2</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,150.5 300,177.7</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message - reading PDF" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Reading PDF: &quot;+g_TransactionItem]">
+      <ui:LogMessage DisplayName="Log Message - reading PDF" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Reading PDF: &quot;+g_TransactionItem]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

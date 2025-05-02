@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1104,938.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,938.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Compare_form_stock_with_NDOMS_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -156,23 +156,26 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID15</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID15" Condition="[in_dtStockNDOMS.Select(&quot;Species = '&quot;+io_rowStockForm(&quot;Species&quot;).ToString.Trim+&quot;'&quot;).Count&gt;0]" DisplayName="Contains species row?" sap:VirtualizedContainerService.HintSize="122.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+    <FlowDecision x:Name="__ReferenceID15" DisplayName="Contains unprocessed species row?" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+      <FlowDecision.Condition>
+        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_dtStockNDOMS.Select(&quot;Species = '&quot;+io_rowStockForm(&quot;Species&quot;).ToString.Trim+&quot;' and [Form present?]='False'&quot;).Count&gt;0" />
+      </FlowDecision.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">318.6,97.7</av:Point>
-          <av:Size x:Key="ShapeSize">122.8,87.2</av:Size>
-          <av:PointCollection x:Key="FalseConnector">441.40000000000003,141.3 450,141.3 450,343.6</av:PointCollection>
-          <av:PointCollection x:Key="TrueConnector">318.6,141.3 300,141.3 300,193.6</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">300,97.7</av:Point>
+          <av:Size x:Key="ShapeSize">160,87.2</av:Size>
+          <av:PointCollection x:Key="FalseConnector">460,141.3 470,141.3 470,343.6</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">300,141.3 280,141.3 280,193.6</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
         <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">200,193.6</av:Point>
+              <av:Point x:Key="ShapeLocation">180,193.6</av:Point>
               <av:Size x:Key="ShapeSize">200,53.2</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,246.8 300,258.6</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">280,246.8 280,258.6</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Store row" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -192,9 +195,9 @@
             <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200,258.6</av:Point>
+                  <av:Point x:Key="ShapeLocation">180,258.6</av:Point>
                   <av:Size x:Key="ShapeSize">200,83.6</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,342.20000000000005 300,386.4</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">280,342.20000000000005 280,386.4</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Sequence DisplayName="NDOMS present" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
@@ -203,7 +206,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Update rows to indicate present in NDOMS" sap:VirtualizedContainerService.HintSize="479.6,148.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign DisplayName="Update rows to indicate present in NDOMS" sap:VirtualizedContainerService.HintSize="479.6,148.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -230,13 +233,13 @@
                 <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID5" DisplayName="Form type" Expression="[in_strFormType]" sap:VirtualizedContainerService.HintSize="70,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">265,386.4</av:Point>
+                      <av:Point x:Key="ShapeLocation">245,386.4</av:Point>
                       <av:Size x:Key="ShapeSize">70,87.2</av:Size>
-                      <av:PointCollection x:Key="EXD644Connector">335,451.79999999999995 512.1,451.79999999999995 512.1,476.4</av:PointCollection>
-                      <av:PointCollection x:Key="EXD44Connector">335,430 529.8,430 529.8,476.4</av:PointCollection>
-                      <av:PointCollection x:Key="EXD195Connector">265,430 149.8,430 149.8,506.4</av:PointCollection>
-                      <av:PointCollection x:Key="EX196Connector">265,408.2 132.1,408.2 132.1,506.4</av:PointCollection>
-                      <av:PointCollection x:Key="EXD197Connector">265,451.79999999999995 167.5,451.79999999999995 167.5,506.4</av:PointCollection>
+                      <av:PointCollection x:Key="EXD644Connector">315,451.79999999999995 512.1,451.79999999999995 512.1,476.4</av:PointCollection>
+                      <av:PointCollection x:Key="EXD44Connector">315,430 529.8,430 529.8,476.4</av:PointCollection>
+                      <av:PointCollection x:Key="EXD195Connector">245,430 149.8,430 149.8,506.4</av:PointCollection>
+                      <av:PointCollection x:Key="EX196Connector">245,408.2 132.1,408.2 132.1,506.4</av:PointCollection>
+                      <av:PointCollection x:Key="EXD197Connector">245,451.79999999999995 167.5,451.79999999999995 167.5,506.4</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision x:Key="EXD644" x:Name="__ReferenceID1" Condition="[CBool(io_rowStockForm(&quot;NDOMS present?&quot;))]" DisplayName="Add or Edit?" sap:VirtualizedContainerService.HintSize="70.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
@@ -280,7 +283,7 @@
                           </FlowStep>
                         </FlowDecision.True>
                         <FlowDecision.False>
-                          <FlowStep x:Name="__ReferenceID14">
+                          <FlowStep x:Name="__ReferenceID14" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">410,633.6</av:Point>
@@ -497,7 +500,7 @@
                       </FlowDecision>
                     </FlowDecision.True>
                     <FlowDecision.False>
-                      <FlowStep x:Name="__ReferenceID11">
+                      <FlowStep x:Name="__ReferenceID11" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">540,573.6</av:Point>
@@ -647,7 +650,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <FlowDecision.False>
-                          <FlowStep x:Name="__ReferenceID13">
+                          <FlowStep x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">30,663.6</av:Point>
@@ -886,7 +889,7 @@
                       </FlowDecision>
                     </FlowDecision.True>
                     <FlowDecision.False>
-                      <FlowStep x:Name="__ReferenceID12">
+                      <FlowStep x:Name="__ReferenceID12" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">160,603.6</av:Point>
@@ -1023,9 +1026,9 @@
         <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">350,343.6</av:Point>
+              <av:Point x:Key="ShapeLocation">370,343.6</av:Point>
               <av:Size x:Key="ShapeSize">200,53.2</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">350,370.20000000000005 317.5,370.20000000000005 317.5,386.4</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">370,370.20000000000005 297.5,370.20000000000005 297.5,386.4</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Not present in NDOMS" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="Assign_2">

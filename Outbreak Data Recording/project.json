@@ -21,7 +21,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.8.0",
-  "projectVersion": "1.0.1-alpha.5",
+  "projectVersion": "1.0.1-alpha.8",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -71,6 +71,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Add New Form.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "6f7e26a3-f036-4588-93de-f44e6120c9cf",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Update Sharepoint.xaml"
       }
     ],
     "modernBehavior": true,
