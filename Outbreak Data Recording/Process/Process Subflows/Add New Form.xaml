@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1410,4504.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,4634</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Add_New_Form_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -130,20 +130,20 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_New_Form" sap:VirtualizedContainerService.HintSize="655.6,4439.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_New_Form" sap:VirtualizedContainerService.HintSize="655.6,4568.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - add new form" sap:VirtualizedContainerService.HintSize="593.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Adding new form to NDOMS&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Navigate Restrictions/Forms" sap:VirtualizedContainerService.HintSize="593.6,4144.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Navigate Restrictions/Forms" sap:VirtualizedContainerService.HintSize="593.6,4274" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="559.6,4006.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="559.6,4136" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strIssueReason" />
             </Sequence.Variables>
@@ -416,11 +416,11 @@
                 </uix:TargetAnchorable>
               </uix:NSelectItem.Target>
             </uix:NSelectItem>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch - Issue Reason from Form Type" Expression="[in_strFormType]" sap:VirtualizedContainerService.HintSize="497.6,237.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch - Issue Reason from Form Type" Expression="[in_strFormType]" sap:VirtualizedContainerService.HintSize="497.6,366.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <Switch.Default>
                 <Throw DisplayName="Throw BRE - form not recognised" Exception="[new BusinessRuleException(&quot;Form type '&quot;+in_strFormType+&quot;' not recognised for interpreting Issue Reason.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </Switch.Default>
-              <Assign x:Key="EXD644" DisplayName="Issue Reason is Clinical Investigation" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign x:Key="EXD644" DisplayName="Issue Reason is Clinical Investigation" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
                 </Assign.To>
@@ -428,7 +428,7 @@
                   <InArgument x:TypeArguments="x:String">Clinical Investigation</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign x:Key="EXD44" DisplayName="Issue Reason is Clinical Inspection" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign x:Key="EXD44" DisplayName="Issue Reason is Clinical Inspection" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_2">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
                 </Assign.To>
@@ -436,7 +436,7 @@
                   <InArgument x:TypeArguments="x:String">Clinical Inspection</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign x:Key="EXD195" DisplayName="Issue Reason is Health Census" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign x:Key="EXD195" DisplayName="Issue Reason is Health Census" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_3">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
                 </Assign.To>
@@ -444,15 +444,15 @@
                   <InArgument x:TypeArguments="x:String">Health Census</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign x:Key="EXD196" DisplayName="Issue Reason is Veterinary Enquiry" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign x:Key="EXD196" DisplayName="Issue Reason is Veterinary Enquiry" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_4">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">Veterinary Enquiry</InArgument>
+                  <InArgument x:TypeArguments="x:String">Veterinary Inquiry</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign x:Key="EXD197" DisplayName="Issue Reason is Stock Enquiry" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign x:Key="EXD197" DisplayName="Issue Reason is Stock Enquiry" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_5">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
                 </Assign.To>
