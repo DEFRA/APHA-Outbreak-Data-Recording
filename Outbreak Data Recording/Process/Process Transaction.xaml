@@ -343,7 +343,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">300,1078.5 300,1088.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="We keep the name &quot;Pause Point&quot; for ease and consistency, but this one is not on-off asset toggleable like the others. We always need the user to check if any scraped form data needs correcting." DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,226.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence sap2010:Annotation.AnnotationText="We keep the name &quot;Pause Point&quot; for ease and consistency, but this one is not on-off asset toggleable like the others. We always need the user to check if any scraped form data needs correcting." DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="668,3952.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dtFormValues" />
               </Sequence.Variables>
@@ -420,7 +420,7 @@
                                   <OutArgument x:TypeArguments="x:String">[dictFormValues(CurrentRow("key").ToString.Replace("&lt;read only&gt;",""))]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[CurrentRow("value").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">[CurrentRow("value").ToString.Trim]</InArgument>
                                 </Assign.Value>
                               </Assign>
                             </Sequence>

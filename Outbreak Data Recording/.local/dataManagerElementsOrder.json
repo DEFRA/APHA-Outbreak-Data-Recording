@@ -310,12 +310,7 @@
         "g_Config&Sequence_89",
         "g_swProcessingTimer&Sequence_89",
         "g_intExitPoint&Sequence_89",
-        "g_TransactionItem&Sequence_89",
-        "g_arrCaseID&Sequence_24",
-        "g_Config&Sequence_24",
-        "g_swProcessingTimer&Sequence_24",
-        "g_intExitPoint&Sequence_24",
-        "g_TransactionItem&Sequence_24"
+        "g_TransactionItem&Sequence_89"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Confirm_Logged_In" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410,1752.4" sap2010:WorkflowViewState.IdRef="Confirm_Logged_In_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Confirm_Logged_In" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410,1271.2" sap2010:WorkflowViewState.IdRef="Confirm_Logged_In_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -105,22 +105,25 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Confirm_Logged_In" sap:VirtualizedContainerService.HintSize="658,1687.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Confirm_Logged_In" sap:VirtualizedContainerService.HintSize="946,1206" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NCheckState DisplayName="Check App State - home page" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="596,1576" sap2010:WorkflowViewState.IdRef="NCheckState_1" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiPath.Core.UiElement)]" ScopeIdentifier="4ebfb334-9158-49af-b453-e0b39fff2cbb" Timeout="0" Version="V3">
+    <uix:NCheckState DisplayName="Check App State - home page" sap:VirtualizedContainerService.HintSize="884,1094.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiPath.Core.UiElement)]" ScopeIdentifier="4ebfb334-9158-49af-b453-e0b39fff2cbb" Timeout="0" Version="V3">
+      <uix:NCheckState.IfExists>
+        <ui:LogMessage sap:VirtualizedContainerService.HintSize="334,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;NDOMS confirmed open and logged in.&quot;]" />
+      </uix:NCheckState.IfExists>
       <uix:NCheckState.IfNotExists>
-        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="552,1375.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,894.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - homepage not found" sap:VirtualizedContainerService.HintSize="490,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;NDOMS home page not found. Re-initialising.&quot;]" />
-          <TryCatch DisplayName="Try Catch - close browser" sap:VirtualizedContainerService.HintSize="490,672" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <ui:LogMessage DisplayName="Log Message - homepage not found" sap:VirtualizedContainerService.HintSize="434,145.2" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;NDOMS home page not found. Re-initialising.&quot;]" />
+          <TryCatch DisplayName="Try Catch - close browser" sap:VirtualizedContainerService.HintSize="434,189.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
               <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Close browser" sap:VirtualizedContainerService.HintSize="434,154.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiPath.Core.UiElement)]" OpenMode="Never" ScopeGuid="d978e9f5-4062-425d-a07e-2ba01f1fda16" Version="V2">
                 <uix:NApplicationCard.Body>
@@ -136,10 +139,10 @@
               </uix:NApplicationCard>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,505.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -160,8 +163,8 @@
               </Catch>
             </TryCatch.Catches>
           </TryCatch>
-          <Delay DisplayName="Delay - allow time between kill and re-init" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="490,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open NDOMS" sap:VirtualizedContainerService.HintSize="490,234.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;NDOMS_browser&quot;)]" ScopeGuid="613d38a5-3c0f-42f4-af62-3c0af0cd0cc6" Version="V2" WindowResize="Maximize">
+          <Delay DisplayName="Delay - allow time between kill and re-init" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,91.2" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open NDOMS" sap:VirtualizedContainerService.HintSize="434,234.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Always" OutUiElement="[g_Config(&quot;NDOMS_browser&quot;)]" ScopeGuid="613d38a5-3c0f-42f4-af62-3c0af0cd0cc6" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
