@@ -1,0 +1,240 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Edit_NDOMS_visit_details" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strVisitDate" Type="InArgument(x:String)" />
+    <x:Property Name="in_strVisitTime" Type="InArgument(x:String)" />
+    <x:Property Name="in_strVetName" Type="InArgument(x:String)" />
+    <x:Property Name="in_strComments" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Edit_NDOMS_visit_details.in_strVisitDate>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Edit_NDOMS_visit_details.in_strVisitDate>
+  <this:Edit_NDOMS_visit_details.in_strVisitTime>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Edit_NDOMS_visit_details.in_strVisitTime>
+  <this:Edit_NDOMS_visit_details.in_strVetName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Edit_NDOMS_visit_details.in_strVetName>
+  <this:Edit_NDOMS_visit_details.in_strComments>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Edit_NDOMS_visit_details.in_strComments>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1410,2272</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Edit_NDOMS_visit_details_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Edit_NDOMS_visit_details" sap:VirtualizedContainerService.HintSize="546,2206.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - edit visit details" sap:VirtualizedContainerService.HintSize="484,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Premises found. Editing visit details.&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Attach NDOMS visit" sap:VirtualizedContainerService.HintSize="484,1912" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[g_Config(&quot;NDOMS_browser&quot;)]" ScopeGuid="f123d7c1-292b-4206-b47a-69087dcee010" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Edit and input visit details" sap:VirtualizedContainerService.HintSize="450,1774" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Visit Details'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f123d7c1-292b-4206-b47a-69087dcee010" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019" DesignTimeRectangle="3352, 1026, 389, 90" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Edit Visit Details'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Edit Visit Details' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Edit Visit Details' type='button' class='bg-defra-brown-200 text-defra-brown-950 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:bg-defra-brown-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-brown-600 inline-flex items-center gap-x-1.5' aaname='                     Edit Visit Details                                              ' check:text='Edit Visit Details' /&gt;" Guid="80a163ca-a501-4c94-9f8a-a36d2e26e84b" InformativeScreenshot="829d465980d01cc1e128a79439bc6c6d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Visit Details for Visit ID*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NInjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Visit Date'" sap:VirtualizedContainerService.HintSize="388,252" sap2010:WorkflowViewState.IdRef="NInjectJsScript_1" InputParameter="[in_strVisitDate]" ScopeIdentifier="f123d7c1-292b-4206-b47a-69087dcee010" ScriptCode="[&quot;function(e, in_date) {&#xA;  const input = document.getElementById(&quot;&quot;visitdate&quot;&quot;);&#xA;  input.value = in_date;&#xA;&#xA;  // Trigger input event&#xA;  const event = new Event('input', { bubbles: true });&#xA;  input.dispatchEvent(event);&#xA;&#xA;  // Optional: Also trigger change event&#xA;  const changeEvent = new Event('change', { bubbles: true });&#xA;  input.dispatchEvent(changeEvent);&#xA;}&quot;]" Version="V3">
+              <uix:NInjectJsScript.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="266, 677, 366, 90" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'2022-08-11'" FullSelectorArgument="&lt;webctrl id='visitdate' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='visitdate' tag='INPUT' type='date' class='border-0 text-defra-warm-grey-900 block rounded-md py-1.5 shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 ring-1 ring-defra-warm-grey-300 sm:text-sm sm:leading-6' aaname='Visit Date' /&gt;" Guid="1489ff2f-dc76-40a2-a57e-0c24f7cd6347" ImageBase64="" InformativeScreenshot="285939d24c8d4e07e9a833d107dc8ccf.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="266, 607, 640, 60" ElementType="Text" FriendlyName="'Visit Date'" FullSelectorArgument="&lt;webctrl aaname='Visit Date' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Visit Date' tag='LABEL' type='' class='leading-6 text-defra-warm-grey-950 block w-64 text-sm font-semibold' check:innerText='Visit Date' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NInjectJsScript.Target>
+            </uix:NInjectJsScript>
+            <uix:NInjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Visit Time'" sap:VirtualizedContainerService.HintSize="388,252" sap2010:WorkflowViewState.IdRef="NInjectJsScript_2" InputParameter="[in_strVisitTime]" ScopeIdentifier="f123d7c1-292b-4206-b47a-69087dcee010" ScriptCode="[&quot;function(e, in_time) {&#xA;  const input = document.getElementById(&quot;&quot;visittime&quot;&quot;);&#xA;  input.value = in_time;&#xA;&#xA;  // Trigger input event&#xA;  const event = new Event('input', { bubbles: true });&#xA;  input.dispatchEvent(event);&#xA;&#xA;  // Optional: Also trigger change event&#xA;  const changeEvent = new Event('change', { bubbles: true });&#xA;  input.dispatchEvent(changeEvent);&#xA;}&quot;]" Version="V3">
+              <uix:NInjectJsScript.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="866, 807, 235, 90" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'00:00'" FullSelectorArgument="&lt;webctrl id='visittime' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='visittime' tag='INPUT' type='time' class='border-0 text-defra-warm-grey-900 block rounded-md py-1.5 shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 ring-1 ring-defra-warm-grey-300 sm:text-sm sm:leading-6' aaname='Visit Time' /&gt;" Guid="595de535-ae07-4658-87b0-cf1a4f09add8" ImageBase64="" InformativeScreenshot="32e2d4fdf5eaca8f52f789fbdc68c355.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="866, 737, 640, 60" ElementType="Text" FriendlyName="'Visit Time'" FullSelectorArgument="&lt;webctrl aaname='Visit Time' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Visit Time' tag='LABEL' type='' class='leading-6 text-defra-warm-grey-950 block w-64 text-sm font-semibold' check:innerText='Visit Time' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NInjectJsScript.Target>
+            </uix:NInjectJsScript>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'checked'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="f123d7c1-292b-4206-b47a-69087dcee010" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="1466, 810, 60, 60" DesignTimeScaleFactor="2.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='debriefcomplete' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='debriefcomplete' tag='INPUT' type='checkbox' class='border-defra-warm-grey-300 text-defra-cyan-600 h-6 w-6 rounded focus:ring-defra-cyan-600' aaname='Debrief Complete' /&gt;" Guid="1461a00f-67db-47a8-a822-e225e2eaa86c" ImageBase64="" InformativeScreenshot="1192616b56d60640a4b63e9ecf0dec70.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1466, 737, 640, 60" ElementType="Text" FriendlyName="'checked'" FullSelectorArgument="&lt;webctrl aaname='Debrief Complete' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Debrief Complete' tag='LABEL' type='' class='leading-6 text-defra-warm-grey-950 block w-64 text-sm font-semibold' check:innerText='Debrief Complete' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Allocated To'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f123d7c1-292b-4206-b47a-69087dcee010" Text="[in_strVetName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="266, 982, 540, 90" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'Alex Whittle'" FullSelectorArgument="&lt;webctrl id='allocatedto' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='allocatedto' tag='INPUT' type='text' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block rounded-md py-1.5 shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:text-sm sm:leading-6' aaname='Allocated To' /&gt;" Guid="66836b32-afb8-4a75-b4b4-d139db1a67ee" ImageBase64="" InformativeScreenshot="d58f9e7463abe1790755739a2f7c9485.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="266, 912, 640, 60" ElementType="Text" FriendlyName="'Allocated To'" FullSelectorArgument="&lt;webctrl aaname='Allocated To' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Allocated To' tag='LABEL' type='' class='leading-6 text-defra-warm-grey-950 block w-64 text-sm font-semibold' check:innerText='Allocated To' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Select Item 'Visit Status'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Completed" ScopeIdentifier="f123d7c1-292b-4206-b47a-69087dcee010" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="7">
+                  <x:String></x:String>
+                  <x:String>Allocated</x:String>
+                  <x:String>Cancelled/Superseded</x:String>
+                  <x:String>Completed</x:String>
+                  <x:String>Continued</x:String>
+                  <x:String>Entry Refused</x:String>
+                  <x:String>Exempt</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="266, 1322, 509, 90" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'Completed'" FullSelectorArgument="&lt;webctrl id='visitstatustype' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='visitstatustype' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-1.5 shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:max-w-xs sm:text-sm sm:leading-6' aaname='' /&gt;" Guid="1fb96cb0-0486-4d5d-9180-f8d894d9a1a3" ImageBase64="" InformativeScreenshot="c6dfd62d2dcc2c9ada235265aa5226be.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="266, 1262, 640, 60" FriendlyName="'Visit Status'" FullSelectorArgument="&lt;webctrl tag='LABLE' visibleinnertext='Visit Status' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABLE' visibleinnertext='Visit Status' type='' class='leading-6 text-defra-warm-grey-950 block w-64 text-sm font-semibold' aaname='Visit Status' check:text='Visit Status' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Comments'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="f123d7c1-292b-4206-b47a-69087dcee010" Text="[in_strComments]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="266, 1146, 3475, 270" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'NDO9 CPD TEST'" FullSelectorArgument="&lt;webctrl id='comments' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='comments' tag='TEXTAREA' type='text' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block w-full rounded-md py-1.5 shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:text-sm sm:leading-6' aaname='Comments' /&gt;" Guid="38182656-1909-4fbe-b118-c427ac67ac8e" ImageBase64="" InformativeScreenshot="d32a664653e8ad3ea3e70e20b2c4ed20.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="266, 1086, 3475, 60" ElementType="Text" FriendlyName="'Comments'" FullSelectorArgument="&lt;webctrl aaname='Comments' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Comments' tag='LABEL' type='' class='leading-6 text-defra-warm-grey-900 block text-sm font-medium' check:innerText='Comments' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,524 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_New_Form" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:DRACOE_PopUps_64;assembly=DRACOE.PopUps.64" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Diagnostics;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_dictFormValues" Type="InArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="in_strDisease" Type="InArgument(x:String)" />
+    <x:Property Name="in_strFormType" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Add_New_Form.in_strDisease>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Add_New_Form.in_strDisease>
+  <this:Add_New_Form.in_strFormType>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Add_New_Form.in_strFormType>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1410,4634</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Add_New_Form_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>DRACOE_PopUps_64</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>DRACOE.PopUps.64</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Add_New_Form" sap:VirtualizedContainerService.HintSize="655.6,4568.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - add new form" sap:VirtualizedContainerService.HintSize="593.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Adding new form to NDOMS&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Navigate Restrictions/Forms" sap:VirtualizedContainerService.HintSize="593.6,4274" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;), UiElement)]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="559.6,4136" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="strIssueReason" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Restrictions/Forms'" sap:VirtualizedContainerService.HintSize="497.6,158" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019" DesignTimeRectangle="1808, 466, 290, 55" DesignTimeScaleFactor="2.5" ElementType="Text" FriendlyName="'Restrictions/Forms'" FullSelectorArgument="&lt;webctrl aaname='Restrictions/Forms' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Restrictions/Forms' tag='A' type='' class='border-b-2 text-defra-warm-grey-700 inline-flex items-center border-transparent px-1 pt-1 text-xs font-medium hover:border-defra-cyan-700 hover:text-defra-cyan-950' check:innerText='Restrictions/Forms' /&gt;" Guid="899aeaa8-f66b-49d8-88c2-44019e0b6524" InformativeScreenshot="f774461b4019d62b90367f28704bd03f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add New Form'" sap:VirtualizedContainerService.HintSize="497.6,158" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms" DesignTimeRectangle="3402, 931, 364, 90" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Add New Form'" FullSelectorArgument="&lt;webctrl visibleInnerText='Add New Form' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                         Add New Form                         ' tag='BUTTON' type='button' class='bg-defra-lime-green-200 text-defra-lime-green-950 inline-flex items-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:bg-defra-lime-green-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-lime-green-600' check:innerText='Add New Form' /&gt;" Guid="c63839ba-1bf8-4751-83d6-bdec684b5f4a" ImageBase64="" InformativeScreenshot="06e2320ed8a7a4671f7311d4cff9c793.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Disease'" sap:VirtualizedContainerService.HintSize="497.6,158" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_strDisease]" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String></x:String>
+                  <x:String>African Horse Sickness</x:String>
+                  <x:String>African Swine Fever</x:String>
+                  <x:String>Anthrax</x:String>
+                  <x:String>Aujeszky's Disease</x:String>
+                  <x:String>Avian Influenza</x:String>
+                  <x:String>Babesia</x:String>
+                  <x:String>Bluetongue</x:String>
+                  <x:String>Brucella Abortus</x:String>
+                  <x:String>Brucella Canis</x:String>
+                  <x:String>Brucella Melitensis</x:String>
+                  <x:String>Brucella Ovis</x:String>
+                  <x:String>Brucella Suis</x:String>
+                  <x:String>Classical Swine Fever</x:String>
+                  <x:String>Contagious Agalactia</x:String>
+                  <x:String>Contagious Bovine Pleuro-Pneumonia</x:String>
+                  <x:String>Contagious Caprine Pleuro-Pneumonia</x:String>
+                  <x:String>Contagious Equine Metritis</x:String>
+                  <x:String>Dourine</x:String>
+                  <x:String>Echinococcus (E. Multilocularis)</x:String>
+                  <x:String>Enzootic Bovine Leukosis</x:String>
+                  <x:String>Epizootic Haemorrhagic Virus Disease</x:String>
+                  <x:String>Epizootic Lymphangitis</x:String>
+                  <x:String>Equine Infectious Anaemia</x:String>
+                  <x:String>Equine Viral Arteritis</x:String>
+                  <x:String>Equine Viral Encephalomyelitis</x:String>
+                  <x:String>European Bat Lyssavirus</x:String>
+                  <x:String>FMD</x:String>
+                  <x:String>Glanders and Farcy</x:String>
+                  <x:String>Goat Pox</x:String>
+                  <x:String>Heartwater</x:String>
+                  <x:String>Hendra</x:String>
+                  <x:String>IAOC - Captive</x:String>
+                  <x:String>IAOD - Domestic</x:String>
+                  <x:String>Lumpy Skin Disease</x:String>
+                  <x:String>New World Screwworm</x:String>
+                  <x:String>Newcastle Disease</x:String>
+                  <x:String>Nipah</x:String>
+                  <x:String>Paramyxovirus</x:String>
+                  <x:String>Peste Des Petits Ruminants</x:String>
+                  <x:String>Psittacosis</x:String>
+                  <x:String>Rabies</x:String>
+                  <x:String>Rift Valley Fever</x:String>
+                  <x:String>Rinderpest</x:String>
+                  <x:String>Salmonella</x:String>
+                  <x:String>Salmonella (Strain B Vaccine)</x:String>
+                  <x:String>Salmonella (Strain B Non-Vaccine)</x:String>
+                  <x:String>Salmonella (Strain D Vaccine)</x:String>
+                  <x:String>Salmonella (Strain D Non-Vaccine)</x:String>
+                  <x:String>SARS-CoV-2</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="266, 1031, 683, 70" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'SELECT notice-details-d…'" FullSelectorArgument="&lt;webctrl id='notice-details-disease' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='notice-details-disease' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-0.5 text-xs shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:leading-6' aaname='' /&gt;" Guid="c543ec8e-bcb0-4b48-9be3-5b1e6af106de" ImageBase64="" InformativeScreenshot="e06511f90a77c608e2e9fe0d7177452b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="266, 966, 1158, 60" FriendlyName="'Disease'" FullSelectorArgument="&lt;webctrl tag='DT' visibleinnertext='Disease' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DT' visibleinnertext='Disease' type='' class='leading-6 text-defra-warm-grey-950 text-xs font-semibold' aaname='Disease' check:text='Disease' /&gt;" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'Form'" sap:VirtualizedContainerService.HintSize="497.6,158" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[in_strFormType]" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String></x:String>
+                  <x:String>EDO118</x:String>
+                  <x:String>EDO206</x:String>
+                  <x:String>EDO214</x:String>
+                  <x:String>EDO286</x:String>
+                  <x:String>EDO343</x:String>
+                  <x:String>EDO344</x:String>
+                  <x:String>EDO49</x:String>
+                  <x:String>EXD1</x:String>
+                  <x:String>EXD100</x:String>
+                  <x:String>EXD101</x:String>
+                  <x:String>EXD102</x:String>
+                  <x:String>EXD103</x:String>
+                  <x:String>EXD105</x:String>
+                  <x:String>EXD108</x:String>
+                  <x:String>EXD109</x:String>
+                  <x:String>EXD110</x:String>
+                  <x:String>EXD111</x:String>
+                  <x:String>EXD120</x:String>
+                  <x:String>EXD124</x:String>
+                  <x:String>EXD13</x:String>
+                  <x:String>EXD132</x:String>
+                  <x:String>EXD133</x:String>
+                  <x:String>EXD14</x:String>
+                  <x:String>EXD149</x:String>
+                  <x:String>EXD158</x:String>
+                  <x:String>EXD16</x:String>
+                  <x:String>EXD176</x:String>
+                  <x:String>EXD178</x:String>
+                  <x:String>EXD179</x:String>
+                  <x:String>EXD180</x:String>
+                  <x:String>EXD181</x:String>
+                  <x:String>EXD182</x:String>
+                  <x:String>EXD183</x:String>
+                  <x:String>EXD184</x:String>
+                  <x:String>EXD185</x:String>
+                  <x:String>EXD188</x:String>
+                  <x:String>EXD190</x:String>
+                  <x:String>EXD191</x:String>
+                  <x:String>EXD192</x:String>
+                  <x:String>EXD193</x:String>
+                  <x:String>EXD194</x:String>
+                  <x:String>EXD195</x:String>
+                  <x:String>EXD196</x:String>
+                  <x:String>EXD197</x:String>
+                  <x:String>EXD2</x:String>
+                  <x:String>EXD200</x:String>
+                  <x:String>EXD201</x:String>
+                  <x:String>EXD203</x:String>
+                  <x:String>EXD204</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="1424, 1031, 406, 70" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'SELECT notice-details-f…'" FullSelectorArgument="&lt;webctrl id='notice-details-form-code' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='notice-details-form-code' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-0.5 text-xs shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:max-w-xs sm:leading-6' aaname='' /&gt;" Guid="e3b91dfd-e7b4-477d-b4db-f96d78734868" ImageBase64="" InformativeScreenshot="98183fd0857b0a8fbd866d41b3f3bf96.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for Premises ID 152' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1424, 966, 1158, 60" FriendlyName="'Form'" FullSelectorArgument="&lt;webctrl visibleInnerText='Form' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='leading-6 text-defra-warm-grey-950 text-xs font-semibold' tag='DT' aaname='Form' check:innerText='Form' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NInjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Issue Date'" sap:VirtualizedContainerService.HintSize="497.6,252" sap2010:WorkflowViewState.IdRef="NInjectJsScript_3" InputParameter="[Date.Parse(in_dictFormValues(&quot;VisitDate&quot;), CultureInfo.GetCultureInfo(&quot;en-GB&quot;)).ToString(&quot;yyyy-MM-dd&quot;)]" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" ScriptCode="[&quot;function(e, in_date) {&#xA;  const input = document.getElementById(&quot;&quot;issuedate&quot;&quot;);&#xA;  input.value = in_date;&#xA;&#xA;  // Trigger input event&#xA;  const event = new Event('input', { bubbles: true });&#xA;  input.dispatchEvent(event);&#xA;&#xA;  // Optional: Also trigger change event&#xA;  const changeEvent = new Event('change', { bubbles: true });&#xA;  input.dispatchEvent(changeEvent);&#xA;}&quot;]" Version="V3">
+              <uix:NInjectJsScript.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="266, 1176, 324, 70" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT issuedate'" FullSelectorArgument="&lt;webctrl id='issuedate' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='issuedate' tag='INPUT' type='date' class='ring-1 ring-defra-warm-grey-300 border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-0.5 text-xs shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:max-w-xs sm:leading-6' aaname='' /&gt;" Guid="34baaf36-39ad-4dc7-9dd2-be5dc65fc5e5" ImageBase64="" InformativeScreenshot="ebd4d6e6c3e5682dd200902c3d7838a9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for Premises ID 152' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="266, 1111, 1158, 60" FriendlyName="'Issue Date'" FullSelectorArgument="&lt;webctrl visibleInnerText='Issue Date' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='leading-6 text-defra-warm-grey-950 text-xs font-semibold' tag='DT' aaname='Issue Date' check:innerText='Issue Date' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NInjectJsScript.Target>
+            </uix:NInjectJsScript>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="497.6,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="547.6,1092.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:BlockUserInput TimeoutMS="{x:Null}" BlockType="All" DisplayName="Block User Input" sap:VirtualizedContainerService.HintSize="485.6,981.6" sap2010:WorkflowViewState.IdRef="BlockUserInput_1" KeyModifiers="Alt" SpecialKey="True">
+                    <ui:BlockUserInput.Body>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,853.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into day" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Text="[Date.Parse(in_dictFormValues(&quot;VisitDate&quot;), CultureInfo.GetCultureInfo(&quot;en-GB&quot;)).Day.ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable CVScreenId="2858cf4e-7ad8-4c2a-8dd6-c140f25c176f" CvTextArea="295, 1037, 192, 35" CvTextArgument="dd/mm/yyyy" CvType="Text" DesignTimeRectangle="296, 1035, 42, 36" DesignTimeScaleFactor="2.5" FriendlyName="'0'" FullSelectorArgument="&lt;ctrl name='Day' role='spin box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises*' role='document' /&gt;&lt;ctrl name='Day' role='spin box' automationid='' check:text='0' /&gt;" Guid="c350e352-a793-430f-aceb-8af5020d7694" InformativeScreenshot="79f19d4c37fc371f7f608854f5880466.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Restrictions/Forms for Premises*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" SelectionStrategy="AA" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="2858cf4e-7ad8-4c2a-8dd6-c140f25c176f" CvTextArea="265, 967, 152, 27" CvTextArgument="Issue Date" CvType="Text" DesignTimeRectangle="266, 953, 1159, 60" ElementType="ListItem" FriendlyName="'Issue Date'" FullSelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises ID 152' role='document' /&gt;&lt;ctrl name='Issue Date' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises ID 152' role='document' /&gt;&lt;ctrl name='Issue Date' role='list item' automationid='' check:text='Issue Date' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into month" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="HardwareEvents" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Text="[Date.Parse(in_dictFormValues(&quot;VisitDate&quot;), CultureInfo.GetCultureInfo(&quot;en-GB&quot;)).Month.ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable CVScreenId="2858cf4e-7ad8-4c2a-8dd6-c140f25c176f" CvTextArea="295, 1037, 192, 35" CvTextArgument="dd/mm/yyyy" CvType="Text" DesignTimeRectangle="348, 1035, 59, 36" DesignTimeScaleFactor="2.5" FriendlyName="'0'" FullSelectorArgument="&lt;ctrl name='Month' role='spin box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises*' role='document' /&gt;&lt;ctrl name='Month' role='spin box' automationid='' check:text='0' /&gt;" Guid="9b06148e-d144-40fe-9b04-953b4cb551bc" InformativeScreenshot="1f6f4a069c0a7182dd62ab63db68b1ab.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Restrictions/Forms for Premises*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" SelectionStrategy="AA" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="2858cf4e-7ad8-4c2a-8dd6-c140f25c176f" CvTextArea="265, 967, 152, 27" CvTextArgument="Issue Date" CvType="Text" DesignTimeRectangle="266, 953, 1159, 60" ElementType="ListItem" FriendlyName="'Issue Date'" FullSelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises ID 152' role='document' /&gt;&lt;ctrl name='Issue Date' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises ID 152' role='document' /&gt;&lt;ctrl name='Issue Date' role='list item' automationid='' check:text='Issue Date' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into year" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="HardwareEvents" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Text="[Date.Parse(in_dictFormValues(&quot;VisitDate&quot;), CultureInfo.GetCultureInfo(&quot;en-GB&quot;)).Year.ToString]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable CVScreenId="2858cf4e-7ad8-4c2a-8dd6-c140f25c176f" CvTextArea="295, 1037, 192, 35" CvTextArgument="dd/mm/yyyy" CvType="Text" DesignTimeRectangle="416, 1035, 74, 36" DesignTimeScaleFactor="2.5" FriendlyName="'0'" FullSelectorArgument="&lt;ctrl name='Year' role='spin box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises*' role='document' /&gt;&lt;ctrl name='Year' role='spin box' automationid='' check:text='0' /&gt;" Guid="9ca6dfc6-f348-4af6-8eec-155f958f50e1" InformativeScreenshot="29b11c0ff255506348503c3d595fe78c.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Restrictions/Forms for Premises*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" SelectionStrategy="AA" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="2858cf4e-7ad8-4c2a-8dd6-c140f25c176f" CvTextArea="265, 967, 152, 27" CvTextArgument="Issue Date" CvType="Text" DesignTimeRectangle="266, 953, 1159, 60" ElementType="ListItem" FriendlyName="'Issue Date'" FullSelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises ID 152' role='document' /&gt;&lt;ctrl name='Issue Date' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restrictions/Forms for Premises ID 152' role='document' /&gt;&lt;ctrl name='Issue Date' role='list item' automationid='' check:text='Issue Date' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </ui:BlockUserInput.Body>
+                  </ui:BlockUserInput>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NInjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'Issue Time'" sap:VirtualizedContainerService.HintSize="497.6,252" sap2010:WorkflowViewState.IdRef="NInjectJsScript_2" InputParameter="[in_dictFormValues(&quot;VisitTime&quot;)]" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" ScriptCode="[&quot;function(e, in_time) {&#xA;  const input = document.getElementById(&quot;&quot;issuetime&quot;&quot;);&#xA;  input.value = in_time;&#xA;&#xA;  // Trigger input event&#xA;  const event = new Event('input', { bubbles: true });&#xA;  input.dispatchEvent(event);&#xA;&#xA;  // Optional: Also trigger change event&#xA;  const changeEvent = new Event('change', { bubbles: true });&#xA;  input.dispatchEvent(changeEvent);&#xA;}&quot;]" Version="V3">
+              <uix:NInjectJsScript.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="266, 1321, 212, 70" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT issuetime'" FullSelectorArgument="&lt;webctrl id='issuetime' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='issuetime' tag='INPUT' type='time' class='ring-1 ring-defra-warm-grey-300 border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-0.5 text-xs shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:max-w-xs sm:leading-6' aaname='' /&gt;" Guid="d38b09e4-37bf-4620-baa5-aa182f20e9e9" ImageBase64="" InformativeScreenshot="ded17c6bc5dd9cf4147a9ab7c3ee8b3e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for Premises ID 152' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="266, 1256, 1158, 60" FriendlyName="'Issue Time'" FullSelectorArgument="&lt;webctrl visibleInnerText='Issue Time' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='leading-6 text-defra-warm-grey-950 text-xs font-semibold' tag='DT' aaname='Issue Time' check:innerText='Issue Time' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NInjectJsScript.Target>
+            </uix:NInjectJsScript>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Issued By'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="497.6,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Text="[in_dictFormValues(&quot;VetName&quot;)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="266, 1466, 472, 70" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'INPUT issuedby'" FullSelectorArgument="&lt;webctrl id='issuedby' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='issuedby' tag='INPUT' type='text' class='ring-1 ring-defra-warm-grey-300 border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-0.5 text-xs shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:max-w-xs sm:leading-6' aaname='' /&gt;" Guid="b37b0a0e-1603-40f7-894f-d52976fba0ad" ImageBase64="" InformativeScreenshot="376c87d3da8383f866d1e3a36512622e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for Premises ID 152' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="266, 1401, 1158, 60" FriendlyName="'Issued By'" FullSelectorArgument="&lt;webctrl visibleInnerText='Issued By' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='leading-6 text-defra-warm-grey-950 text-xs font-semibold' tag='DT' aaname='Issued By' check:innerText='Issued By' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Comments'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="497.6,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Text="[in_dictFormValues(&quot;JRF&quot;)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="2583, 1031, 1158, 190" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'TEXTAREA notice-details…'" FullSelectorArgument="&lt;webctrl id='notice-details-comments' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='notice-details-comments' tag='TEXTAREA' type='text' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block w-full rounded-md py-0.5 text-xs shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:leading-6' aaname='' /&gt;" Guid="8d0434f7-6f3d-454a-b429-9596dd8295d2" ImageBase64="" InformativeScreenshot="fba7860e8fe7da9402881dda95c4907e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for *' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="2583, 966, 1158, 60" FriendlyName="'Comments'" FullSelectorArgument="&lt;webctrl visibleInnerText='Comments' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='leading-6 text-defra-warm-grey-950 text-xs font-semibold' tag='DT' aaname='Comments' check:innerText='Comments' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Select Item 'Issue Method'" sap:VirtualizedContainerService.HintSize="497.6,158" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="By hand" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String></x:String>
+                  <x:String>By hand</x:String>
+                  <x:String>Mail</x:String>
+                  <x:String>Verbal</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="1424, 1456, 246, 70" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'SELECT notice-details-i…'" FullSelectorArgument="&lt;webctrl id='notice-details-issue-method' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='notice-details-issue-method' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-0.5 text-xs shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:max-w-xs sm:leading-6' aaname='' /&gt;" Guid="c1bc172e-85d3-410e-819d-0bb95587e647" ImageBase64="" InformativeScreenshot="42f8645ced9a5de25dcd52ded3ae3022.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for *' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1424, 1391, 1158, 60" FriendlyName="'Issue Method'" FullSelectorArgument="&lt;webctrl visibleInnerText='Issue Method' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='leading-6 text-defra-warm-grey-950 text-xs font-semibold' tag='DT' aaname='Issue Method' check:innerText='Issue Method' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <Switch x:TypeArguments="x:String" DisplayName="Switch - Issue Reason from Form Type" Expression="[in_strFormType]" sap:VirtualizedContainerService.HintSize="497.6,366.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Switch.Default>
+                <Throw DisplayName="Throw BRE - form not recognised" Exception="[new BusinessRuleException(&quot;Form type '&quot;+in_strFormType+&quot;' not recognised for interpreting Issue Reason.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
+              </Switch.Default>
+              <Assign x:Key="EXD644" DisplayName="Issue Reason is Clinical Investigation" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Clinical Investigation</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign x:Key="EXD44" DisplayName="Issue Reason is Clinical Inspection" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Clinical Inspection</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign x:Key="EXD195" DisplayName="Issue Reason is Health Census" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Health Census</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign x:Key="EXD196" DisplayName="Issue Reason is Veterinary Enquiry" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Veterinary Inquiry</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign x:Key="EXD197" DisplayName="Issue Reason is Stock Enquiry" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[strIssueReason]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Stock Enquiry</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Switch>
+            <uix:NSelectItem DisplayName="Select Item 'Issue Reason'" sap:VirtualizedContainerService.HintSize="497.6,158" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[strIssueReason]" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="2">
+                  <x:String></x:String>
+                  <x:String>Clinical Investigation</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="1424, 1611, 422, 70" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'SELECT notice-details-i…'" FullSelectorArgument="&lt;webctrl id='notice-details-issue-reason' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='notice-details-issue-reason' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-0.5 text-xs shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:max-w-xs sm:leading-6' aaname='' /&gt;" Guid="fd222f1d-8762-4e2a-85eb-5c213795f613" ImageBase64="" InformativeScreenshot="dcff31e86909063484eb3a2c7fdf47cb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1424, 1546, 1158, 60" FriendlyName="'Issue Reason'" FullSelectorArgument="&lt;webctrl visibleInnerText='Issue Reason' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='leading-6 text-defra-warm-grey-950 text-xs font-semibold' tag='DT' aaname='Issue Reason' check:innerText='Issue Reason' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <If Condition="[CBool(g_Config(&quot;PausePoint5&quot;))]" DisplayName="Pause Point 5?" sap:VirtualizedContainerService.HintSize="497.6,1030" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,846.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <InvokeMethod DisplayName="PP5 - Stop timer" sap:VirtualizedContainerService.HintSize="334,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Stop">
+                    <InvokeMethod.TargetObject>
+                      <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
+                    </InvokeMethod.TargetObject>
+                  </InvokeMethod>
+                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP5" sap:VirtualizedContainerService.HintSize="334,405.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 5" IN_PopupMessage="[&quot;&lt;h1&gt;Review New Form&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please review the information added for the new form.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Disease:&lt;/strong&gt;&amp;ensp;&quot;+in_strDisease+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Issue Date:&lt;/strong&gt;&amp;ensp;&quot;+in_dictFormValues(&quot;VisitDate&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Issue Time:&lt;/strong&gt;&amp;ensp;&quot;+in_dictFormValues(&quot;VisitTime&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Issued By:&lt;/strong&gt;&amp;ensp;&quot;+in_dictFormValues(&quot;VetName&quot;)+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Form:&lt;/strong&gt;&amp;ensp;&quot;+in_strFormType+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Issue Method:&lt;/strong&gt;&amp;ensp;By hand&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Issue Reason:&lt;/strong&gt;&amp;ensp;&quot;+strIssueReason+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Comments:&lt;/strong&gt;&amp;ensp;&quot;+in_dictFormValues(&quot;JRF&quot;)]" IN_PopupTitle="Pause Point 5" IN_WidthHeight="[{500,450}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                  <InvokeMethod DisplayName="PP5 - Start timer" sap:VirtualizedContainerService.HintSize="334,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
+                    <InvokeMethod.TargetObject>
+                      <InArgument x:TypeArguments="sd:Stopwatch">[g_swProcessingTimer]</InArgument>
+                    </InvokeMethod.TargetObject>
+                  </InvokeMethod>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8" />
+              </If.Else>
+            </If>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add New Form'" sap:VirtualizedContainerService.HintSize="497.6,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/restrictions-forms/add" DesignTimeRectangle="484, 2089, 309, 90" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Add New Form'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' visibleInnerText='Add New Form' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='bg-defra-lime-green-200 text-defra-lime-green-950 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:bg-defra-lime-green-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-lime-green-600' aaname='                         Add New Form                     ' check:innerText='Add New Form' /&gt;" Guid="9f01f6ed-84d1-4222-84cf-a78ba48c85c4" ImageBase64="" InformativeScreenshot="25492a9096a8c2b3b3b2fe9dfb7b0b4c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Restrictions/Forms for*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,982 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Update_Sharepoint" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:DRACOE_Credentials_64;assembly=DRACOE.Credentials.64" xmlns:d1="clr-namespace:DRACOE_PopUps_64;assembly=DRACOE.PopUps.64" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mg="clr-namespace:Microsoft.Graph;assembly=Microsoft.Graph" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Diagnostics;assembly=System.Private.CoreLib" xmlns:sn="clr-namespace:System.Net;assembly=System.Net.Primitives" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uma="clr-namespace:UiPath.MicrosoftOffice365.Activities;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umaf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umas="clr-namespace:UiPath.MicrosoftOffice365.Activities.SharePoint;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_dictFormValues" Type="InArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="in_dtStockForm" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_strDisease" Type="InArgument(x:String)" />
+    <x:Property Name="in_strFormType" Type="InArgument(x:String)" />
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Update_Sharepoint.in_dictFormValues>
+    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" />
+  </this:Update_Sharepoint.in_dictFormValues>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1410,10820.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Update_Sharepoint_Masterlist_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Sharepoint</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Sharepoint.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Sharepoint.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Sharepoint.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Sharepoint.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Enums</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>DRACOE_Credentials_64</x:String>
+      <x:String>CredentialManagement</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Credentials.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.SharePoint</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>DRACOE_PopUps_64</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>DRACOE.Credentials.64</AssemblyReference>
+      <AssemblyReference>CredentialManagement</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>DRACOE.PopUps.64</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="919.6,10755.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sn:NetworkCredential" Name="credSPOL" />
+      <Variable x:TypeArguments="x:String" Name="strUsername" />
+      <Variable x:TypeArguments="ss:SecureString" Name="sstrPassword" />
+      <Variable x:TypeArguments="x:Int32" Name="intListItemID" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[new Dictionary(of String, String)]" Name="dictPausePoint" />
+      <Variable x:TypeArguments="x:String" Name="strSharepointURL" />
+      <Variable x:TypeArguments="x:String" Name="strSharepointListName" />
+      <Variable x:TypeArguments="x:String" Name="strSharepointDirectory" />
+      <Variable x:TypeArguments="x:String" Name="strJRFColumn" />
+      <Variable x:TypeArguments="x:String" Name="strQuery" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <d:Get_Credential DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="857.6,248.4" IN_strRequestMessage="&lt;p&gt;Your device does not have the credentials stored for the robot to interact with Sharepoint. Please contact DRACoE to provide these credentials for you.&lt;/p&gt;&lt;p&gt;Note: these are NOT your log in credentials. These are specific credentials managed by DRACoE.&lt;/p&gt;" sap2010:WorkflowViewState.IdRef="Get_Credential_1" in_strCredentialName="[g_Config(&quot;SharepointCredentialTarget&quot;).ToString]" in_strRequestTitle="Please contact DRACoE" out_credNetworkCredential="[credSPOL]" />
+    <ui:MultipleAssign DisplayName="Store username and password" sap:VirtualizedContainerService.HintSize="857.6,148.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[strUsername]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[credSPOL.UserName]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="ss:SecureString">[sstrPassword]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="ss:SecureString">[credSPOL.SecurePassword]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="857.6,53.2" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+      <Switch.Default>
+        <Throw DisplayName="Throw BRE - disease not recognised" Exception="[new BusinessRuleException(&quot;Disease '&quot;+in_strDisease+&quot;' is not currently supported by this automation. The automation is currently compatible for Avian Influenza and Bluetongue.&quot;)]" sap:VirtualizedContainerService.HintSize="334,90.8" sap2010:WorkflowViewState.IdRef="Throw_3" />
+      </Switch.Default>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MultipleAssign x:Key="Avian Influenza" DisplayName="Set Sharepoint locations to AIV" sap:VirtualizedContainerService.HintSize="479.6,179.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strSharepointURL]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[g_Config("AIVsharepointURL").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strSharepointListName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[g_Config("AIVsharepointListName").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strSharepointDirectory]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[g_Config("AIVsharepointDirectory").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+      <ui:MultipleAssign x:Key="Bluetongue" DisplayName="Set Sharepoint locations to BTD" sap:VirtualizedContainerService.HintSize="479.6,179.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strSharepointURL]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[g_Config("BTDsharepointURL").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strSharepointListName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[g_Config("BTDsharepointListName").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strSharepointDirectory]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[g_Config("BTDsharepointDirectory").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+    </Switch>
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - JRF column to search based on form type" Expression="[in_strFormType]" sap:VirtualizedContainerService.HintSize="857.6,53.2" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+      <Switch.Default>
+        <Throw DisplayName="Throw BRE - form type not recognised" Exception="[new BusinessRuleException(&quot;Form type '&quot;+in_strFormType+&quot;' not recognised for finding corresponding Job Number column to search in Sharepoint.&quot;)]" sap:VirtualizedContainerService.HintSize="334,90.8" sap2010:WorkflowViewState.IdRef="Throw_5" />
+      </Switch.Default>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence x:Key="EXD195" DisplayName="Set search column and filter query - 195" sap:VirtualizedContainerService.HintSize="496,315.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="Column to search for Job Number - 195" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_17">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strJRFColumn]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">SZVisitSE_x002d_JRFNumber</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Filter query - 195" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strQuery]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">["fields/CPH eq '"+in_dictFormValues("CPH")+"' and substringof('"+in_dictFormValues("JRF")+"',fields/"+strJRFColumn+")"]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+      <Sequence x:Key="EXD196" DisplayName="Set search column and filter query - 196" sap:VirtualizedContainerService.HintSize="496,315.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="Column to search for Job Number - 196" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_13">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strJRFColumn]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">PZ_x002d_JRFNo_x002e_</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Filter query - 196" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_19">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strQuery]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">["fields/CPH eq '"+in_dictFormValues("CPH")+"' and substringof('"+in_dictFormValues("JRF")+"',fields/"+strJRFColumn+")"]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+      <Sequence x:Key="EXD197" sap2010:Annotation.AnnotationText="Query is different for 197 due to &quot;Multiple Lines of text&quot; column type not accepting OData queries" DisplayName="Set search column and filter query - 197" sap:VirtualizedContainerService.HintSize="496,359.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="Column to search for Job Number - 197" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strJRFColumn]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">PZStockConfirmation_x002d_JRFNo_</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Filter query - 197" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_24">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strQuery]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">["fields/CPH eq '"+in_dictFormValues("CPH")+"'"]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+      <Sequence x:Key="EXD644" DisplayName="Set search column and filter query - 644" sap:VirtualizedContainerService.HintSize="496,315.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="Column to search for Job Number - 644" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_20">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strJRFColumn]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">PZ_x002d_JRFNo_x002e_</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Filter query - 644" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_21">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strQuery]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">["fields/CPH eq '"+in_dictFormValues("CPH")+"' and substringof('"+in_dictFormValues("JRF")+"',fields/"+strJRFColumn+")"]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+      <Sequence x:Key="EXD44" DisplayName="Set search column and filter query - 44" sap:VirtualizedContainerService.HintSize="496,315.2" sap2010:WorkflowViewState.IdRef="Sequence_30">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="Column to search for Job Number - 44" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_22">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strJRFColumn]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">PZ_x002d_JRFNo_x002e_</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Filter query - 44" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_23">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strQuery]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">["fields/CPH eq '"+in_dictFormValues("CPH")+"' and substringof('"+in_dictFormValues("JRF")+"',fields/"+strJRFColumn+")"]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+    </Switch>
+    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[strUsername]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="857.6,9980.4" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstrPassword]" TenantId="[g_Config(&quot;TenantID&quot;).ToString]" UseConnectionService="False">
+      <uma:Office365ApplicationScope.AuthenticationScopes>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+      </uma:Office365ApplicationScope.AuthenticationScopes>
+      <uma:Office365ApplicationScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="823.6,9736.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="umm:Office365SharepointList" Name="spList" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dtListItems" />
+              <Variable x:TypeArguments="x:Int32" Name="intIndex" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch - update master list" sap:VirtualizedContainerService.HintSize="781.6,9525.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <Sequence DisplayName="Update master list" sap:VirtualizedContainerService.HintSize="744,8091.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="bool197Update" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - updating master list" sap:VirtualizedContainerService.HintSize="682,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Updating &quot;+in_strDisease+&quot; master list&quot;]" />
+                  <umas:GetListInfo ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Get List Info" sap:VirtualizedContainerService.HintSize="682,190" sap2010:WorkflowViewState.IdRef="GetListInfo_1" IncludeColumnsDefinitions="True" List="[spList]" ListTitleOrId="[strSharepointListName]" SiteUrlOrId="[strSharepointURL]" />
+                  <umas:GetListItems ContinueOnError="{x:Null}" AuthScopesInvalid="False" ColumnsToRetrieve="[{&quot;CPH&quot;}]" DisplayName="Get List Items" Filter="[strQuery]" sap:VirtualizedContainerService.HintSize="682,215.2" sap2010:WorkflowViewState.IdRef="GetListItems_1" List="[spList]" ListItems="[dtListItems]" />
+                  <If sap2010:Annotation.AnnotationText="Exception on multiple rows returned does not apply to EXD197 due to special querying requirements" Condition="[dtListItems.RowCount=0 or (dtListItems.RowCount&lt;&gt;1 and in_strFormType&lt;&gt;&quot;EXD197&quot;)]" DisplayName="If non-singular amount of list items returned" sap:VirtualizedContainerService.HintSize="682,407.6" sap2010:WorkflowViewState.IdRef="If_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,179.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw BRE - could not isolate row" Exception="[new BusinessRuleException(&quot;Could not isolate a singular master list entry for CPH '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;' and JRF '&quot;+in_dictFormValues(&quot;JRF&quot;)+&quot;'. Number of list rows returned: &quot;+dtListItems.RowCount.ToString)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13" />
+                    </If.Else>
+                  </If>
+                  <umas:ForEachListItem CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="The filter should return only one list item to update unless form is EXD197" DisplayName="For Each List Item" Filter="[strQuery]" sap:VirtualizedContainerService.HintSize="682,6254" sap2010:WorkflowViewState.IdRef="ForEachListItem_1" List="[spList]">
+                    <umas:ForEachListItem.Body>
+                      <ActivityAction x:TypeArguments="umm:Office365SharepointListItem, x:Int32">
+                        <ActivityAction.Argument1>
+                          <DelegateInArgument x:TypeArguments="umm:Office365SharepointListItem" Name="ListItem" />
+                        </ActivityAction.Argument1>
+                        <ActivityAction.Argument2>
+                          <DelegateInArgument x:TypeArguments="x:Int32" Name="ListItemIndex" />
+                        </ActivityAction.Argument2>
+                        <Sequence DisplayName="Update fields" sap:VirtualizedContainerService.HintSize="648,6045.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[in_strFormType=&quot;EXD197&quot;]" DisplayName="If EXD197" sap:VirtualizedContainerService.HintSize="586,1412.8" sap2010:WorkflowViewState.IdRef="If_6">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="552,1229.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find field index - job number" sap:VirtualizedContainerService.HintSize="510,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">PZ Stock Enquiry - JRF No.</InArgument>
+                                    <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <If Condition="[ListItem.Fields(intIndex).Value is Nothing]" DisplayName="If JRF field empty" sap:VirtualizedContainerService.HintSize="510,296.4" sap2010:WorkflowViewState.IdRef="If_10">
+                                  <If.Then>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="376,113.2" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:Continue sap:VirtualizedContainerService.HintSize="334,24.8" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_41" />
+                                  </If.Else>
+                                </If>
+                                <If Condition="[ListItem.Fields(intIndex).Value.ToString.Contains(in_dictFormValues(&quot;JRF&quot;))]" DisplayName="If list item found" sap:VirtualizedContainerService.HintSize="510,650.8" sap2010:WorkflowViewState.IdRef="If_7">
+                                  <If.Then>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="476,354.4" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message - list item found" sap:VirtualizedContainerService.HintSize="434,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;List item found for EXD197 with CPH '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;' and JRF '&quot;+in_dictFormValues(&quot;JRF&quot;)+&quot;'&quot;]" />
+                                      <Assign DisplayName="Confirm item found and updated" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Boolean">[bool197Update]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="376,113.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:Continue sap:VirtualizedContainerService.HintSize="334,24.8" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="300,81.2" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dtStockForm]" DisplayName="For Each Species" sap:VirtualizedContainerService.HintSize="586,631.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                            <ui:ForEachRow.Body>
+                              <ActivityAction x:TypeArguments="sd:DataRow">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                </ActivityAction.Argument>
+                                <Sequence sap:VirtualizedContainerService.HintSize="476,443.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Sharepoint Field Index.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">[CurrentRow("Species").ToString]</InArgument>
+                                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                  <Assign DisplayName="Update species count" sap:VirtualizedContainerService.HintSize="434,80.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Object">[CInt(CurrentRow("Total"))]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="434,80.8" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[ListItem.Fields(intIndex).Value.ToString]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ForEachRow.Body>
+                          </ui:ForEachRow>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find surveillance comments field index" sap:VirtualizedContainerService.HintSize="586,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">Surveillance Comments</InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <Assign DisplayName="Update surveillance comments field" sap:VirtualizedContainerService.HintSize="586,80.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Object">[in_dictFormValues("Comments")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="586,80.8" sap2010:WorkflowViewState.IdRef="Assign_9">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[in_dictFormValues("Comments")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find date visit complete field index" sap:VirtualizedContainerService.HintSize="586,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">Date Visit Complete</InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <Assign DisplayName="Update date visit completed field" sap:VirtualizedContainerService.HintSize="586,80.8" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Object">[DateTime.Parse(in_dictFormValues("VisitDate"),System.Globalization.CultureInfo.GetCultureInfo("en-GB"))]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="586,80.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[DateTime.Parse(in_dictFormValues("VisitDate"),System.Globalization.CultureInfo.GetCultureInfo("en-GB")).ToString("dd/MM/yyyy")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Samples Taken field index" sap:VirtualizedContainerService.HintSize="586,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">Samples Taken</InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <If Condition="[in_dictFormValues.ContainsKey(&quot;SampleOutcome&quot;)]" DisplayName="EXD37?" sap:VirtualizedContainerService.HintSize="586,998.4" sap2010:WorkflowViewState.IdRef="If_4">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="521.6,578.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:MultipleAssign DisplayName="Update Samples Taken field as &quot;Yes&quot; and add to pause point" sap:VirtualizedContainerService.HintSize="479.6,148.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                                  <ui:MultipleAssign.AssignOperations>
+                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:Object">["Yes"]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">Yes</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                    </scg:List>
+                                  </ui:MultipleAssign.AssignOperations>
+                                </ui:MultipleAssign>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Sample Outcome field index" sap:VirtualizedContainerService.HintSize="479.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">Sample Outcome</InArgument>
+                                    <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <ui:MultipleAssign DisplayName="Update Sample Outcome field and add to pause point" sap:VirtualizedContainerService.HintSize="479.6,148.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                                  <ui:MultipleAssign.AssignOperations>
+                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:Object">[in_dictFormValues("SampleOutcome")]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">[in_dictFormValues("SampleOutcome")]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                    </scg:List>
+                                  </ui:MultipleAssign.AssignOperations>
+                                </ui:MultipleAssign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="521.6,236.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:MultipleAssign DisplayName="Update Samples Taken field as &quot;no&quot; and add to pause point" sap:VirtualizedContainerService.HintSize="479.6,148.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                                  <ui:MultipleAssign.AssignOperations>
+                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:Object">["No"]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">No</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                    </scg:List>
+                                  </ui:MultipleAssign.AssignOperations>
+                                </ui:MultipleAssign>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <If Condition="[CBool(g_Config(&quot;PausePoint6&quot;))]" DisplayName="Pause Point 6?" sap:VirtualizedContainerService.HintSize="586,1423.6" sap2010:WorkflowViewState.IdRef="If_3">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="552,1240.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="strSharepointFields" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each updated list field" sap:VirtualizedContainerService.HintSize="510,356.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[dictPausePoint]">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="currentItem" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,169.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign DisplayName="Construct Pause Point string" sap:VirtualizedContainerService.HintSize="434,80.8" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[strSharepointFields]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[strSharepointFields+"&lt;strong&gt;"+currentItem.Key+":&lt;/strong&gt;&amp;ensp;"+currentItem.Value+"&lt;br&gt;"]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                </ui:ForEach>
+                                <InvokeMethod DisplayName="Stop Timer - PP6" sap:VirtualizedContainerService.HintSize="510,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Stop">
+                                  <InvokeMethod.TargetObject>
+                                    <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
+                                  </InvokeMethod.TargetObject>
+                                </InvokeMethod>
+                                <d1:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP6" sap:VirtualizedContainerService.HintSize="510,402.8" IN_CSS_filepath="[&quot;/file://&quot; + System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 6" IN_PopupMessage="[&quot;&lt;h1&gt;Sharepoint Masterlist update&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;The list item with CPH '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;' and JRF '&quot;+in_dictFormValues(&quot;JRF&quot;)+&quot;' will be updated with the following values&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+strSharepointFields+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;Additionally, the current transaction file will be attached:&lt;br&gt;&quot;+g_TransactionItem+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;Once you have confirmed that these values are correct, please click 'Continue'.&lt;br&gt;&quot;+&#xA;&quot;If there are any issues present, please click 'Stop' and complete this update manually.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 6" IN_WidthHeight="[{500,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+                                <InvokeMethod DisplayName="Start Timer - PP6" sap:VirtualizedContainerService.HintSize="510,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Start">
+                                  <InvokeMethod.TargetObject>
+                                    <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
+                                  </InvokeMethod.TargetObject>
+                                </InvokeMethod>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17" />
+                            </If.Else>
+                          </If>
+                          <umas:UpdateListItem ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Update List Item" sap:VirtualizedContainerService.HintSize="586,90" sap2010:WorkflowViewState.IdRef="UpdateListItem_4" ListItem="[ListItem]" />
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find ID field index" sap:VirtualizedContainerService.HintSize="586,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">ID</InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <Assign DisplayName="Store list ID" sap:VirtualizedContainerService.HintSize="586,80.8" sap2010:WorkflowViewState.IdRef="Assign_7">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[intListItemID]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[CInt(ListItem.Fields(intIndex).Value)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </umas:ForEachListItem.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </umas:ForEachListItem>
+                  <If Condition="[in_strFormType=&quot;EXD197&quot; and not bool197Update]" DisplayName="If no list item found for EXD197" sap:VirtualizedContainerService.HintSize="682,362" sap2010:WorkflowViewState.IdRef="If_8">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,179.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw BRE - could not isolate row EXD197" Exception="[new BusinessRuleException(&quot;Could not isolate a singular master list entry for CPH '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;' and JRF '&quot;+in_dictFormValues(&quot;JRF&quot;)+&quot;'. Number of list rows returned: &quot;+dtListItems.RowCount.ToString)]" sap:VirtualizedContainerService.HintSize="334,90.8" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_37" />
+                    </If.Else>
+                  </If>
+                  <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process - add file attachment" sap:VirtualizedContainerService.HintSize="682,168" sap2010:WorkflowViewState.IdRef="InvokeProcess_2" ProcessName="Add.Sharepoint.File.Attachment">
+                    <ui:InvokeProcess.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_strSharepointURL">[strSharepointURL]</InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="in_strListID">[intListItemID]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_strListName">[strSharepointListName]</InArgument>
+                      <InArgument x:TypeArguments="scg:IEnumerable(x:String)" x:Key="in_ieFilePaths">[{g_TransactionItem}]</InArgument>
+                    </ui:InvokeProcess.Arguments>
+                  </ui:InvokeProcess>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="747.6,1119.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Log error and notify user" sap:VirtualizedContainerService.HintSize="450,1049.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message - error updating masterlist" sap:VirtualizedContainerService.HintSize="388,142.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Error updating Sharepoint Master List: &quot;+exception.Message]" />
+                      <InvokeMethod DisplayName="Stop timer - SPOL error" sap:VirtualizedContainerService.HintSize="388,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
+                        <InvokeMethod.TargetObject>
+                          <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
+                        </InvokeMethod.TargetObject>
+                      </InvokeMethod>
+                      <d1:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Report SPOL list update error" sap:VirtualizedContainerService.HintSize="388,402.8" IN_CSS_filepath="[&quot;/file://&quot; + System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Generic\Exception.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Master List update incomplete&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;The robot could not complete its update of the master list for the following reason:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&quot;+exception.Message+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;On dismissal of this message, the robot will continue, though you may need to manually update the master list after the robot has completed.&lt;br&gt;&quot;+&#xA;&quot;If you are unsure about the meaning of this exception, please contact DRACoE.&lt;/p&gt;&quot;]" IN_PopupTitle="Could not update Master List" IN_WidthHeight="[{600,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_2" />
+                      <InvokeMethod DisplayName="Start timer - SPOL error" sap:VirtualizedContainerService.HintSize="388,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Stop">
+                        <InvokeMethod.TargetObject>
+                          <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
+                        </InvokeMethod.TargetObject>
+                      </InvokeMethod>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <Sequence DisplayName="Upload form to library" sap:VirtualizedContainerService.HintSize="781.6,82.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="strUploadPath" />
+                <Variable x:TypeArguments="mg:DriveItem" Name="diUploadPath" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message - uploading transaction item" sap:VirtualizedContainerService.HintSize="450,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Uploading current transaction item to Sharepoint&quot;]" />
+              <Assign DisplayName="Construct upload directory" sap:VirtualizedContainerService.HintSize="450,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[strUploadPath]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[strSharepointURL+"/"+String.Format(strSharepointDirectory,in_dictFormValues("DiseaseRef"),in_dictFormValues("CPH").Replace("/","-"))]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,970.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                <TryCatch.Try>
+                  <umaf:GetItem ContinueOnError="{x:Null}" DriveMetadata="{x:Null}" DriveName="{x:Null}" ItemFriendlyName="{x:Null}" ItemId="{x:Null}" SiteUrl="{x:Null}" AuthScopesInvalid="False" DisplayName="Get Upload Destination" sap:VirtualizedContainerService.HintSize="334,110" sap2010:WorkflowViewState.IdRef="GetItem_1" Item="[diUploadPath]" ItemSelectionMode="ItemUrl" ItemUrl="[strUploadPath]" />
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="416,546.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                      <If Condition="[exception.Message.Contains(&quot;The system cannot find the file specified&quot;)]" DisplayName="If path not found" sap:VirtualizedContainerService.HintSize="410,476" sap2010:WorkflowViewState.IdRef="If_5">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="376,179.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Throw DisplayName="Throw BRE - path not found" Exception="[new BusinessRuleException(&quot;The file could not be uploaded to Sharepoint as one or more parts of the Sharepoint path do not exist. It is also possible that there is an uncorrected typo in the CPH or Disease Reference that are being used in the Sharepoint path. Please check that all folders in the following path exist in Sharepoint: &quot;+strUploadPath)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="376,113.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Rethrow sap:VirtualizedContainerService.HintSize="334,24.8" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+              </TryCatch>
+              <umaf:UploadFile CloudFileName="{x:Null}" ContinueOnError="{x:Null}" DriveMetadata="{x:Null}" Metadata="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" Checkin="False" ConflictBehavior="Replace" Destination="[diUploadPath]" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="450,254.8" sap2010:WorkflowViewState.IdRef="UploadFile_1" LocalFilePath="[g_TransactionItem]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uma:Office365ApplicationScope.Body>
+      <uma:Office365ApplicationScope.EmailAddress>
+        <InArgument x:TypeArguments="x:String" />
+      </uma:Office365ApplicationScope.EmailAddress>
+      <uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
+        <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="{x:Null}">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uma:Office365ApplicationScope>
+  </Sequence>
+</Activity>

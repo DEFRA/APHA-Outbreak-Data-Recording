@@ -1,0 +1,56 @@
+<!-- saved from url=(0014)about:internet -->
+<!-- Author: Mohammed Ali -->
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<link rel="stylesheet" href="C:\Users\rm000121\OneDrive - Defra\UiPath\APHA-Outbreak-Data-Recording\Outbreak Data Recording\Assets\Editable Standard Template.css">
+
+<body>
+
+<h1>Stock table corrections</h1><p>Please review the Stock data scraped from the pdf form and correct any values where necessary.<br>Please note that there should only be <strong>1 species per row</strong>. For example, if there are two or more rows for 'Chicken', please consolidate these by summing up their totals.</p>
+<div class="Table_Container" >
+<table><thead><tr><th>Species</th><th>Inspected Count</th><th>Examined Count</th><th>Total</th></tr></thead><tbody><tr><td><input id = 'Species' value = 'Chickens' ></td><td><input id = 'Inspected Count' value = '6' ></td><td><input id = 'Examined Count' value = '0' ></td><td><input id = 'Total' value = '6' ></td></tr><tr><td><input id = 'Species' value = 'Ducks' ></td><td><input id = 'Inspected Count' value = '4' ></td><td><input id = 'Examined Count' value = '0' ></td><td><input id = 'Total' value = '4' ></td></tr><tr><td><input id = 'Species' value = 'Guinea Fowls' ></td><td><input id = 'Inspected Count' value = '2' ></td><td><input id = 'Examined Count' value = '0' ></td><td><input id = 'Total' value = '2' ></td></tr><tr><td><input id = 'Species' value = '' ></td><td><input id = 'Inspected Count' value = '' ></td><td><input id = 'Examined Count' value = '' ></td><td><input id = 'Total' value = '' ></td></tr><tr><td><input id = 'Species' value = '' ></td><td><input id = 'Inspected Count' value = '' ></td><td><input id = 'Examined Count' value = '' ></td><td><input id = 'Total' value = '' ></td></tr></tbody></table>
+</div>
+
+<br>
+
+<div class="Button_Container">
+<input type="submit"  value="Stop" id="StopButton">
+<input type="submit"  value="Continue" id="ContinueButton">
+</div>
+
+<script>
+document.getElementById("ContinueButton").onclick = function() {
+
+var elements = document.getElementsByTagName("input");
+var JSONObj = {};
+var JSONarr = [];
+var colName = elements[0].id;
+
+for(var i = 0;i < elements.length -2; i++) {
+	var x = elements[i].id;
+
+	if (colName == x && i !=0) {
+		JSONarr.push(JSONObj);
+		JSONObj = {};
+	};
+    
+	JSONObj[x] = elements[i].value;
+};
+
+JSONarr.push(JSONObj);
+
+window.external.setResult(JSON.stringify(JSONarr));
+
+};
+
+
+document.getElementById("StopButton").onclick = function() {
+window.external.setResult("stop");
+};
+</script>
+
+</body>
+</html>
