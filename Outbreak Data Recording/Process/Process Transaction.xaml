@@ -343,7 +343,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">300,1078.5 300,1088.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="We keep the name &quot;Pause Point&quot; for ease and consistency, but this one is not on-off asset toggleable like the others. We always need the user to check if any scraped form data needs correcting." DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="668,3952.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence sap2010:Annotation.AnnotationText="We keep the name &quot;Pause Point&quot; for ease and consistency, but this one is not on-off asset toggleable like the others. We always need the user to check if any scraped form data needs correcting." DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="668,3984" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dtFormValues" />
               </Sequence.Variables>
@@ -445,7 +445,7 @@
                   <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                 </InvokeMethod.TargetObject>
               </InvokeMethod>
-              <If sap2010:Annotation.AnnotationText="If all rows are returned empty from the stock table, the column data ends up being lost, so we re-initialise the datatable." Condition="[dtStockForm.ColumnCount=0]" DisplayName="If stock table returned empty" sap:VirtualizedContainerService.HintSize="606,805.2" sap2010:WorkflowViewState.IdRef="If_8">
+              <If sap2010:Annotation.AnnotationText="If all rows are returned empty from the stock table, the column data ends up being lost, so we re-initialise the datatable." Condition="[dtStockForm.ColumnCount=0]" DisplayName="If stock table returned empty" sap:VirtualizedContainerService.HintSize="606,836.4" sap2010:WorkflowViewState.IdRef="If_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -471,19 +471,35 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,252.4" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,283.6" sap2010:WorkflowViewState.IdRef="Sequence_55">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:FilterDataTable DataTable="[dtStockForm]" DisplayName="Remove empty rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtStockForm]" SelectColumnsMode="Remove">
+                    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Also removes rows with placeholder text" DataTable="[dtStockForm]" DisplayName="Remove empty rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,195.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtStockForm]" SelectColumnsMode="Remove">
                       <ui:FilterDataTable.Filters>
                         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                           <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
                             <ui:FilterOperationArgument.Column>
                               <InArgument x:TypeArguments="x:String">["Species"]</InArgument>
                             </ui:FilterOperationArgument.Column>
+                          </ui:FilterOperationArgument>
+                          <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">["Species"]</InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">["Insert species / type"]</InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                          <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">["Total"]</InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">["State number"]</InArgument>
+                            </ui:FilterOperationArgument.Operand>
                           </ui:FilterOperationArgument>
                         </scg:List>
                       </ui:FilterDataTable.Filters>
@@ -492,6 +508,11 @@
                           <x:Null />
                         </scg:List>
                       </ui:FilterDataTable.SelectColumns>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ui:FilterDataTable>
                   </Sequence>
                 </If.Else>
