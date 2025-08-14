@@ -156,10 +156,7 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID15</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID15" DisplayName="Contains unprocessed species row?" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-      <FlowDecision.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_dtStockNDOMS.Select(&quot;Species = '&quot;+io_rowStockForm(&quot;Species&quot;).ToString.Trim+&quot;' and [Form present?]='False'&quot;).Count&gt;0" />
-      </FlowDecision.Condition>
+    <FlowDecision x:Name="__ReferenceID15" Condition="[in_dtStockNDOMS.Select(&quot;Species = '&quot;+io_rowStockForm(&quot;Species&quot;).ToString.Trim+&quot;' and [Form present?]='False'&quot;).Count&gt;0]" DisplayName="Contains unprocessed species row?" sap:VirtualizedContainerService.HintSize="160,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -217,7 +214,7 @@
                           <InArgument x:TypeArguments="x:Object">[True]</InArgument>
                         </ui:AssignOperation.Value>
                       </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                      <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334,24.799999999999997" sap2010:WorkflowViewState.IdRef="AssignOperation_2">
                         <ui:AssignOperation.To>
                           <OutArgument x:TypeArguments="x:Object">[rowStockNDOMS("Form present?")]</OutArgument>
                         </ui:AssignOperation.To>
@@ -297,7 +294,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Construct Species selector and click edit" sap:VirtualizedContainerService.HintSize="496,394.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                  <Sequence DisplayName="Construct Species selector and click edit" sap:VirtualizedContainerService.HintSize="496,395.2" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="strSpecies" />
                                     </Sequence.Variables>
@@ -306,7 +303,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign DisplayName="Construct row selector" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                    <Assign DisplayName="Construct row selector" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_8">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[strSpecies]</OutArgument>
                                       </Assign.To>
@@ -314,7 +311,7 @@
                                         <InArgument x:TypeArguments="x:String">[rowStockNDOMS(0).ToString+"*"+rowStockNDOMS(1).ToString+"*"+rowStockNDOMS(2).ToString+"*"]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="434,157.6" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="3444, 1929, 125, 70" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Edit'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TR' innertext='{0}' /&gt;&lt;webctrl tag='BUTTON' visibleinnertext='Edit' /&gt;&quot;, strSpecies)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TR' innertext='{0}' /&gt;&lt;webctrl tag='BUTTON' visibleinnertext='Edit' type='button' class='underline-offset-2 text-defra-cyan-950 inline-flex items-center gap-x-1 rounded-md px-3 py-1 text-sm font-semibold underline hover:text-defra-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-cyan-600' aaname='                                         Edit                                     ' check:text='Edit' /&gt;&quot;, strSpecies)]" Guid="98cea09a-e735-40c1-aa3a-144d80fb8b56" InformativeScreenshot="6f5a00a6a96092c1b33b8c06c5182fbd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                       </uix:NClick.Target>
@@ -345,7 +342,7 @@
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Update stock details" sap:VirtualizedContainerService.HintSize="472,2565.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                      <Sequence DisplayName="Update stock details" sap:VirtualizedContainerService.HintSize="472,2568.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:String" Default="Chicken*" Name="strSpecies" />
                                         </Sequence.Variables>
@@ -664,7 +661,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Construct Species selector and click edit" sap:VirtualizedContainerService.HintSize="496,394.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                  <Sequence DisplayName="Construct Species selector and click edit" sap:VirtualizedContainerService.HintSize="496,395.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="strSpecies" />
                                     </Sequence.Variables>
@@ -673,7 +670,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign DisplayName="Construct row selector" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                    <Assign DisplayName="Construct row selector" sap:VirtualizedContainerService.HintSize="434,82.8" sap2010:WorkflowViewState.IdRef="Assign_7">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[strSpecies]</OutArgument>
                                       </Assign.To>
@@ -681,7 +678,7 @@
                                         <InArgument x:TypeArguments="x:String">[rowStockNDOMS(0).ToString+"*"+rowStockNDOMS(1).ToString+"*"+rowStockNDOMS(2).ToString+"*"]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="434,157.6" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="3444, 1929, 125, 70" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Edit'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TR' innertext='{0}' /&gt;&lt;webctrl tag='BUTTON' visibleinnertext='Edit' /&gt;&quot;, strSpecies)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TR' innertext='{0}' /&gt;&lt;webctrl tag='BUTTON' visibleinnertext='Edit' type='button' class='underline-offset-2 text-defra-cyan-950 inline-flex items-center gap-x-1 rounded-md px-3 py-1 text-sm font-semibold underline hover:text-defra-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-cyan-600' aaname='                                         Edit                                     ' check:text='Edit' /&gt;&quot;, strSpecies)]" Guid="98cea09a-e735-40c1-aa3a-144d80fb8b56" InformativeScreenshot="6f5a00a6a96092c1b33b8c06c5182fbd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                       </uix:NClick.Target>
@@ -706,13 +703,13 @@
                                     <av:Size x:Key="ShapeSize">200,53.2</av:Size>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Add/Edit stock details - 195/196/197" sap:VirtualizedContainerService.HintSize="200,53.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V2">
+                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Add/Edit stock details - 195/196/197" sap:VirtualizedContainerService.HintSize="506,2289.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[DirectCast(g_Config(&quot;NDOMS_browser&quot;),UiElement)]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V2">
                                   <uix:NApplicationCard.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,2516.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,2151.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:String" Default="Chicken*" Name="strSpecies" />
                                         </Sequence.Variables>
@@ -721,53 +718,6 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="410,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                                          <ui:CommentOut.Body>
-                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="472,786" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <If Condition="[CBool(io_rowStockForm(&quot;NDOMS present?&quot;))]" DisplayName="Add or edit?" sap:VirtualizedContainerService.HintSize="410,674.8" sap2010:WorkflowViewState.IdRef="If_5">
-                                                <If.Then>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="334,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V3">
-                                                      <uix:NClick.Target>
-                                                        <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="3444, 1929, 125, 70" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Edit'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TR' innertext='{0}' /&gt;&lt;webctrl tag='BUTTON' visibleinnertext='Edit' /&gt;&quot;, strSpecies)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TR' innertext='{0}' /&gt;&lt;webctrl tag='BUTTON' visibleinnertext='Edit' type='button' class='underline-offset-2 text-defra-cyan-950 inline-flex items-center gap-x-1 rounded-md px-3 py-1 text-sm font-semibold underline hover:text-defra-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-cyan-600' aaname='                                         Edit                                     ' check:text='Edit' /&gt;&quot;, strSpecies)]" Guid="98cea09a-e735-40c1-aa3a-144d80fb8b56" InformativeScreenshot="6f5a00a6a96092c1b33b8c06c5182fbd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                                      </uix:NClick.Target>
-                                                    </uix:NClick>
-                                                  </Sequence>
-                                                </If.Then>
-                                                <If.Else>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add Stock'" sap:VirtualizedContainerService.HintSize="334,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V3">
-                                                      <uix:NClick.Target>
-                                                        <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="3452, 1544, 289, 90" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Add Stock'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Add Stock' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Add Stock' type='button' class='inline-flex items-center gap-x-1.5 bg-defra-lime-green-200 text-defra-lime-green-950 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:bg-defra-lime-green-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-lime-green-600' aaname='                     Add Stock                     ' check:text='Add Stock' /&gt;" Guid="7a3e161d-a925-41f6-9a5f-85ac1bcf93cf" InformativeScreenshot="cfc34e14411bab33d31ae71534dfcf1c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                                      </uix:NClick.Target>
-                                                    </uix:NClick>
-                                                  </Sequence>
-                                                </If.Else>
-                                              </If>
-                                            </Sequence>
-                                          </ui:CommentOut.Body>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:CommentOut>
                                         <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Number of stock at premises'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="410,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Text="[io_rowStockForm(&quot;Total&quot;).ToString.Trim]" Version="V3">
                                           <uix:NTypeInto.Target>
                                             <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="1174, 853, 280, 90" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'10'" FullSelectorArgument="&lt;webctrl id='stock-count' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='stock-count' tag='INPUT' type='number' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 w-28 rounded-md py-1.5 shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:text-sm sm:leading-6' aaname='' /&gt;" Guid="c48c026a-27c9-4a08-ac5d-e92236994ad3" ImageBase64="" InformativeScreenshot="ff2d2b2c2d1b7c6133ffdcf9696ead2e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
@@ -779,50 +729,36 @@
                                             </uix:TargetAnchorable>
                                           </uix:NTypeInto.Target>
                                         </uix:NTypeInto>
-                                        <If Condition="[io_rowStockForm(&quot;Type of Enterprise&quot;).ToString.Trim&lt;&gt;rowStockNDOMS(&quot;Category&quot;).ToString.Trim]" DisplayName="If category mismatch" sap:VirtualizedContainerService.HintSize="410,429.6" sap2010:WorkflowViewState.IdRef="If_3">
-                                          <If.Then>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="376,246.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NSelectItem DisplayName="Replace category with &quot;Not Required&quot;" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Not Required" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V3">
-                                                <uix:NSelectItem.Items>
-                                                  <scg:List x:TypeArguments="x:String" Capacity="15">
-                                                    <x:String></x:String>
-                                                    <x:String>Backyard Flock</x:String>
-                                                    <x:String>Egg Laying</x:String>
-                                                    <x:String>Meat</x:String>
-                                                    <x:String>Mixed Backyard Flock</x:String>
-                                                    <x:String>Not Required</x:String>
-                                                    <x:String>Other</x:String>
-                                                    <x:String>Layer Breeder</x:String>
-                                                    <x:String>Layer Breeder Grandparent</x:String>
-                                                    <x:String>Showing</x:String>
-                                                    <x:String>Table Egg Production</x:String>
-                                                    <x:String>Breeder</x:String>
-                                                    <x:String>Vaccine production</x:String>
-                                                    <x:String>Broiler Breeder</x:String>
-                                                    <x:String>Broiler Breeder Grandparent</x:String>
-                                                  </scg:List>
-                                                </uix:NSelectItem.Items>
-                                                <uix:NSelectItem.Target>
-                                                  <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="1954, 463, 720, 90" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'Egg Laying'" FullSelectorArgument="&lt;webctrl id='species-category' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='species-category' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-1.5 shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:w-72 sm:text-sm sm:leading-6' aaname='' /&gt;" Guid="bde37325-79a5-4823-a5fa-d9e9b4eb1aff" ImageBase64="" InformativeScreenshot="260c3762f6f9ca1b99276c9419a2d71e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target DesignTimeRectangle="1954, 383, 720, 60" FriendlyName="'Category'" FullSelectorArgument="&lt;webctrl visibleInnerText='Category' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DT' class='leading-6 text-defra-warm-grey-950 text-sm font-semibold' aaname='Category' check:innerText='Category' /&gt;" ImageBase64="" SearchSteps="Selector" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NSelectItem.Target>
-                                              </uix:NSelectItem>
-                                            </Sequence>
-                                          </If.Then>
-                                          <If.Else>
-                                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10" />
-                                          </If.Else>
-                                        </If>
+                                        <uix:NSelectItem DisplayName="Replace category with &quot;Not Required&quot;" sap:VirtualizedContainerService.HintSize="410,158" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Not Required" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V3">
+                                          <uix:NSelectItem.Items>
+                                            <scg:List x:TypeArguments="x:String" Capacity="15">
+                                              <x:String></x:String>
+                                              <x:String>Backyard Flock</x:String>
+                                              <x:String>Egg Laying</x:String>
+                                              <x:String>Meat</x:String>
+                                              <x:String>Mixed Backyard Flock</x:String>
+                                              <x:String>Not Required</x:String>
+                                              <x:String>Other</x:String>
+                                              <x:String>Layer Breeder</x:String>
+                                              <x:String>Layer Breeder Grandparent</x:String>
+                                              <x:String>Showing</x:String>
+                                              <x:String>Table Egg Production</x:String>
+                                              <x:String>Breeder</x:String>
+                                              <x:String>Vaccine production</x:String>
+                                              <x:String>Broiler Breeder</x:String>
+                                              <x:String>Broiler Breeder Grandparent</x:String>
+                                            </scg:List>
+                                          </uix:NSelectItem.Items>
+                                          <uix:NSelectItem.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="1954, 463, 720, 90" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'Egg Laying'" FullSelectorArgument="&lt;webctrl id='species-category' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='species-category' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-1.5 shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:w-72 sm:text-sm sm:leading-6' aaname='' /&gt;" Guid="bde37325-79a5-4823-a5fa-d9e9b4eb1aff" ImageBase64="" InformativeScreenshot="260c3762f6f9ca1b99276c9419a2d71e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="1954, 383, 720, 60" FriendlyName="'Category'" FullSelectorArgument="&lt;webctrl visibleInnerText='Category' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DT' class='leading-6 text-defra-warm-grey-950 text-sm font-semibold' aaname='Category' check:innerText='Category' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NSelectItem.Target>
+                                        </uix:NSelectItem>
                                         <If Condition="[CBool(g_Config(&quot;PausePoint4&quot;))]" DisplayName="Pause Point 4?" sap:VirtualizedContainerService.HintSize="410,1030" sap2010:WorkflowViewState.IdRef="If_2">
                                           <If.Then>
                                             <Sequence sap:VirtualizedContainerService.HintSize="376,846.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
@@ -903,18 +839,18 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Click add stock and select species - 195/196/197" sap:VirtualizedContainerService.HintSize="450,668.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                              <Sequence DisplayName="Click add stock and select species - 195/196/197" sap:VirtualizedContainerService.HintSize="547.6,858" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add Stock'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add Stock'" sap:VirtualizedContainerService.HintSize="485.6,158" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="3452, 1544, 289, 90" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Add Stock'" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Add Stock' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Add Stock' type='button' class='inline-flex items-center gap-x-1.5 bg-defra-lime-green-200 text-defra-lime-green-950 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:bg-defra-lime-green-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-lime-green-600' aaname='                     Add Stock                     ' check:text='Add Stock' /&gt;" Guid="7a3e161d-a925-41f6-9a5f-85ac1bcf93cf" InformativeScreenshot="cfc34e14411bab33d31ae71534dfcf1c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <uix:NSelectItem DisplayName="Select Item 'Species' - 195/196/197" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[io_rowStockForm(&quot;Species&quot;).ToString]" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
+                                <uix:NSelectItem DisplayName="Select Item 'Species' - 195/196/197" sap:VirtualizedContainerService.HintSize="485.6,158" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[io_rowStockForm(&quot;Species&quot;).ToString]" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
                                   <uix:NSelectItem.Items>
                                     <scg:List x:TypeArguments="x:String" Capacity="50">
                                       <x:String>Cattle</x:String>
@@ -979,23 +915,34 @@
                                     </uix:TargetAnchorable>
                                   </uix:NSelectItem.Target>
                                 </uix:NSelectItem>
-                                <uix:NSelectItem DisplayName="Select Item 'Category' - 195/196/197" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Not Required" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
-                                  <uix:NSelectItem.Items>
-                                    <scg:List x:TypeArguments="x:String" Capacity="2">
-                                      <x:String></x:String>
-                                      <x:String>Not Required</x:String>
-                                    </scg:List>
-                                  </uix:NSelectItem.Items>
-                                  <uix:NSelectItem.Target>
-                                    <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="1954, 781, 720, 90" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'SELECT species-category'" FullSelectorArgument="&lt;webctrl id='species-category' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='species-category' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-1.5 shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:w-72 sm:text-sm sm:leading-6' aaname='' /&gt;" Guid="e14bfa00-caba-4173-af09-d04177b495da" ImageBase64="" InformativeScreenshot="33b63a9ca135f41ebd7074d228dc24f1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
-                                      <uix:TargetAnchorable.Anchors>
-                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target DesignTimeRectangle="1954, 701, 720, 60" FriendlyName="'Category'" FullSelectorArgument="&lt;webctrl tag='DT' visibleinnertext='Category' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DT' visibleinnertext='Category' type='' class='leading-6 text-defra-warm-grey-950 text-sm font-semibold' aaname='Category' check:text='Category' /&gt;" SearchSteps="Selector" />
-                                        </scg:List>
-                                      </uix:TargetAnchorable.Anchors>
-                                    </uix:TargetAnchorable>
-                                  </uix:NSelectItem.Target>
-                                </uix:NSelectItem>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="485.6,347.6" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,269.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NSelectItem DisplayName="Select Item 'Category' - 195/196/197" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Not Required" ScopeIdentifier="95ec7b30-b232-452c-97b4-b4a3ddb7ed51" Version="V3">
+                                        <uix:NSelectItem.Items>
+                                          <scg:List x:TypeArguments="x:String" Capacity="2">
+                                            <x:String></x:String>
+                                            <x:String>Not Required</x:String>
+                                          </scg:List>
+                                        </uix:NSelectItem.Items>
+                                        <uix:NSelectItem.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="1954, 781, 720, 90" DesignTimeScaleFactor="2.5" ElementType="DropDown" FriendlyName="'SELECT species-category'" FullSelectorArgument="&lt;webctrl id='species-category' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='species-category' tag='SELECT' type='' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 block truncate rounded-md py-1.5 shadow-sm ring-inset focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:w-72 sm:text-sm sm:leading-6' aaname='' /&gt;" Guid="e14bfa00-caba-4173-af09-d04177b495da" ImageBase64="" InformativeScreenshot="33b63a9ca135f41ebd7074d228dc24f1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID 152' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="1954, 701, 720, 60" FriendlyName="'Category'" FullSelectorArgument="&lt;webctrl tag='DT' visibleinnertext='Category' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DT' visibleinnertext='Category' type='' class='leading-6 text-defra-warm-grey-950 text-sm font-semibold' aaname='Category' check:text='Category' /&gt;" SearchSteps="Selector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NSelectItem.Target>
+                                      </uix:NSelectItem>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                </ui:CommentOut>
                               </Sequence>
                             </ActivityAction>
                           </uix:NApplicationCard.Body>
