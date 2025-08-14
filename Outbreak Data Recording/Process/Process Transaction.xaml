@@ -212,7 +212,7 @@
             <av:PointCollection x:Key="ConnectorLocation">300,760.8999999999999 300,851.6999999999999</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Scrape EXD195" sap:VirtualizedContainerService.HintSize="200,83.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Scrape EXD195" sap:VirtualizedContainerService.HintSize="603.6,1046.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strNameDate" />
             <Variable x:TypeArguments="s:DateTime" Name="datetimeVisit" />
@@ -222,7 +222,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="Scrape EXD195 values and store to dictionary" sap:VirtualizedContainerService.HintSize="541.6,304.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+          <ui:MultipleAssign DisplayName="Scrape EXD195 values and store to dictionary" sap:VirtualizedContainerService.HintSize="541.6,273.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -241,20 +241,12 @@
                     <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=JRF No\.).*?(?=AIV of IP)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
-                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
-                  <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="x:String">[strNameDate]</OutArgument>
-                  </ui:AssignOperation.To>
-                  <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Part Three.*?Name).*?(?=Mobile)").Value]</InArgument>
-                  </ui:AssignOperation.Value>
-                </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
                   <ui:AssignOperation.To>
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("VetName")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Replace(strNameDate,"[^A-z\s]|Date","").Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Part Three.*?Name).*?(?=Date)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
@@ -262,7 +254,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("VisitDateTime")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Replace(strNameDate,"[^0-9]","")]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Part Three.*?Date).*?(?=EXD195|Mobile)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
@@ -270,7 +262,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("Comments")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Surveillance Team comments\:).*?(?=Form reviewed by OSV)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Surveillance Team comments\:).*?(?=Form reviewed by OS[V|T])").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_52">
@@ -343,7 +335,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">300,1078.5 300,1088.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="We keep the name &quot;Pause Point&quot; for ease and consistency, but this one is not on-off asset toggleable like the others. We always need the user to check if any scraped form data needs correcting." DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="668,3984" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence sap2010:Annotation.AnnotationText="We keep the name &quot;Pause Point&quot; for ease and consistency, but this one is not on-off asset toggleable like the others. We always need the user to check if any scraped form data needs correcting." DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,226.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dtFormValues" />
               </Sequence.Variables>
@@ -440,7 +432,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NApplicationCard>
-              <InvokeMethod DisplayName="Start timer - PP1" sap:VirtualizedContainerService.HintSize="606,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
+              <InvokeMethod DisplayName="Start timer - PP1" sap:VirtualizedContainerService.HintSize="606,136" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
                 <InvokeMethod.TargetObject>
                   <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                 </InvokeMethod.TargetObject>
@@ -519,7 +511,7 @@
               </If>
             </Sequence>
             <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID30">
+              <FlowStep x:Name="__ReferenceID30" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">200,1088.5</av:Point>
@@ -1410,7 +1402,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("VisitDate")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Date\:).*?(?=Time\:)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=Part Four.*?Date\:).*?(?=Time\:)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
@@ -1442,7 +1434,7 @@
                     <OutArgument x:TypeArguments="x:String">[dictFormValues("DiseaseRef")]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=AIV of IP).*?(?=triggering)").Value.Trim]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[Regex.Match(strDocText,"(?s)(?&lt;=AIV of IP).*?(?=Report|triggering)").Value.Trim]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
               </scg:List>
@@ -1459,14 +1451,14 @@
               <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtStockTable">[dtStockForm]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <Sequence DisplayName="TryParse date and time - EXD196" sap:VirtualizedContainerService.HintSize="541.6,644.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="TryParse date and time - EXD196" sap:VirtualizedContainerService.HintSize="541.6,643.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <InvokeMethod DisplayName="TryParse date - 196" sap:VirtualizedContainerService.HintSize="479.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" MethodName="TryParse" TargetType="s:DateOnly">
+            <InvokeMethod DisplayName="TryParse date - 196" sap:VirtualizedContainerService.HintSize="479.6,136" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" MethodName="TryParse" TargetType="s:DateOnly">
               <InvokeMethod.Result>
                 <OutArgument x:TypeArguments="x:Boolean">[boolDateParsed]</OutArgument>
               </InvokeMethod.Result>
@@ -1475,7 +1467,7 @@
               <InArgument x:TypeArguments="sg:DateTimeStyles">[System.Globalization.DateTimeStyles.None]</InArgument>
               <OutArgument x:TypeArguments="s:DateOnly">[dateVisit]</OutArgument>
             </InvokeMethod>
-            <InvokeMethod DisplayName="TryParse time - 196" sap:VirtualizedContainerService.HintSize="479.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_8" MethodName="TryParse" TargetType="s:TimeOnly">
+            <InvokeMethod DisplayName="TryParse time - 196" sap:VirtualizedContainerService.HintSize="479.6,136" sap2010:WorkflowViewState.IdRef="InvokeMethod_8" MethodName="TryParse" TargetType="s:TimeOnly">
               <InvokeMethod.Result>
                 <OutArgument x:TypeArguments="x:Boolean">[boolTimeParsed]</OutArgument>
               </InvokeMethod.Result>
