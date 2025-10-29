@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fpaYqFSsKPAY8aumzv20dQa99xUxmytAwLuhtWI/JYpBeYzr6jB10HuiYkucyOpcAfTluH+YwkkXUqkbDJQR/Q==",
+  "dgSpecHash": "B9WneCd1EQMJPIVA5y5TKvjt9uWoO4dPi3vJ28HEsTxczwhX8UevLCnUni0w/a+KmJo8eg0DKQYHPp8gPqE+Dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rm000121\\OneDrive - Defra\\UiPath\\APHA-Outbreak-Data-Recording\\Outbreak Data Recording\\.local\\",
   "expectedPackageFiles": [
@@ -167,8 +167,6 @@
     "C:\\Users\\rm000121\\.nuget\\packages\\runtime.win.system.net.primitives\\4.3.0\\runtime.win.system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\runtime.win.system.net.sockets\\4.3.0\\runtime.win.system.net.sockets.4.3.0.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\runtime.win.system.runtime.extensions\\4.3.0\\runtime.win.system.runtime.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\rm000121\\.nuget\\packages\\runtime.win7-x64.runtime.native.system.io.compression\\4.3.2\\runtime.win7-x64.runtime.native.system.io.compression.4.3.2.nupkg.sha512",
-    "C:\\Users\\rm000121\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0\\runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\sixlabors.fonts\\1.0.0-beta18\\sixlabors.fonts.1.0.0-beta18.nupkg.sha512",
     "C:\\Users\\rm000121\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20250401.2\\system.activities.viewmodels.1.0.0-20250401.2.nupkg.sha512",
@@ -347,8 +345,8 @@
       "message": "Detected package version outside of dependency constraint: DRACOE.Logging.64 1.0.9 requires UiPath.Excel.Activities (= 2.22.3) but version UiPath.Excel.Activities 3.0.1 was resolved.",
       "libraryId": "UiPath.Excel.Activities",
       "targetGraphs": [
-        "net6.0-windows7.0",
-        "net6.0-windows7.0/win10-x64"
+        "net8.0-windows7.0",
+        "net8.0-windows7.0/win-x64"
       ]
     }
   ]

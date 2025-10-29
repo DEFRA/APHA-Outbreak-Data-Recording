@@ -188,7 +188,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="965.2,10659.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="1451.6000000000001,10330.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sn:NetworkCredential" Name="credSPOL" />
       <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -207,8 +207,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <d:Get_Credential DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="903.2,248.4" IN_strRequestMessage="&lt;p&gt;Your device does not have the credentials stored for the robot to interact with Sharepoint. Please contact DRACoE to provide these credentials for you.&lt;/p&gt;&lt;p&gt;Note: these are NOT your log in credentials. These are specific credentials managed by DRACoE.&lt;/p&gt;" sap2010:WorkflowViewState.IdRef="Get_Credential_1" in_strCredentialName="[g_Config(&quot;SharepointCredentialTarget&quot;).ToString]" in_strRequestTitle="Please contact DRACoE" out_credNetworkCredential="[credSPOL]" />
-    <ui:MultipleAssign DisplayName="Store username and password" sap:VirtualizedContainerService.HintSize="903.2,148.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <d:Get_Credential DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="895.2,280.4" IN_strRequestMessage="&lt;p&gt;Your device does not have the credentials stored for the robot to interact with Sharepoint. Please contact DRACoE to provide these credentials for you.&lt;/p&gt;&lt;p&gt;Note: these are NOT your log in credentials. These are specific credentials managed by DRACoE.&lt;/p&gt;" sap2010:WorkflowViewState.IdRef="Get_Credential_1" in_strCredentialName="[g_Config(&quot;SharepointCredentialTarget&quot;).ToString]" in_strRequestTitle="Please contact DRACoE" out_credNetworkCredential="[credSPOL]" />
+    <ui:MultipleAssign DisplayName="Store username and password" sap:VirtualizedContainerService.HintSize="895.2,180.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -230,7 +230,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="903.2,53.2" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="895.2,56.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Default>
         <Throw DisplayName="Throw BRE - disease not recognised" Exception="[new BusinessRuleException(&quot;Disease '&quot;+in_strDisease+&quot;' is not currently supported by this automation. The automation is currently compatible for Avian Influenza and Bluetongue.&quot;)]" sap:VirtualizedContainerService.HintSize="334,90.8" sap2010:WorkflowViewState.IdRef="Throw_3" />
       </Switch.Default>
@@ -301,7 +301,7 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Switch>
-    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[strUsername]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="903.2,9977.6" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstrPassword]" TenantId="[g_Config(&quot;TenantID&quot;).ToString]" UseConnectionService="False">
+    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[strUsername]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="895.2,9789.2" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstrPassword]" TenantId="[g_Config(&quot;TenantID&quot;).ToString]" UseConnectionService="False">
       <uma:Office365ApplicationScope.AuthenticationScopes>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </uma:Office365ApplicationScope.AuthenticationScopes>
@@ -310,7 +310,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="869.2,9734" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="861.2,9544.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="umm:Office365SharepointList" Name="spList" />
               <Variable x:TypeArguments="sd:DataTable" Name="dtListItems" />
@@ -321,9 +321,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch - update master list" sap:VirtualizedContainerService.HintSize="827.2,7924.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch - update master list" sap:VirtualizedContainerService.HintSize="827.2,7803.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence DisplayName="Update master list" sap:VirtualizedContainerService.HintSize="789.6,6486.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence DisplayName="Update master list" sap:VirtualizedContainerService.HintSize="761.6,6334" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="bool197Update" />
                   </Sequence.Variables>
@@ -333,22 +333,22 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message - updating master list" sap:VirtualizedContainerService.HintSize="727.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Updating &quot;+in_strDisease+&quot; master list&quot;]" />
-                  <umas:GetListInfo ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Get List Info" sap:VirtualizedContainerService.HintSize="727.6,190" sap2010:WorkflowViewState.IdRef="GetListInfo_1" IncludeColumnsDefinitions="True" List="[spList]" ListTitleOrId="[strSharepointListName]" SiteUrlOrId="[strSharepointURL]" />
-                  <umas:GetListItems ContinueOnError="{x:Null}" AuthScopesInvalid="False" ColumnsToRetrieve="[{&quot;CPH&quot;}]" DisplayName="Get List Items" Filter="[&quot;fields/CPH eq '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;'&quot;]" sap:VirtualizedContainerService.HintSize="727.6,215.2" sap2010:WorkflowViewState.IdRef="GetListItems_1" List="[spList]" ListItems="[dtListItems]" />
-                  <If Condition="[dtListItems.RowCount&lt;&gt;1]" DisplayName="If non-singular amount of list items returned" sap:VirtualizedContainerService.HintSize="727.6,362.8" sap2010:WorkflowViewState.IdRef="If_2">
+                  <ui:LogMessage DisplayName="Log Message - updating master list" sap:VirtualizedContainerService.HintSize="727.6,175.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Updating &quot;+in_strDisease+&quot; master list&quot;]" />
+                  <umas:GetListInfo ContinueOnError="{x:Null}" AuthScopesInvalid="False" DisplayName="Get List Info" sap:VirtualizedContainerService.HintSize="727.6,222" sap2010:WorkflowViewState.IdRef="GetListInfo_1" IncludeColumnsDefinitions="True" List="[spList]" ListTitleOrId="[strSharepointListName]" SiteUrlOrId="[strSharepointURL]" />
+                  <umas:GetListItems ContinueOnError="{x:Null}" AuthScopesInvalid="False" ColumnsToRetrieve="[{&quot;CPH&quot;}]" DisplayName="Get List Items" Filter="[&quot;fields/CPH eq '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;'&quot;]" sap:VirtualizedContainerService.HintSize="727.6,247.2" sap2010:WorkflowViewState.IdRef="GetListItems_1" List="[spList]" ListItems="[dtListItems]" />
+                  <If Condition="[dtListItems.RowCount&lt;&gt;1]" DisplayName="If non-singular amount of list items returned" sap:VirtualizedContainerService.HintSize="727.6,365.6" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,179.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Throw DisplayName="Throw BRE - could not isolate row" Exception="[new BusinessRuleException(&quot;Could not isolate a singular master list entry for CPH '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;'. Number of list rows returned: &quot;+dtListItems.RowCount.ToString)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                        <Throw DisplayName="Throw BRE - could not isolate row" Exception="[new BusinessRuleException(&quot;Could not isolate a singular master list entry for CPH '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;'. Number of list rows returned: &quot;+dtListItems.RowCount.ToString)]" sap:VirtualizedContainerService.HintSize="382,114.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13" />
+                      <Sequence DisplayName="Else" sap2010:WorkflowViewState.IdRef="Sequence_13" />
                     </If.Else>
                   </If>
                   <umas:ForEachListItem CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="The filter should return only one list item to update unless form is EXD197" DisplayName="For Each List Item" Filter="[&quot;fields/CPH eq '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;'&quot;]" sap:VirtualizedContainerService.HintSize="727.6,5094.8" sap2010:WorkflowViewState.IdRef="ForEachListItem_1" List="[spList]">

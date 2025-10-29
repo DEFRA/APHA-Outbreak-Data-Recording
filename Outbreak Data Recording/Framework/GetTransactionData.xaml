@@ -107,7 +107,7 @@
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;This framework is setup by default to look for an Outlook MailMessage from a config-specified mailbox, this should be changed on a work package basis with out_TransactionItem being set to a single transaction from whatever source is required.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem should be set to Nothing, which leads to the End Process state. &#xA;&#xA;out_boolLastTransaction should be set to True where it is possible to determine that a transaction is the last in the batch. If this is not possible to derive then changes will need to be made to the &quot;Final Transaction&quot; transition at the framework's parent level. " DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="606,2564.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;This framework is setup by default to look for an Outlook MailMessage from a config-specified mailbox, this should be changed on a work package basis with out_TransactionItem being set to a single transaction from whatever source is required.&#xA;&#xA;If there are no transaction items remaining, out_TransactionItem should be set to Nothing, which leads to the End Process state. &#xA;&#xA;out_boolLastTransaction should be set to True where it is possible to determine that a transaction is the last in the batch. If this is not possible to derive then changes will need to be made to the &quot;Final Transaction&quot; transition at the framework's parent level. " DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1451.6000000000001,2297.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="ienumFiles" />
     </Sequence.Variables>
@@ -117,7 +117,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Get &quot;To Process&quot; files" sap:VirtualizedContainerService.HintSize="544,82.4" sap2010:WorkflowViewState.IdRef="Assign_9">
+    <Assign DisplayName="Get &quot;To Process&quot; files" sap:VirtualizedContainerService.HintSize="536,114.4" sap2010:WorkflowViewState.IdRef="Assign_9">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:IEnumerable(x:String)">[ienumFiles]</OutArgument>
       </Assign.To>
@@ -125,9 +125,9 @@
         <InArgument x:TypeArguments="scg:IEnumerable(x:String)">[Directory.EnumerateFiles(g_Config("ToProcess").ToString)]</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[ienumFiles.Count &gt; 0]" DisplayName="Retrieved Files?" sap:VirtualizedContainerService.HintSize="544,2105.6" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[ienumFiles.Count &gt; 0]" DisplayName="Retrieved Files?" sap:VirtualizedContainerService.HintSize="536,2082" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Files found in To Process folder" sap:VirtualizedContainerService.HintSize="510,1840" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Files found in To Process folder" sap:VirtualizedContainerService.HintSize="502,1815.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strCurrentFile" />
           </Sequence.Variables>
@@ -136,7 +136,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[ienumFiles.Count = 1]" DisplayName="Last Transaction?" sap:VirtualizedContainerService.HintSize="468,348" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[ienumFiles.Count = 1]" DisplayName="Last Transaction?" sap:VirtualizedContainerService.HintSize="468,380" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
               <Assign DisplayName="Assign Last Transaction" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
                 <Assign.To>
@@ -158,7 +158,7 @@
               </Assign>
             </If.Else>
           </If>
-          <If sap2010:Annotation.AnnotationText="Where the Process Type has been selected as &quot;Single&quot; mode and the framework has completed the first transaction then it should prompt the user to ask if it should continue processing. &#xA;&#xA;Before prompting it also checks to ensure there is more data to process before presenting the user with the option to continue." Condition="[in_strProcessType = &quot;single&quot; AND in_TransactionNumber &gt;1 AND in_boolContinue = False]" DisplayName="Present &quot;Single&quot; Mode Form?" sap:VirtualizedContainerService.HintSize="468,732" sap2010:WorkflowViewState.IdRef="If_4">
+          <If sap2010:Annotation.AnnotationText="Where the Process Type has been selected as &quot;Single&quot; mode and the framework has completed the first transaction then it should prompt the user to ask if it should continue processing. &#xA;&#xA;Before prompting it also checks to ensure there is more data to process before presenting the user with the option to continue." Condition="[in_strProcessType = &quot;single&quot; AND in_TransactionNumber &gt;1 AND in_boolContinue = False]" DisplayName="Present &quot;Single&quot; Mode Form?" sap:VirtualizedContainerService.HintSize="468,799.6" sap2010:WorkflowViewState.IdRef="If_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -168,10 +168,16 @@
               <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Single Mode Form" sap:VirtualizedContainerService.HintSize="334,405.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\ProcessAnotherForm.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;Continue processing?&lt;/h1&gt;&lt;P&gt;The robot has completed processing the previous case. Click Continue to process more cases.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_6" />
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_5" />
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
             </If.Else>
           </If>
-          <Assign DisplayName="Assign current file" sap:VirtualizedContainerService.HintSize="468,82.4" sap2010:WorkflowViewState.IdRef="Assign_10">
+          <Assign DisplayName="Assign current file" sap:VirtualizedContainerService.HintSize="468,114.4" sap2010:WorkflowViewState.IdRef="Assign_10">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[strCurrentFile]</OutArgument>
             </Assign.To>
@@ -179,7 +185,7 @@
               <InArgument x:TypeArguments="x:String">[ienumFiles(0)]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[g_Config(&quot;InProgress&quot;).ToString]" DisplayName="Move File to &quot;In Progress&quot; folder" sap:VirtualizedContainerService.HintSize="468,163.6" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[strCurrentFile]" />
+          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[g_Config(&quot;InProgress&quot;).ToString]" DisplayName="Move File to &quot;In Progress&quot; folder" sap:VirtualizedContainerService.HintSize="468,195.6" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[strCurrentFile]" />
           <If Condition="[File.Exists(g_Config(&quot;InProgress&quot;).ToString+&quot;\&quot;+Path.GetFileName(strCurrentFile))]" DisplayName="If file moved from To Process to In Progress successfully" sap:VirtualizedContainerService.HintSize="468,265.6" sap2010:WorkflowViewState.IdRef="If_5">
             <If.Then>
               <Assign DisplayName="Assign transaction item" sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_12">
