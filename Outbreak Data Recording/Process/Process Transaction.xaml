@@ -629,7 +629,7 @@
                                         <av:Point x:Key="ShapeLocation">291.6,1515.3999999999999</av:Point>
                                         <av:Size x:Key="ShapeSize">60,60</av:Size>
                                         <av:PointCollection x:Key="TrueConnector">291.6,1545.3999999999999 255,1545.3999999999999 255,1608.2</av:PointCollection>
-                                        <av:PointCollection x:Key="FalseConnector">351.6,1545.3999999999999 375,1545.3999999999999 375,1708.1999999999998 315,1708.1999999999998 315,1738.2</av:PointCollection>
+                                        <av:PointCollection x:Key="FalseConnector">351.6,1545.3999999999999 375,1545.3999999999999 375,1708.2 315,1708.2 315,1738.2</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <FlowDecision.True>
@@ -672,7 +672,7 @@
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <av:Point x:Key="ShapeLocation">260,1738.2</av:Point>
                                                 <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                                <av:PointCollection x:Key="ConnectorLocation">315,1808.2 315,1838.1999999999998 314.4,1838.1999999999998 314.4,1841.8000000000002</av:PointCollection>
+                                                <av:PointCollection x:Key="ConnectorLocation">315,1808.2 315,1838.2 314.4,1838.2 314.4,1841.8000000000002</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <Sequence DisplayName="Scrape stock data and edit" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_47">
@@ -1245,7 +1245,7 @@
                                                                                             <av:Size x:Key="ShapeSize">110,70</av:Size>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Disease is currently fixed for each form:&#xA;EXD44 = Bluetongue&#xA;EXD644/195/196/197 = Avian Influenza&#xA;&#xA;This may change in future." DisplayName="Update Sharepoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="349.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Process\Process Subflows\Update Sharepoint.xaml">
+                                                                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Disease is currently fixed for each form:&#xA;EXD44 = Bluetongue&#xA;EXD644/195/196/197 = Avian Influenza&#xA;&#xA;This may change in future." DisplayName="Update Sharepoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Process\Process Subflows\Update Sharepoint.xaml">
                                                                                           <ui:InvokeWorkflowFile.Arguments>
                                                                                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_dictFormValues">[dictFormValues]</InArgument>
                                                                                             <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtStockForm">[dtStockForm]</InArgument>
@@ -1865,7 +1865,7 @@
             <av:PointCollection x:Key="ConnectorLocation">455,728.0999999999999 455,841.6999999999999 325,841.6999999999999 325,871.6999999999999</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Scrape EXD197" sap:VirtualizedContainerService.HintSize="513.6,1007.5999999999999" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Scrape EXD197" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
             <Variable x:TypeArguments="s:DateOnly" Name="dateVisit" />
           </Sequence.Variables>
