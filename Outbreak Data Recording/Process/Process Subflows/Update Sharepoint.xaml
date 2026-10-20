@@ -199,7 +199,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="1451.6000000000001,10047.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="1451.6000000000001,10019.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrPassword" />
@@ -224,7 +224,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="823.2,85.2" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - set Sharepoint locations based on disease" Expression="[in_strDisease]" sap:VirtualizedContainerService.HintSize="823.2,56.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Default>
         <Throw DisplayName="Throw BRE - disease not recognised" Exception="[new BusinessRuleException(&quot;Disease '&quot;+in_strDisease+&quot;' is not currently supported by this automation. The automation is currently compatible for Avian Influenza and Bluetongue.&quot;)]" sap:VirtualizedContainerService.HintSize="334,90.8" sap2010:WorkflowViewState.IdRef="Throw_3" />
       </Switch.Default>
@@ -413,9 +413,15 @@
                           </ui:ForEachRow>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find surveillance comments field index" sap:VirtualizedContainerService.HintSize="615.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">Surveillance Comments</InArgument>
-                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
-                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
+                                <Literal x:TypeArguments="x:String">ESZ Surveillance Comments</Literal>
+                              </InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
+                                <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="ListItem" />
+                              </InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
+                                <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
+                              </OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                           <Assign DisplayName="Update surveillance comments field" sap:VirtualizedContainerService.HintSize="615.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_5">
@@ -742,7 +748,7 @@
                   <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                 </InvokeMethod.TargetObject>
               </InvokeMethod>
-              <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt add attachment to list item" sap:VirtualizedContainerService.HintSize="416,437.6" IN_CSS_filepath="[&quot;/file://&quot; + System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at user prompt to attach transaction file to new SharePoint list item" IN_PopupMessage="[&quot;&lt;h1&gt;Please attach file to new list item&lt;/h1&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&lt;strong&gt;The tracker was updated successfully&lt;/strong&gt;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;As of May 1st 2026, a change in SharePoint authentication means that the robot's previous method of attaching files to list items is no longer supported.&lt;br&gt;&quot;+&#xD;&#xA;&quot;Whilst DRACOE explores other automated options for this, please complete this step manually. We apologise for the inconvenience.&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;&lt;strong&gt;List item ID:&lt;/strong&gt;&amp;ensp;&quot;+intListItemID.ToString+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&quot;&lt;strong&gt;Local file path:&lt;/strong&gt;&amp;ensp;&quot;+g_TransactionItem+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&quot;&lt;strong&gt;Sharepoint URL:&lt;/strong&gt;&amp;ensp;&quot;+strSharepointURL+&quot;&lt;br&gt;&quot;+&#xD;&#xA;&quot;&lt;strong&gt;Sharepoint List Name:&lt;/strong&gt;&amp;ensp;&quot;+strSharepointListName+&quot;&lt;/p&gt;&quot;+&#xD;&#xA;&quot;&lt;p&gt;Once you have completed this step, please click 'Continue'.&lt;/p&gt;&quot;]" IN_PopupTitle="Please attach file to new list item" IN_WidthHeight="[{500,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_3" />
+              <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User prompt add attachment to list item" sap:VirtualizedContainerService.HintSize="416,437.6" IN_CSS_filepath="[&quot;/file://&quot; + System.IO.Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at user prompt to attach transaction file to new SharePoint list item" IN_PopupMessage="[&quot;&lt;h1&gt;Please attach file to new list item&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;The tracker was updated successfully&lt;/strong&gt;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;As of May 1st 2026, a change in SharePoint authentication means that the robot's previous method of attaching files to list items is no longer supported.&lt;br&gt;&quot;+&#xA;&quot;Whilst DRACOE explores other automated options for this, please complete this step manually. We apologise for the inconvenience.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;List item ID:&lt;/strong&gt;&amp;ensp;&quot;+intListItemID.ToString+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Local file path:&lt;/strong&gt;&amp;ensp;&quot;+g_TransactionItem+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Sharepoint URL:&lt;/strong&gt;&amp;ensp;&quot;+strSharepointURL+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Sharepoint List Name:&lt;/strong&gt;&amp;ensp;&quot;+strSharepointListName+&quot;&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;Once you have completed this step, please click 'Continue'.&lt;/p&gt;&quot;]" IN_PopupTitle="Please attach file to new list item" IN_WidthHeight="[{500,500}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_3" />
               <InvokeMethod DisplayName="Start timer - add attachment to list" sap:VirtualizedContainerService.HintSize="416,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Stop">
                 <InvokeMethod.TargetObject>
                   <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
