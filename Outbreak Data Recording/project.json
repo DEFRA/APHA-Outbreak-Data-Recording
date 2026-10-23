@@ -85,6 +85,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Process\\Process Subflows\\tc01 Read stock table 195, 196, 197.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "543c412d-407b-4d8c-b904-f52af3c01d28",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Process\\Process Subflows\\tc01 Determine Premise Type and Status.xaml"
       }
     ],
     "saveToCloud": false
