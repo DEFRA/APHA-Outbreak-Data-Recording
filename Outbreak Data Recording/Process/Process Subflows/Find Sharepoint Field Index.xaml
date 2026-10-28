@@ -98,7 +98,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Find Sharepoint Field Index" sap:VirtualizedContainerService.HintSize="572,765.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Find Sharepoint Field Index" sap:VirtualizedContainerService.HintSize="1468.8000000000002,658.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="umm:Office365ListItemField" Name="fieldCurrent" />
     </Sequence.Variables>
@@ -107,15 +107,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_spListItem.Fields.Where(function(x) x.DisplayName=in_strFieldName).Count&lt;&gt;0]" DisplayName="If field exists in Sharepoint list" sap:VirtualizedContainerService.HintSize="510,532.8" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_spListItem.Fields.Where(function(x) x.DisplayName=in_strFieldName).Count&lt;&gt;0]" DisplayName="If field exists in Sharepoint list" sap:VirtualizedContainerService.HintSize="502,511.2" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,165.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Store field" sap:VirtualizedContainerService.HintSize="434,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign DisplayName="Store field" sap:VirtualizedContainerService.HintSize="434,105.6" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="umm:Office365ListItemField">[fieldCurrent]</OutArgument>
             </Assign.To>
@@ -126,17 +126,17 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,179.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw DisplayName="Throw BRE - field name not found" Exception="[new BusinessRuleException(&quot;Field name '&quot;+in_strFieldName+&quot;' not found amongst Sharepoint List fields. Please check whether this column name has been changed.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          <Throw DisplayName="Throw BRE - field name not found" Exception="[new BusinessRuleException(&quot;Field name '&quot;+in_strFieldName+&quot;' not found amongst Sharepoint List fields. Please check whether this column name has been changed.&quot;)]" sap:VirtualizedContainerService.HintSize="382,114.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
         </Sequence>
       </If.Else>
     </If>
-    <Assign DisplayName="Get field index" sap:VirtualizedContainerService.HintSize="510,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Get field index" sap:VirtualizedContainerService.HintSize="502,105.6" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[out_intIndex]</OutArgument>
       </Assign.To>
