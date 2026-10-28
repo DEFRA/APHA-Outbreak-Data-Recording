@@ -240,7 +240,7 @@
                       <av:PointCollection x:Key="EXD197Connector">540,400 480,400 480,415</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <FlowStep x:Key="EXD195" x:Name="__ReferenceID15">
+                  <FlowStep x:Key="EXD195" x:Name="__ReferenceID15" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">185,415</av:Point>
@@ -359,7 +359,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,2151.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,2116.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="x:String" Default="Chicken*" Name="strSpecies" />
                                             </Sequence.Variables>
@@ -368,7 +368,7 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Number of stock at premises'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="410,220.8" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Text="[io_rowStockForm(&quot;Total&quot;).ToString.Trim]" Version="V3">
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Number of stock at premises'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,252.8" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Text="[io_rowStockForm(&quot;Total&quot;).ToString.Trim]" Version="V3">
                                               <uix:NTypeInto.Target>
                                                 <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="1174, 853, 280, 90" DesignTimeScaleFactor="2.5" ElementType="InputBox" FriendlyName="'10'" FullSelectorArgument="&lt;webctrl id='stock-count' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='stock-count' tag='INPUT' type='number' class='border-0 text-defra-warm-grey-900 ring-1 ring-defra-warm-grey-300 w-28 rounded-md py-1.5 shadow-sm ring-inset placeholder:text-defra-warm-grey-400 focus:ring-2 focus:ring-inset focus:ring-defra-yellow-vivid-600 sm:text-sm sm:leading-6' aaname='' /&gt;" Guid="c48c026a-27c9-4a08-ac5d-e92236994ad3" ImageBase64="" InformativeScreenshot="ff2d2b2c2d1b7c6133ffdcf9696ead2e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                                                   <uix:TargetAnchorable.Anchors>
@@ -379,7 +379,7 @@
                                                 </uix:TargetAnchorable>
                                               </uix:NTypeInto.Target>
                                             </uix:NTypeInto>
-                                            <uix:NSelectItem DisplayName="Replace category with &quot;Not Required&quot;" sap:VirtualizedContainerService.HintSize="410,158" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Not Required" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V3">
+                                            <uix:NSelectItem DisplayName="Replace category with &quot;Not Required&quot;" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Not Required" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V3">
                                               <uix:NSelectItem.Items>
                                                 <scg:List x:TypeArguments="x:String" Capacity="15">
                                                   <x:String></x:String>
@@ -409,21 +409,21 @@
                                                 </uix:TargetAnchorable>
                                               </uix:NSelectItem.Target>
                                             </uix:NSelectItem>
-                                            <If Condition="[CBool(g_Config(&quot;PausePoint4&quot;))]" DisplayName="Pause Point 4?" sap:VirtualizedContainerService.HintSize="410,1030" sap2010:WorkflowViewState.IdRef="If_2">
+                                            <If Condition="[CBool(g_Config(&quot;PausePoint4&quot;))]" DisplayName="Pause Point 4?" sap:VirtualizedContainerService.HintSize="450,1087.2" sap2010:WorkflowViewState.IdRef="If_2">
                                               <If.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="376,846.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,825.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <InvokeMethod DisplayName="PP4 - Stop timer" sap:VirtualizedContainerService.HintSize="334,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
+                                                  <InvokeMethod DisplayName="PP4 - Stop timer" sap:VirtualizedContainerService.HintSize="382,168.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
                                                     <InvokeMethod.TargetObject>
                                                       <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                                                     </InvokeMethod.TargetObject>
                                                   </InvokeMethod>
-                                                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP4" sap:VirtualizedContainerService.HintSize="334,405.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 4" IN_PopupMessage="[&quot;&lt;h1&gt;Edit NDOMS Stock Details&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the following stock details have been updated correctly:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Species:&lt;/strong&gt;&amp;ensp;&quot;+io_rowStockForm(&quot;Species&quot;).ToString.Trim+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Total:&lt;/strong&gt;&amp;ensp;&quot;+io_rowStockForm(&quot;Total&quot;).ToString.Trim+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Inspected:&lt;/strong&gt;&amp;ensp;&quot;+io_rowStockForm(&quot;Type of Enterprise&quot;).ToString.Trim+&quot;&lt;br&gt;&quot;+&#xA;&quot;Please note that 'Type of Enterprise' may have been entered as Category 'Not Required'.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;If the robot has entered this information correctly, click 'Continue' (do NOT click Save on the NDOMS pop-up).&lt;br&gt;&quot;+&#xA;&quot;If there is an issue with the entered data, click 'Stop'.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 4" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_2" />
-                                                  <InvokeMethod DisplayName="PP4 - Start timer" sap:VirtualizedContainerService.HintSize="334,136.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Start">
+                                                  <d:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="PP4" sap:VirtualizedContainerService.HintSize="382,437.6" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed at Pause Point 4" IN_PopupMessage="[&quot;&lt;h1&gt;Edit NDOMS Stock Details&lt;/h1&gt;&quot;+&#xA;&quot;&lt;p&gt;Please confirm that the following stock details have been updated correctly:&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;&lt;strong&gt;Species:&lt;/strong&gt;&amp;ensp;&quot;+io_rowStockForm(&quot;Species&quot;).ToString.Trim+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Total:&lt;/strong&gt;&amp;ensp;&quot;+io_rowStockForm(&quot;Total&quot;).ToString.Trim+&quot;&lt;br&gt;&quot;+&#xA;&quot;&lt;strong&gt;Inspected:&lt;/strong&gt;&amp;ensp;&quot;+io_rowStockForm(&quot;Type of Enterprise&quot;).ToString.Trim+&quot;&lt;br&gt;&quot;+&#xA;&quot;Please note that 'Type of Enterprise' may have been entered as Category 'Not Required'.&lt;/p&gt;&quot;+&#xA;&quot;&lt;p&gt;If the robot has entered this information correctly, click 'Continue' (do NOT click Save on the NDOMS pop-up).&lt;br&gt;&quot;+&#xA;&quot;If there is an issue with the entered data, click 'Stop'.&lt;/p&gt;&quot;]" IN_PopupTitle="Pause Point 4" IN_WidthHeight="[{500,350}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_2" />
+                                                  <InvokeMethod DisplayName="PP4 - Start timer" sap:VirtualizedContainerService.HintSize="382,159.6" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Start">
                                                     <InvokeMethod.TargetObject>
                                                       <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                                                     </InvokeMethod.TargetObject>
@@ -431,15 +431,21 @@
                                                 </Sequence>
                                               </If.Then>
                                               <If.Else>
-                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7" />
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
                                               </If.Else>
                                             </If>
-                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save Stock Details'" sap:VirtualizedContainerService.HintSize="410,158" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V3">
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save Stock Details'" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Version="V3">
                                               <uix:NClick.Target>
                                                 <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="1391, 2024, 373, 90" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Save Stock Details'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' visibleInnerText='Save Stock Details' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='bg-defra-brown-200 text-defra-brown-950 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:bg-defra-brown-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-brown-600' aaname='                         Save Stock Details                     ' check:innerText='Save Stock Details' /&gt;" Guid="a0b701ed-7361-4e72-84a3-eae8fa2c0824" ImageBase64="" InformativeScreenshot="59f8fefc3330a63985aeadc6e604e005.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                               </uix:NClick.Target>
                                             </uix:NClick>
-                                            <uix:NCheckState DisplayName="'Please correct the following' appears?" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="410,310.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Timeout="1" Version="V3">
+                                            <uix:NCheckState DisplayName="'Please correct the following' appears?" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="450,335.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="58a25ca0-9355-40a2-a4dd-b875a5efbc77" Timeout="1" Version="V3">
                                               <uix:NCheckState.IfExists>
                                                 <Throw DisplayName="Throw SE - stock details incomplete" Exception="[new System.Exception(&quot;Stock details entry incomplete.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
                                               </uix:NCheckState.IfExists>
@@ -613,7 +619,7 @@
                       </FlowDecision>
                     </FlowStep.Next>
                   </FlowStep>
-                  <FlowStep x:Key="EX196" x:Name="__ReferenceID16">
+                  <FlowStep x:Key="EX196" x:Name="__ReferenceID16" sap2010:WorkflowViewState.IdRef="FlowStep_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">305,415</av:Point>
@@ -632,7 +638,7 @@
                       <x:Reference>__ReferenceID1</x:Reference>
                     </FlowStep.Next>
                   </FlowStep>
-                  <FlowStep x:Key="EXD197" x:Name="__ReferenceID17">
+                  <FlowStep x:Key="EXD197" x:Name="__ReferenceID17" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">425,415</av:Point>
@@ -651,7 +657,7 @@
                       <x:Reference>__ReferenceID1</x:Reference>
                     </FlowStep.Next>
                   </FlowStep>
-                  <FlowStep x:Key="EXD644" x:Name="__ReferenceID18">
+                  <FlowStep x:Key="EXD644" x:Name="__ReferenceID18" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">635,425</av:Point>
@@ -1035,7 +1041,7 @@
                       </FlowDecision>
                     </FlowStep.Next>
                   </FlowStep>
-                  <FlowStep x:Key="EXD44" x:Name="__ReferenceID19">
+                  <FlowStep x:Key="EXD44" x:Name="__ReferenceID19" sap2010:WorkflowViewState.IdRef="FlowStep_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">755,425</av:Point>

@@ -206,7 +206,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="1451.6000000000001,9236" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update_Sharepoint" sap:VirtualizedContainerService.HintSize="1451.6000000000001,10675.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrPassword" />
@@ -302,7 +302,7 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Switch>
-    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[strUsername]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="777.6,8890" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstrPassword]" TenantId="[g_Config(&quot;TenantID&quot;).ToString]" UseConnectionService="False">
+    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Please select an account." ApplicationId="[strUsername]" AuthenticationType="ApplicationIdAndSecret" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="777.6,10329.6" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" SecureApplicationSecret="[sstrPassword]" TenantId="[g_Config(&quot;TenantID&quot;).ToString]" UseConnectionService="False">
       <uma:Office365ApplicationScope.AuthenticationScopes>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
       </uma:Office365ApplicationScope.AuthenticationScopes>
@@ -311,7 +311,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="743.6,8645.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="743.6,10084.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="umm:Office365SharepointList" Name="spList" />
               <Variable x:TypeArguments="sd:DataTable" Name="dtListItems" />
@@ -322,7 +322,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch - update master list" sap:VirtualizedContainerService.HintSize="709.6,6129.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch - update master list" sap:VirtualizedContainerService.HintSize="709.6,7569.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -330,7 +330,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence DisplayName="Update master list" sap:VirtualizedContainerService.HintSize="672,5643.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence DisplayName="Update master list" sap:VirtualizedContainerService.HintSize="672,7082.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="bool197Update" />
                   </Sequence.Variables>
@@ -364,7 +364,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <umas:ForEachListItem CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="The filter should return only one list item to update unless form is EXD197" DisplayName="For Each List Item" Filter="[&quot;fields/CPH eq '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;'&quot;]" sap:VirtualizedContainerService.HintSize="638,4148.8" sap2010:WorkflowViewState.IdRef="ForEachListItem_1" List="[spList]">
+                  <umas:ForEachListItem CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="The filter should return only one list item to update unless form is EXD197" DisplayName="For Each List Item" Filter="[&quot;fields/CPH eq '&quot;+in_dictFormValues(&quot;CPH&quot;)+&quot;'&quot;]" sap:VirtualizedContainerService.HintSize="638,5588.4" sap2010:WorkflowViewState.IdRef="ForEachListItem_1" List="[spList]">
                     <umas:ForEachListItem.Body>
                       <ActivityAction x:TypeArguments="umm:Office365SharepointListItem, x:Int32">
                         <ActivityAction.Argument1>
@@ -373,7 +373,7 @@
                         <ActivityAction.Argument2>
                           <DelegateInArgument x:TypeArguments="x:Int32" Name="ListItemIndex" />
                         </ActivityAction.Argument2>
-                        <Sequence DisplayName="Update fields" sap:VirtualizedContainerService.HintSize="604,3908.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Update fields" sap:VirtualizedContainerService.HintSize="604,5348" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Boolean" Name="boolESZ" />
                           </Sequence.Variables>
@@ -444,13 +444,13 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:CommentOut>
-                          <ui:ForEach x:TypeArguments="s:ValueTuple(x:String, x:Int32)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This sums the stock table into a tuple collection like so:&#xD;&#xA;&#xD;&#xA;e.g.&#xD;&#xA;A, 1&#xD;&#xA;A, 2&#xD;&#xA;B, 1&#xD;&#xA;A, 10&#xD;&#xA;B, 5&#xD;&#xA;&#xD;&#xA;becomes&#xD;&#xA;&#xD;&#xA;A, 13&#xD;&#xA;B, 6" DisplayName="For Each species type" sap:VirtualizedContainerService.HintSize="570,849.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_dtStockForm.AsEnumerable.GroupBy(function(x) x(&quot;SPOL species&quot;)).Select(function(y) (SPOLSpecies := y.Key.ToString, Total:=y.Sum(function(z) CInt(z(&quot;Total&quot;)))))]">
+                          <ui:ForEach x:TypeArguments="s:ValueTuple(x:String, x:Int32)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This sums the stock table into a tuple collection like so:&#xA;&#xA;e.g.&#xA;A, 1&#xA;A, 2&#xA;B, 1&#xA;A, 10&#xA;B, 5&#xA;&#xA;becomes&#xA;&#xA;A, 13&#xA;B, 6" DisplayName="For Each species type" sap:VirtualizedContainerService.HintSize="570,850.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_dtStockForm.AsEnumerable.GroupBy(function(x) x(&quot;SPOL species&quot;)).Select(function(y) (SPOLSpecies := y.Key.ToString, Total:=y.Sum(function(z) CInt(z(&quot;Total&quot;)))))]">
                             <ui:ForEach.Body>
                               <ActivityAction x:TypeArguments="s:ValueTuple(x:String, x:Int32)">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:ValueTuple(x:String, x:Int32)" Name="currentItem" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,426" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,427.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -458,23 +458,20 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Sharepoint Field Index.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="currentItem.Item1" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                        <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="ListItem" />
-                                      </InArgument>
-                                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                        <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                      </OutArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">[currentItem.Item1]</InArgument>
+                                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
-                                  <Assign DisplayName="Update species count" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                  <Assign DisplayName="Update species count" sap:VirtualizedContainerService.HintSize="434,115.6" sap2010:WorkflowViewState.IdRef="Assign_20">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:Object">[CInt(currentItem.Item2)]</InArgument>
+                                      <InArgument x:TypeArguments="x:Object" xml:space="preserve">[If(CInt(currentItem.Item2)&gt;249,"250+",
+	If(CInt(currentItem.Item2)&gt;49,"50 - 249",
+		If(CInt(currentItem.Item2)&gt;0,"1 - 49",
+			"0")))]</InArgument>
                                     </Assign.Value>
                                   </Assign>
                                   <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="434,105.6" sap2010:WorkflowViewState.IdRef="Assign_21">
@@ -491,9 +488,64 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:ForEach>
+                          <Sequence DisplayName="Total birds" sap:VirtualizedContainerService.HintSize="570,574.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:Int32" Name="intTotalBirds" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="Sum up birds (excluding non-bird species)" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="Assign_22">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[intTotalBirds]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">[in_dtStockForm.AsEnumerable.Where(function(x) CBool(x("IsBird"))).Select(function(y) y("Total")).Sum(function(z) Cint(z))]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find total birds field index" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
+                                  <Literal x:TypeArguments="x:String">Total Number of Birds</Literal>
+                                </InArgument>
+                                <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
+                                  <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="ListItem" />
+                                </InArgument>
+                                <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
+                                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
+                                </OutArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <Assign DisplayName="Update total birds field" sap:VirtualizedContainerService.HintSize="434,115.6" sap2010:WorkflowViewState.IdRef="Assign_23">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Object">[ListItem.Fields(intIndex).Value]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Object" xml:space="preserve">[If(intTotalBirds&gt;249,"250+",
+	If(intTotalBirds&gt;49,"50 - 249",
+		If(intTotalBirds&gt;0,"1 - 49",
+			"0")))]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign DisplayName="Store for Pause Point" sap:VirtualizedContainerService.HintSize="434,106.8" sap2010:WorkflowViewState.IdRef="Assign_24">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[dictPausePoint(ListItem.Fields(intIndex).DisplayName)]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(intTotalBirds&gt;249,"250+",
+	If(intTotalBirds&gt;49,"50 - 249",
+		If(intTotalBirds&gt;0,"1 - 49",
+			"0")))]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
                           <Assign DisplayName="Check if ESZ" sap:VirtualizedContainerService.HintSize="570,114.4" sap2010:WorkflowViewState.IdRef="Assign_17">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[boolESZ]</OutArgument>
@@ -504,15 +556,9 @@
                           </Assign>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="If ESZ, update ESZ Surveillance Comments" DisplayName="Find surveillance comments field index" sap:VirtualizedContainerService.HintSize="570,177.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="if(boolESZ, &quot;ESZ Surveillance Comments&quot;, &quot;Surveillance Comments&quot;)" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="ListItem" />
-                              </InArgument>
-                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                              </OutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">[if(boolESZ, "ESZ Surveillance Comments", "Surveillance Comments")]</InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -536,7 +582,7 @@
                               <InArgument x:TypeArguments="x:String">[in_dictFormValues("Comments")]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If Condition="[{&quot;EXD196&quot;,&quot;EXD644&quot;,&quot;EXD44&quot;}.Contains(in_strFormType)]" DisplayName="EXD196, EXD644 or EXD44?" sap:VirtualizedContainerService.HintSize="570,568" sap2010:WorkflowViewState.IdRef="If_6">
+                          <If Condition="[{&quot;EXD196&quot;,&quot;EXD644&quot;,&quot;EXD44&quot;}.Contains(in_strFormType)]" DisplayName="EXD196, EXD644 or EXD44?" sap:VirtualizedContainerService.HintSize="570,1431.6" sap2010:WorkflowViewState.IdRef="If_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -693,62 +739,40 @@
                                 </ui:CommentOut>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Process Subflows\Update Numbered Visit Columns.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="382,137.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Update Numbered Visit Columns.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolESZ">
-                                      <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolESZ" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_dictFormValues">
-                                      <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="in_dictFormValues" />
-                                    </InArgument>
-                                    <InOutArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="io_spListItem">
-                                      <VisualBasicReference x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="ListItem" />
-                                    </InOutArgument>
-                                    <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictPausePoint">
-                                      <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="dictPausePoint" />
-                                    </InOutArgument>
+                                    <InArgument x:TypeArguments="x:Boolean" x:Key="in_boolESZ">[boolESZ]</InArgument>
+                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_dictFormValues">[in_dictFormValues]</InArgument>
+                                    <InOutArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="io_spListItem">[ListItem]</InOutArgument>
+                                    <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_dictPausePoint">[dictPausePoint]</InOutArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence sap2010:Annotation.AnnotationText="EXD195 and 197 have PremiseType and Status to be derived from comments" DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,114.4" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                              <Sequence sap2010:Annotation.AnnotationText="EXD195 and 197 have PremiseType and Status to be derived from comments" DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,978" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="strPremiseType" />
                                   <Variable x:TypeArguments="x:String" Name="strStatus" />
                                 </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Determine Premise Type and Status.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Process\Process Subflows\Determine Premise Type and Status.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtKeywords">
-                                      <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtKeywords" />
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_strComments">
-                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_dictFormValues(&quot;Comments&quot;)" />
-                                    </InArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="out_strPremiseType">
-                                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strPremiseType" />
-                                    </OutArgument>
-                                    <OutArgument x:TypeArguments="x:String" x:Key="out_strStatus">
-                                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strStatus" />
-                                    </OutArgument>
+                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtKeywords">[in_dtKeywords]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_strComments">[in_dictFormValues("Comments")]</InArgument>
+                                    <OutArgument x:TypeArguments="x:String" x:Key="out_strPremiseType">[strPremiseType]</OutArgument>
+                                    <OutArgument x:TypeArguments="x:String" x:Key="out_strStatus">[strStatus]</OutArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Premise Type field index" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                      <Literal x:TypeArguments="x:String">Premise Type</Literal>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                      <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="ListItem" />
-                                    </InArgument>
-                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                      <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                    </OutArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">Premise Type</InArgument>
+                                    <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                                 <Assign DisplayName="Update Premise Type field" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="Assign_13">
@@ -769,15 +793,9 @@
                                 </Assign>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Status field index" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                      <Literal x:TypeArguments="x:String">Status</Literal>
-                                    </InArgument>
-                                    <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                      <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="ListItem" />
-                                    </InArgument>
-                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                      <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                    </OutArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">Status</InArgument>
+                                    <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[ListItem]</InArgument>
+                                    <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                                 <Assign DisplayName="Update Premise Type field" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="Assign_15">
@@ -993,7 +1011,7 @@
                   <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,492.8" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>

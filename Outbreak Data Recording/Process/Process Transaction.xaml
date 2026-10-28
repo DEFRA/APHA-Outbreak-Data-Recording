@@ -362,8 +362,8 @@
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:BuildDataTable DataTable="[dtFormValues]" DisplayName="Build Data Table - form values" sap:VirtualizedContainerService.HintSize="606,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;key&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-              <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each formValue" sap:VirtualizedContainerService.HintSize="606,471.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dictFormValues]">
+              <ui:BuildDataTable DataTable="[dtFormValues]" DisplayName="Build Data Table - form values" sap:VirtualizedContainerService.HintSize="570,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;key&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+              <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each formValue" sap:VirtualizedContainerService.HintSize="570,471.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dictFormValues]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
                     <ActivityAction.Argument>
@@ -380,12 +380,12 @@
                   </ActivityAction>
                 </ui:ForEach.Body>
               </ui:ForEach>
-              <InvokeMethod DisplayName="Stop timer - PP1" sap:VirtualizedContainerService.HintSize="606,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Stop">
+              <InvokeMethod DisplayName="Stop timer - PP1" sap:VirtualizedContainerService.HintSize="570,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Stop">
                 <InvokeMethod.TargetObject>
                   <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                 </InvokeMethod.TargetObject>
               </InvokeMethod>
-              <uix:NApplicationCard sap2010:Annotation.AnnotationText="Use google as dummy URL to prevent extra homepage tab opening." AttachMode="ByInstance" CloseMode="Always" DisplayName="Open PDF in browser" sap:VirtualizedContainerService.HintSize="606,1944" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="01f77a08-b66b-48b6-8ae0-099f43b8c257" Version="V2">
+              <uix:NApplicationCard sap2010:Annotation.AnnotationText="Use google as dummy URL to prevent extra homepage tab opening." AttachMode="ByInstance" CloseMode="Always" DisplayName="Open PDF in browser" sap:VirtualizedContainerService.HintSize="570,1944" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="01f77a08-b66b-48b6-8ae0-099f43b8c257" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
@@ -449,25 +449,25 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NApplicationCard>
-              <InvokeMethod DisplayName="Start timer - PP1" sap:VirtualizedContainerService.HintSize="606,136" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
+              <InvokeMethod DisplayName="Start timer - PP1" sap:VirtualizedContainerService.HintSize="570,168.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
                 <InvokeMethod.TargetObject>
                   <InArgument x:TypeArguments="sd1:Stopwatch">[g_swProcessingTimer]</InArgument>
                 </InvokeMethod.TargetObject>
               </InvokeMethod>
-              <If sap2010:Annotation.AnnotationText="If all rows are returned empty from the stock table, the column data ends up being lost, so we re-initialise the datatable." Condition="[dtStockForm.ColumnCount=0]" DisplayName="If stock table returned empty" sap:VirtualizedContainerService.HintSize="606,836.4" sap2010:WorkflowViewState.IdRef="If_8">
+              <If sap2010:Annotation.AnnotationText="If all rows are returned empty from the stock table, the column data ends up being lost, so we re-initialise the datatable." Condition="[dtStockForm.ColumnCount=0]" DisplayName="If stock table returned empty" sap:VirtualizedContainerService.HintSize="570,805.2" sap2010:WorkflowViewState.IdRef="If_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="539.6,324.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="531.6,319.6" sap2010:WorkflowViewState.IdRef="Sequence_54">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Switch x:TypeArguments="x:String" DisplayName="Switch - reinitialise stock table" Expression="[strFormType]" sap:VirtualizedContainerService.HintSize="497.6,236.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                    <Switch x:TypeArguments="x:String" DisplayName="Switch - reinitialise stock table" Expression="[strFormType]" sap:VirtualizedContainerService.HintSize="497.6,259.6" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                       <Switch.Default>
                         <Throw DisplayName="Throw BRE - form type not recognised" Exception="[new BusinessRuleException(&quot;Form type '&quot;+strFormType+&quot;' not recognised at reinitialising of stock table.&quot;)]" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_3" />
                       </Switch.Default>
@@ -480,13 +480,13 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,283.6" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,278.4" sap2010:WorkflowViewState.IdRef="Sequence_55">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Also removes rows with placeholder text" DataTable="[dtStockForm]" DisplayName="Remove empty rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,195.2" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtStockForm]" SelectColumnsMode="Remove">
+                    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Also removes rows with placeholder text" DataTable="[dtStockForm]" DisplayName="Remove empty rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="382,218.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtStockForm]" SelectColumnsMode="Remove">
                       <ui:FilterDataTable.Filters>
                         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                           <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -750,7 +750,8 @@
                                                 </uix:NCheckState.Target>
                                               </uix:NCheckState>
                                               <ui:AddDataColumn x:TypeArguments="x:Boolean" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="NDOMS present?" DataTable="[dtStockForm]" DefaultValue="False" DisplayName="Add Data Column to form data" sap:VirtualizedContainerService.HintSize="988,222" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6" />
-                                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="SPOL species" DataTable="[dtStockForm]" DisplayName="Add SPOL column name to form data" sap:VirtualizedContainerService.HintSize="988,213.2" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" />
+                                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="SPOL species" DataTable="[dtStockForm]" DisplayName="Add SPOL column name to form data" sap:VirtualizedContainerService.HintSize="988,222" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" />
+                                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="IsBird" DataTable="[dtStockForm]" DisplayName="Add IsBird to form data" sap:VirtualizedContainerService.HintSize="988,213.2" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9" />
                                             </Sequence>
                                             <FlowStep.Next>
                                               <FlowDecision x:Name="__ReferenceID20" Condition="[dtStockForm.RowCount&gt;0]" DisplayName="Any form stock?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
@@ -772,7 +773,7 @@
                                                         <av:PointCollection x:Key="ConnectorLocation">260,2005 260,2035 325,2035 325,2058.6</av:PointCollection>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Sequence DisplayName="Susceptible stock" sap:VirtualizedContainerService.HintSize="536,1264" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                                    <Sequence DisplayName="Susceptible stock" sap:VirtualizedContainerService.HintSize="536,1378.4" sap2010:WorkflowViewState.IdRef="Sequence_64">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -795,16 +796,17 @@
                                                           <uix:TargetApp Area="0, 0, 0, 0" />
                                                         </uix:NApplicationCard.TargetApp>
                                                       </uix:NApplicationCard>
-                                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtStockForm]" DisplayName="For Each Stock Row" sap:VirtualizedContainerService.HintSize="502,876" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtStockForm]" DisplayName="For Each Stock Row" sap:VirtualizedContainerService.HintSize="502,990.4" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                                         <ui:ForEachRow.Body>
                                                           <ActivityAction x:TypeArguments="sd:DataRow">
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                             </ActivityAction.Argument>
-                                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,686.4" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,800.8" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                                               <Sequence.Variables>
                                                                 <Variable x:TypeArguments="x:String" Name="strSpecies" />
                                                                 <Variable x:TypeArguments="x:String" Name="strSPOLSpecies" />
+                                                                <Variable x:TypeArguments="x:Boolean" Name="boolIsBird" />
                                                               </Sequence.Variables>
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -821,9 +823,18 @@
                                                               </Assign>
                                                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Species" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Process\Process Subflows\Check Species.xaml">
                                                                 <ui:InvokeWorkflowFile.Arguments>
-                                                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSpecies">[in_dtSpecies]</InArgument>
-                                                                  <InOutArgument x:TypeArguments="x:String" x:Key="io_strSpecies">[strSpecies]</InOutArgument>
-                                                                  <OutArgument x:TypeArguments="x:String" x:Key="out_strSPOLSpecies">[strSPOLSpecies]</OutArgument>
+                                                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSpecies">
+                                                                    <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtSpecies" />
+                                                                  </InArgument>
+                                                                  <InOutArgument x:TypeArguments="x:String" x:Key="io_strSpecies">
+                                                                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strSpecies" />
+                                                                  </InOutArgument>
+                                                                  <OutArgument x:TypeArguments="x:String" x:Key="out_strSPOLSpecies">
+                                                                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strSPOLSpecies" />
+                                                                  </OutArgument>
+                                                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_boolIsBird">
+                                                                    <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="boolIsBird" />
+                                                                  </OutArgument>
                                                                 </ui:InvokeWorkflowFile.Arguments>
                                                               </ui:InvokeWorkflowFile>
                                                               <Assign DisplayName="Update species after checking" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="Assign_17">
@@ -840,6 +851,14 @@
                                                                 </Assign.To>
                                                                 <Assign.Value>
                                                                   <InArgument x:TypeArguments="x:Object">[strSPOLSpecies]</InArgument>
+                                                                </Assign.Value>
+                                                              </Assign>
+                                                              <Assign DisplayName="Update IsBird" sap:VirtualizedContainerService.HintSize="434,114.4" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                                                <Assign.To>
+                                                                  <OutArgument x:TypeArguments="x:Object">[CurrentRow("IsBird")]</OutArgument>
+                                                                </Assign.To>
+                                                                <Assign.Value>
+                                                                  <InArgument x:TypeArguments="x:Object">[boolIsBird]</InArgument>
                                                                 </Assign.Value>
                                                               </Assign>
                                                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Compare form stock with NDOMS.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,137.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Process\Process Subflows\Compare form stock with NDOMS.xaml">
@@ -964,7 +983,7 @@
                                                                     <av:PointCollection x:Key="ConnectorLocation">265,2328.2 265,2358.2 325,2358.2 325,2391.7999999999997</av:PointCollection>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <Sequence DisplayName="Present unprocessed rows to user" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                                <Sequence DisplayName="Present unprocessed rows to user" sap:VirtualizedContainerService.HintSize="620,2832" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                                                   <Sequence.Variables>
                                                                     <Variable x:TypeArguments="x:String" Name="strStockFormUnprocessed" />
                                                                     <Variable x:TypeArguments="x:String" Name="strStockNDOMSUnprocessed" />
@@ -1188,7 +1207,7 @@
                                                                           <ActivityAction.Argument>
                                                                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                                           </ActivityAction.Argument>
-                                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,432.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,431.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1199,7 +1218,7 @@
                                                                                 <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/3177/edit" DesignTimeRectangle="266, 1434, 60, 60" DesignTimeScaleFactor="2.5" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='No Stock Present' /&gt;&lt;webctrl id='nostock' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' visibleinnertext='No Stock Present' /&gt;&lt;webctrl id='nostock' tag='INPUT' type='checkbox' class='border-defra-warm-grey-300 text-defra-cyan-600 h-6 w-6 rounded focus:ring-defra-cyan-600' aaname='No Stock Present' /&gt;" Guid="e54a151e-42c8-4abb-8491-06831b0fc949" InformativeScreenshot="cd27dd32906582de5a91697fce4585c1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID *' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                                               </uix:NCheck.Target>
                                                                             </uix:NCheck>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Update Visit'" sap:VirtualizedContainerService.HintSize="382,182.8" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Update Visit'" sap:VirtualizedContainerService.HintSize="382,181.2" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="01e66a9a-1a40-432c-a22d-cfc82c343552" Version="V3">
                                                                               <uix:NClick.Target>
                                                                                 <uix:TargetAnchorable BrowserURL="https://t1ndoms.app.defra.gov.uk/premises/152/visits/2019/edit" DesignTimeRectangle="484, 2086, 266, 90" DesignTimeScaleFactor="2.5" ElementType="Button" FriendlyName="'Update Visit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' visibleInnerText='Update Visit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='bg-defra-brown-200 text-defra-brown-950 rounded-md px-3 py-2 text-sm font-semibold shadow-sm hover:bg-defra-brown-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-defra-brown-600' aaname='Update Visit             ' check:innerText='Update Visit' /&gt;" Guid="89bb3625-ed86-46e8-9803-3589a5dfe48b" ImageBase64="" InformativeScreenshot="dd013c9737172f3957b6ba1f061d8fef.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Edit Visit Details for Premises ID*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                                               </uix:NClick.Target>

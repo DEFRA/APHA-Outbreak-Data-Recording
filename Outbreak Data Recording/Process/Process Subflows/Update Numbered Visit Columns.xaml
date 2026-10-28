@@ -99,7 +99,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="There are 5 different visit numbers in the master list: 1st visit, 2nd visit, 3rd visit, ESZ 1st visit and ESZ 2nd visit. Here we determine which are the most relevant set of columns to update for the current transaction.&#xD;&#xA;&#xD;&#xA;The number of the visit is determined by the lowest visit number that is not populated (e.g. if 1st visit date already has a value, update the 2nd visit date. If 2nd has a value, use 3rd).&#xD;&#xA;&#xD;&#xA;The ESZ columns are used when the comments of the EXD reference that it is an Enhanced Surveillance Visit (meaning it is an Enhance Surveillance Zone)." DisplayName="Update Numbered Visit Columns" sap:VirtualizedContainerService.HintSize="1468.8000000000002,658.84" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="There are 5 different visit numbers in the master list: 1st visit, 2nd visit, 3rd visit, ESZ 1st visit and ESZ 2nd visit. Here we determine which are the most relevant set of columns to update for the current transaction.&#xA;&#xA;The number of the visit is determined by the lowest visit number that is not populated (e.g. if 1st visit date already has a value, update the 2nd visit date. If 2nd has a value, use 3rd).&#xA;&#xA;The ESZ columns are used when the comments of the EXD reference that it is an Enhanced Surveillance Visit (meaning it is an Enhance Surveillance Zone)." DisplayName="Update Numbered Visit Columns" sap:VirtualizedContainerService.HintSize="1468.8000000000002,658.84" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Int32" Name="intIndex" />
     </Flowchart.Variables>
@@ -115,10 +115,7 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID17</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID17" DisplayName="ESZ?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-      <FlowDecision.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="in_boolESZ" />
-      </FlowDecision.Condition>
+    <FlowDecision x:Name="__ReferenceID17" Condition="[in_boolESZ]" DisplayName="ESZ?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -139,15 +136,9 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get ESZ 1st visit date field" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                <Literal x:TypeArguments="x:String">ESZ 1st Visit Date Completed</Literal>
-              </InArgument>
-              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-              </InArgument>
-              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-              </OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">ESZ 1st Visit Date Completed</InArgument>
+              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <FlowStep.Next>
@@ -197,15 +188,9 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Samples Taken field index" sap:VirtualizedContainerService.HintSize="547.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                          <Literal x:TypeArguments="x:String">ESZ 1st Visit Samples Taken</Literal>
-                        </InArgument>
-                        <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                          <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                        </InArgument>
-                        <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                          <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                        </OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">ESZ 1st Visit Samples Taken</InArgument>
+                        <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                        <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <If Condition="[in_dictFormValues.ContainsKey(&quot;SampleOutcome&quot;)]" DisplayName="EXD37?" sap:VirtualizedContainerService.HintSize="547.6,953.2" sap2010:WorkflowViewState.IdRef="If_1">
@@ -240,15 +225,9 @@
                           </ui:MultipleAssign>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Sample Outcome field index" sap:VirtualizedContainerService.HintSize="479.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                <Literal x:TypeArguments="x:String">ESZ 1st Visit Sampling Results</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                              </InArgument>
-                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                              </OutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">ESZ 1st Visit Sampling Results</InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                           <ui:MultipleAssign DisplayName="Update Sample Outcome field and add to pause point" sap:VirtualizedContainerService.HintSize="479.6,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
@@ -321,22 +300,13 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get ESZ 2nd visit date field" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                        <Literal x:TypeArguments="x:String">ESZ 2nd Visit Date Completed</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                        <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                      </InArgument>
-                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                        <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                      </OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">ESZ 2nd Visit Date Completed</InArgument>
+                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID4" DisplayName="ESZ 2nd visit field empty?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-                      <FlowDecision.Condition>
-                        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="io_spListItem.Fields(intIndex).Value is Nothing" />
-                      </FlowDecision.Condition>
+                    <FlowDecision x:Name="__ReferenceID4" Condition="[io_spListItem.Fields(intIndex).Value is Nothing]" DisplayName="ESZ 2nd visit field empty?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -379,15 +349,9 @@
                             </Assign>
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Samples Taken field index" sap:VirtualizedContainerService.HintSize="547.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                  <Literal x:TypeArguments="x:String">ESZ 2nd Visit Samples Taken</Literal>
-                                </InArgument>
-                                <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                  <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                                </InArgument>
-                                <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                </OutArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">ESZ 2nd Visit Samples Taken</InArgument>
+                                <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                                <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
                             <If Condition="[in_dictFormValues.ContainsKey(&quot;SampleOutcome&quot;)]" DisplayName="EXD37?" sap:VirtualizedContainerService.HintSize="547.6,953.2" sap2010:WorkflowViewState.IdRef="If_2">
@@ -422,15 +386,9 @@
                                   </ui:MultipleAssign>
                                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Sample Outcome field index" sap:VirtualizedContainerService.HintSize="479.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                        <Literal x:TypeArguments="x:String">ESZ 2nd Visit Sampling Results</Literal>
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                        <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                                      </InArgument>
-                                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                        <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                      </OutArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">ESZ 2nd Visit Sampling Results</InArgument>
+                                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                   <ui:MultipleAssign DisplayName="Update Sample Outcome field and add to pause point" sap:VirtualizedContainerService.HintSize="479.6,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
@@ -528,15 +486,9 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get 1st visit date field" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                <Literal x:TypeArguments="x:String">1st Visit Date Completed</Literal>
-              </InArgument>
-              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-              </InArgument>
-              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-              </OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">1st Visit Date Completed</InArgument>
+              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <FlowStep.Next>
@@ -583,15 +535,9 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Samples Taken field index" sap:VirtualizedContainerService.HintSize="547.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                          <Literal x:TypeArguments="x:String">1st Visit Samples Taken</Literal>
-                        </InArgument>
-                        <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                          <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                        </InArgument>
-                        <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                          <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                        </OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">1st Visit Samples Taken</InArgument>
+                        <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                        <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <If Condition="[in_dictFormValues.ContainsKey(&quot;SampleOutcome&quot;)]" DisplayName="EXD37?" sap:VirtualizedContainerService.HintSize="547.6,953.2" sap2010:WorkflowViewState.IdRef="If_3">
@@ -626,15 +572,9 @@
                           </ui:MultipleAssign>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Sample Outcome field index" sap:VirtualizedContainerService.HintSize="479.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                <Literal x:TypeArguments="x:String">1st Visit Sampling Results</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                              </InArgument>
-                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                              </OutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">1st Visit Sampling Results</InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                           <ui:MultipleAssign DisplayName="Update Sample Outcome field and add to pause point" sap:VirtualizedContainerService.HintSize="479.6,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_9">
@@ -707,15 +647,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get 2nd visit date field" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                        <Literal x:TypeArguments="x:String">2nd Visit Date Completed</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                        <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                      </InArgument>
-                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                        <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                      </OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">2nd Visit Date Completed</InArgument>
+                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
@@ -762,15 +696,9 @@
                             </Assign>
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Samples Taken field index" sap:VirtualizedContainerService.HintSize="547.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                  <Literal x:TypeArguments="x:String">2nd Visit Samples Taken</Literal>
-                                </InArgument>
-                                <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                  <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                                </InArgument>
-                                <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                </OutArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">2nd Visit Samples Taken</InArgument>
+                                <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                                <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
                             <If Condition="[in_dictFormValues.ContainsKey(&quot;SampleOutcome&quot;)]" DisplayName="EXD37?" sap:VirtualizedContainerService.HintSize="547.6,953.2" sap2010:WorkflowViewState.IdRef="If_4">
@@ -805,15 +733,9 @@
                                   </ui:MultipleAssign>
                                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Sample Outcome field index" sap:VirtualizedContainerService.HintSize="479.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                        <Literal x:TypeArguments="x:String">2nd Visit Sampling Results</Literal>
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                        <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                                      </InArgument>
-                                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                        <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                      </OutArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">2nd Visit Sampling Results</InArgument>
+                                      <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                                      <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                   <ui:MultipleAssign DisplayName="Update Sample Outcome field and add to pause point" sap:VirtualizedContainerService.HintSize="479.6,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
@@ -886,15 +808,9 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get 3rd visit date field" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                <Literal x:TypeArguments="x:String">3rd Visit Date Completed</Literal>
-                              </InArgument>
-                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                              </InArgument>
-                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                              </OutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">3rd Visit Date Completed</InArgument>
+                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                           <FlowStep.Next>
@@ -941,15 +857,9 @@
                                     </Assign>
                                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Samples Taken field index" sap:VirtualizedContainerService.HintSize="547.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                          <Literal x:TypeArguments="x:String">3rd Visit Samples Taken</Literal>
-                                        </InArgument>
-                                        <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                          <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                                        </InArgument>
-                                        <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                          <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                        </OutArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">3rd Visit Samples Taken</InArgument>
+                                        <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                                        <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
                                     <If Condition="[in_dictFormValues.ContainsKey(&quot;SampleOutcome&quot;)]" DisplayName="EXD37?" sap:VirtualizedContainerService.HintSize="547.6,953.2" sap2010:WorkflowViewState.IdRef="If_5">
@@ -984,15 +894,9 @@
                                           </ui:MultipleAssign>
                                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Find Sample Outcome field index" sap:VirtualizedContainerService.HintSize="479.6,146" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Process\Process Subflows\Find Sharepoint Field Index.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
-                                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">
-                                                <Literal x:TypeArguments="x:String">3rd Visit Sampling Results</Literal>
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">
-                                                <VisualBasicValue x:TypeArguments="umm:Office365SharepointListItem" ExpressionText="io_spListItem" />
-                                              </InArgument>
-                                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">
-                                                <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="intIndex" />
-                                              </OutArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="in_strFieldName">3rd Visit Sampling Results</InArgument>
+                                              <InArgument x:TypeArguments="umm:Office365SharepointListItem" x:Key="in_spListItem">[io_spListItem]</InArgument>
+                                              <OutArgument x:TypeArguments="x:Int32" x:Key="out_intIndex">[intIndex]</OutArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                           </ui:InvokeWorkflowFile>
                                           <ui:MultipleAssign DisplayName="Update Sample Outcome field and add to pause point" sap:VirtualizedContainerService.HintSize="479.6,172" sap2010:WorkflowViewState.IdRef="MultipleAssign_15">
